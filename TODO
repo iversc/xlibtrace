@@ -1,0 +1,63 @@
+
+xlibtrace
+
+- write man page
+
+- decent unbuffered stdin for --prompt using termios/readline...
+  - allow better runtime control using readline
+
+- autoconf option to specify max_va (default 32)
+- autoconf correclty checking for X, functions that are used, etc
+
+- add string output of symbolic things
+  - the variety of UNKNOWN_ATOMS that keep popping up
+  - what else?
+
+- add the stuff from the other standard x headers
+  - Xutil.h
+  - Xcms.h
+  - etc
+
+- add stuff from common extensions
+  - X11/extension/shape.h
+  - what else?
+
+- where arrays are passed along with the number of things in the array, properly
+  print all of the array values
+
+- properly suppress printing of (the contents of) return pointers on function
+  entry
+
+- properly print varargs
+
+---------------------------------------------------
+
+DONE - write README, AUTHORS, etc
+DONE - put gpl in Copying
+DONE - put copyright notice at the head of each file
+DONE - website
+
+DONE - clean up files
+DONE   - rationalise the __WRAP_*__ macro names
+DONE   - move all of the printing ones into their own header file
+DONE   - move all of the native type printing stuff into their own .h/.c files
+DONE     - clean them up - split into declaration and definition - difficult with macros
+
+DONE - add string output of symbolic things
+DONE   - #define'd bitmask stuff from Xlib.h (and maybe X.h) (XIM and possible other stuff)
+DONE   - ints that are really enums in the structs in Xlib.h
+DONE   - keysyms
+DONE   - other stuff from X.h?
+
+DONE - implement --sleep
+
+DONE - implement --flush, --sync : will need to do these only in functions that pass a Display*
+
+DONE - rename it
+DONE - create a new package for it
+
+DONE - integrate the gen* scripts into the automake building
+
+DONE - finish the datatypes in Xlib.h and X.h
+
+

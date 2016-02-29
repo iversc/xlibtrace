@@ -1,0 +1,128 @@
+#!/bin/sh
+
+# xlibtrace: LD_PRELOAD library to trace libX11 calls
+# Copyright (C) 2007-2009 Kevin Pulo
+# 
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2 of the License, or (at your option) any later version.
+# 
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+# 
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+# 
+# Contact:
+# Kevin Pulo
+# kev@pulo.com.au
+
+
+usage() {
+	echo "xlibtrace v@PACKAGE_VERSION@"
+	echo "Copyright (c) 2007-2009, Kevin Pulo, kev@pulo.com.au"
+	echo "Licensed under the GNU GPL v2"
+	echo ""
+	echo "Usage: $0 [options] <program> [args...]"
+	echo ""
+	echo "Valid options:"
+	echo ""
+	echo "  --stderr          Send output to stderr (default)"
+	echo "  --stdout          Send output to stdout"
+	echo "  -o filename       Send output to the specified file"
+	echo "  -a, --append      Append output to file specified by -o"
+	echo ""
+	echo "  --single          Trace only the specified program, and not any"
+	echo "                    other subsequently forked processes"
+	echo ""
+	echo "  --prompt          Prompt user prior to each call"
+	echo "  --sleep us        Sleep for the given microseconds after each call"
+	echo "  --xflush          Call XFlush() after each call"
+	echo "  --xsync, --sync   Call XSync(..., False) after each call"
+	echo "  --fflush          Call fflush() after each line of output"
+	echo "  --flush           Equivalent to --xflush --fflush"
+	echo ""
+	echo "  --show-implementation-dependent-structs"
+	echo "                    Show the contents of structs that are xlib"
+	echo "                    implementation dependent (may cause segfaults)"
+	if [ "$#" = 0 ]; then
+		exit 0
+	else
+		exit "$1"
+	fi
+}
+
+while :; do
+	case "$1" in
+		-h|--help)
+			usage
+			;;
+		--show-implementation-dependent-structs)
+			XLIBTRACE_SHOW_IMPLEMENTATION_DEPENDENT_STRUCTS=y
+			export XLIBTRACE_SHOW_IMPLEMENTATION_DEPENDENT_STRUCTS
+			;;
+		--single)
+			XLIBTRACE_SINGLE=y
+			export XLIBTRACE_SINGLE
+			;;
+		--prompt)
+			XLIBTRACE_PROMPT=y
+			export XLIBTRACE_PROMPT
+			;;
+		--sleep)
+			shift
+			XLIBTRACE_SLEEP="$1"
+			export XLIBTRACE_SLEEP
+			;;
+		--xflush)
+			XLIBTRACE_XFLUSH=y
+			export XLIBTRACE_XFLUSH
+			;;
+		--xsync|--sync)
+			XLIBTRACE_XSYNC=y
+			export XLIBTRACE_XSYNC
+			;;
+		--fflush)
+			XLIBTRACE_FFLUSH=y
+			export XLIBTRACE_FFLUSH
+			;;
+		--flush)
+			XLIBTRACE_XFLUSH=y
+			export XLIBTRACE_XFLUSH
+			XLIBTRACE_FFLUSH=y
+			export XLIBTRACE_FFLUSH
+			;;
+		--stderr)
+			XLIBTRACE_STDERR=y
+			export XLIBTRACE_STDERR
+			;;
+		--stdout)
+			XLIBTRACE_STDOUT=y
+			export XLIBTRACE_STDOUT
+			;;
+		-o)
+			shift
+			XLIBTRACE_OUTPUT_FILE="$1"
+			export XLIBTRACE_OUTPUT_FILE
+			;;
+		-a|--append)
+			XLIBTRACE_APPEND=y
+			export XLIBTRACE_APPEND
+			;;
+		*)
+			break
+			;;
+	esac
+	shift
+done
+
+if [ "$#" = "0" ]; then
+	usage 1
+fi
+
+LD_PRELOAD="@libdir@/libxlibtrace.so:$LD_PRELOAD" exec "$@"
+

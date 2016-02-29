@@ -1,0 +1,144 @@
+
+XLIBTRACE 0.1
+=============
+
+by Kevin Pulo, kev@pulo.com.au
+http://www.kev.pulo.com.au/xlibtrace/
+Copyright (c) 2007-2009
+Licensed under the GNU GPL v2 or higher, as in the COPYING file.
+
+
+DESCRIPTION
+-----------
+
+xlibtrace displays the interaction between X11 client programs and the
+X11 client shared library (libX11.so), by showing the Xlib calls that
+are made.  Output is shown in a similar style to strace(1).
+
+xlibtrace works by using the $LD_PRELOAD dynamic linker option to
+insert itself between the target X11 client program and libX11.so.
+This allows it to "intercept" all calls to X functions, whereupon it
+has the opportunity to print the name of the function being called,
+along with any arguments and return value.
+
+xlibtrace allows the user to investigate which X functions are being
+called, when they are being called, what parameters are passed and
+what the return value is.  This can be particularly useful when
+analysing the behaviour of closed-source X11 programs.
+
+
+DEPENDENCIES
+------------
+
+- X11R6
+
+- The build process additionally requires the Xlib header files, as
+  well as sed and awk.
+
+
+INSTALLATION
+------------
+
+Standard autoconf process:  ./configure && make && make install
+
+
+USAGE
+-----
+
+    xlibtrace [options] <program> [args...]
+
+Valid options are:
+
+  --stderr          Send output to stderr (default)
+  --stdout          Send output to stdout
+  -o filename       Send output to the specified file
+  -a, --append      Append output to file specified by -o
+
+  --single          Trace only the specified program, and not any
+                    other subsequently forked processes.  Useful for
+                    tracing xterms, etc.
+
+  --prompt          Prompt user prior to each call.  Useful for
+                    interactively stepping through the X11 calls.
+  --sleep us        Sleep for the given microseconds after each call.
+                    Useful for artificially slowing down the client.
+  --xflush          Call XFlush() after each call.  Useful in
+                    conjunction with --prompt or --sleep to interactively
+                    step through drawing commands, etc.
+  --xsync, --sync   Call XSync(..., False) after each call.  Useful in
+                    conjunction with --prompt or --sleep to interactively
+                    step through drawing commands, etc.
+  --fflush          Call fflush() after each line of output.
+  --flush           Equivalent to --xflush --fflush
+
+  --show-implementation-dependent-structs
+                    Show the contents of structs that are xlib
+                    implementation dependent, but still publicly
+                    declared in XFree86/Xorg (may cause segfaults)
+
+
+EXAMPLES
+--------
+
+Refer to the examples/ subdirectory for some sample output from running
+some of these commands on my system.
+
+* Some simple examples:
+
+  $ xlibtrace xlogo
+  $ xlibtrace xeyes
+  $ xlibtrace xclock
+
+* Tracing an xterm:
+
+  $ xlibtrace --single xterm
+
+* Observing how xlogo draws the logo:
+
+  $ xlibtrace --sleep 100000 --flush xlogo
+  $ xlibtrace --sleep 100000 --sync xlogo
+  $ xlibtrace --prompt --flush xlogo
+
+* Trace an xterm, which then traces an xlogo:
+
+  $ xlibtrace xterm -e xlogo
+
+* Trace xfig (very verbose output):
+
+  $ xlibtrace -o xfig-xtrace.log xfig
+
+* Trace the closed-source PDF viewer from Adobe:
+
+  $ xlibtrace -o acroread-xtrace.log acroread
+
+
+LIMITATIONS
+-----------
+
+The usual $LD_PRELOAD caveats apply, ie:
+
+- Only works with dynamically linked binaries.
+
+- For setuid/setgid binaries, the libxlibtrace.so shared library must be
+  installed in a system location and have matching setuid/setgid permissions.
+
+
+FEEDBACK
+--------
+
+Comments, feature suggestions, bug reports, patches, etc are most
+welcome, please send them to Kevin Pulo <kev@pulo.com.au>.
+
+
+SEE ALSO
+--------
+
+- xtrace: http://xtrace.alioth.debian.org/
+- GNU xnee: http://www.gnu.org/software/xnee/
+
+Both of these projects deal more with the X protocol, that is, the interface
+between the Xlib client library and the X server.  xlibtrace deals with the
+interface between the client application and the Xlib client library (ie. the
+local libX11 shared library).
+
+
