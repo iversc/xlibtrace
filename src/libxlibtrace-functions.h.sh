@@ -162,7 +162,12 @@ BEGIN {
 			saferettype = override[funcname,""];
 		}
 
+		retstyle = ((type == "void") ? "VOID" : "TYPED");
+		argstyle = (usesvarargs ? "VAR" : "FIXED");
+
 		#printf("#define __TRACE_RETTYPE_%s__ %s\n", funcname, type);
+		printf("#define __TRACE_RETSTYLE_%s__ %s\n", funcname, retstyle);
+		printf("#define __TRACE_ARGSTYLE_%s__ %s\n", funcname, argstyle);
 		printf("#define __TRACE_SAFERETTYPE_%s__ %s\n", funcname, saferettype);
 		printf("#define __TRACE_PROTOARGLIST_%s__ %s\n", funcname, makeprotoarglist());
 		printf("#define __TRACE_ARGLIST_%s__ %s\n", funcname, makearglist());
@@ -226,7 +231,8 @@ BEGIN {
 			printf("#define __TRACE_RUN_UNDERLYING_EPILOGUE_%s__ \n", funcname);
 		}
 
-		printf("__TRACE__(%s, %s, %s)\n", ((type == "void") ? "VOID" : "TYPED"), (usesvarargs ? "VAR" : "FIXED"), funcname);
+		#printf("//__TRACE_STYLE__(%s, %s, %s)\n", retstyle, argstyle, funcname);
+		printf("__TRACE__(%s)\n", funcname);
 		printf("\n");
 		printf("\n");
 

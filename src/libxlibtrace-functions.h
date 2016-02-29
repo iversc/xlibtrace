@@ -3,6 +3,8 @@ XFontStruct * XLoadQueryFont  // 2 args
     "Display *" "display"
     "const char *" "name"
 */
+#define __TRACE_RETSTYLE_XLoadQueryFont__ TYPED
+#define __TRACE_ARGSTYLE_XLoadQueryFont__ FIXED
 #define __TRACE_SAFERETTYPE_XLoadQueryFont__ XFontStruct_p
 #define __TRACE_PROTOARGLIST_XLoadQueryFont__ ( Display * display, const char * name)
 #define __TRACE_ARGLIST_XLoadQueryFont__ ( display, name)
@@ -15,7 +17,7 @@ XFontStruct * XLoadQueryFont  // 2 args
     __TRACE_PRINTF_ARG__(XLoadQueryFont, char_p, name)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLoadQueryFont__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XLoadQueryFont, Display_p, display)
-__TRACE__(TYPED, FIXED, XLoadQueryFont)
+__TRACE__(XLoadQueryFont)
 
 
 /*
@@ -23,6 +25,8 @@ XFontStruct * XQueryFont  // 2 args
     "Display *" "display"
     "XID" "font_ID"
 */
+#define __TRACE_RETSTYLE_XQueryFont__ TYPED
+#define __TRACE_ARGSTYLE_XQueryFont__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryFont__ XFontStruct_p
 #define __TRACE_PROTOARGLIST_XQueryFont__ ( Display * display, XID font_ID)
 #define __TRACE_ARGLIST_XQueryFont__ ( display, font_ID)
@@ -35,7 +39,7 @@ XFontStruct * XQueryFont  // 2 args
     __TRACE_PRINTF_ARG__(XQueryFont, XID, font_ID)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryFont__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryFont, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryFont)
+__TRACE__(XQueryFont)
 
 
 /*
@@ -46,6 +50,8 @@ XTimeCoord * XGetMotionEvents  // 5 args
     "Time" "stop"
     "int *" "nevents_return"
 */
+#define __TRACE_RETSTYLE_XGetMotionEvents__ TYPED
+#define __TRACE_ARGSTYLE_XGetMotionEvents__ FIXED
 #define __TRACE_SAFERETTYPE_XGetMotionEvents__ XTimeCoord_p
 #define __TRACE_PROTOARGLIST_XGetMotionEvents__ ( Display * display, Window w, Time start, Time stop, int * nevents_return)
 #define __TRACE_ARGLIST_XGetMotionEvents__ ( display, w, start, stop, nevents_return)
@@ -61,7 +67,7 @@ XTimeCoord * XGetMotionEvents  // 5 args
     __TRACE_PRINTF_ARG__(XGetMotionEvents, int_p, nevents_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetMotionEvents__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetMotionEvents, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetMotionEvents)
+__TRACE__(XGetMotionEvents)
 
 
 /*
@@ -70,6 +76,8 @@ XModifierKeymap * XDeleteModifiermapEntry  // 3 args
     "KeyCode" "keycode_entry"
     "int" "modifier"
 */
+#define __TRACE_RETSTYLE_XDeleteModifiermapEntry__ TYPED
+#define __TRACE_ARGSTYLE_XDeleteModifiermapEntry__ FIXED
 #define __TRACE_SAFERETTYPE_XDeleteModifiermapEntry__ XModifierKeymap_p
 #define __TRACE_PROTOARGLIST_XDeleteModifiermapEntry__ ( XModifierKeymap * modmap, KeyCode keycode_entry, int modifier)
 #define __TRACE_ARGLIST_XDeleteModifiermapEntry__ ( modmap, keycode_entry, modifier)
@@ -82,13 +90,15 @@ XModifierKeymap * XDeleteModifiermapEntry  // 3 args
     __TRACE_PRINTF_ARG__(XDeleteModifiermapEntry, KeyCode, keycode_entry) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XDeleteModifiermapEntry, int, modifier)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDeleteModifiermapEntry__ 
-__TRACE__(TYPED, FIXED, XDeleteModifiermapEntry)
+__TRACE__(XDeleteModifiermapEntry)
 
 
 /*
 XModifierKeymap * XGetModifierMapping  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XGetModifierMapping__ TYPED
+#define __TRACE_ARGSTYLE_XGetModifierMapping__ FIXED
 #define __TRACE_SAFERETTYPE_XGetModifierMapping__ XModifierKeymap_p
 #define __TRACE_PROTOARGLIST_XGetModifierMapping__ ( Display * display)
 #define __TRACE_ARGLIST_XGetModifierMapping__ ( display)
@@ -100,7 +110,7 @@ XModifierKeymap * XGetModifierMapping  // 1 args
     __TRACE_PRINTF_ARG__(XGetModifierMapping, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetModifierMapping__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetModifierMapping, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetModifierMapping)
+__TRACE__(XGetModifierMapping)
 
 
 /*
@@ -109,6 +119,8 @@ XModifierKeymap * XInsertModifiermapEntry  // 3 args
     "KeyCode" "keycode_entry"
     "int" "modifier"
 */
+#define __TRACE_RETSTYLE_XInsertModifiermapEntry__ TYPED
+#define __TRACE_ARGSTYLE_XInsertModifiermapEntry__ FIXED
 #define __TRACE_SAFERETTYPE_XInsertModifiermapEntry__ XModifierKeymap_p
 #define __TRACE_PROTOARGLIST_XInsertModifiermapEntry__ ( XModifierKeymap * modmap, KeyCode keycode_entry, int modifier)
 #define __TRACE_ARGLIST_XInsertModifiermapEntry__ ( modmap, keycode_entry, modifier)
@@ -121,13 +133,15 @@ XModifierKeymap * XInsertModifiermapEntry  // 3 args
     __TRACE_PRINTF_ARG__(XInsertModifiermapEntry, KeyCode, keycode_entry) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XInsertModifiermapEntry, int, modifier)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XInsertModifiermapEntry__ 
-__TRACE__(TYPED, FIXED, XInsertModifiermapEntry)
+__TRACE__(XInsertModifiermapEntry)
 
 
 /*
 XModifierKeymap * XNewModifiermap  // 1 args
     "int" "max_keys_per_mod"
 */
+#define __TRACE_RETSTYLE_XNewModifiermap__ TYPED
+#define __TRACE_ARGSTYLE_XNewModifiermap__ FIXED
 #define __TRACE_SAFERETTYPE_XNewModifiermap__ XModifierKeymap_p
 #define __TRACE_PROTOARGLIST_XNewModifiermap__ ( int max_keys_per_mod)
 #define __TRACE_ARGLIST_XNewModifiermap__ ( max_keys_per_mod)
@@ -137,7 +151,7 @@ XModifierKeymap * XNewModifiermap  // 1 args
 #define __TRACE_PRINTF_BODY_XNewModifiermap__ \
     __TRACE_PRINTF_ARG__(XNewModifiermap, int, max_keys_per_mod)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XNewModifiermap__ 
-__TRACE__(TYPED, FIXED, XNewModifiermap)
+__TRACE__(XNewModifiermap)
 
 
 /*
@@ -153,6 +167,8 @@ XImage * XCreateImage  // 10 args
     "int" "bitmap_pad"
     "int" "bytes_per_line"
 */
+#define __TRACE_RETSTYLE_XCreateImage__ TYPED
+#define __TRACE_ARGSTYLE_XCreateImage__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateImage__ XImage_p
 #define __TRACE_PROTOARGLIST_XCreateImage__ ( Display * display, Visual * visual, unsigned int depth, int format, int offset, char * data, unsigned int width, unsigned int height, int bitmap_pad, int bytes_per_line)
 #define __TRACE_ARGLIST_XCreateImage__ ( display, visual, depth, format, offset, data, width, height, bitmap_pad, bytes_per_line)
@@ -173,13 +189,15 @@ XImage * XCreateImage  // 10 args
     __TRACE_PRINTF_ARG__(XCreateImage, int, bytes_per_line)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateImage__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateImage, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateImage)
+__TRACE__(XCreateImage)
 
 
 /*
 Status XInitImage  // 1 args
     "XImage *" "image"
 */
+#define __TRACE_RETSTYLE_XInitImage__ TYPED
+#define __TRACE_ARGSTYLE_XInitImage__ FIXED
 #define __TRACE_SAFERETTYPE_XInitImage__ Status
 #define __TRACE_PROTOARGLIST_XInitImage__ ( XImage * image)
 #define __TRACE_ARGLIST_XInitImage__ ( image)
@@ -190,7 +208,7 @@ Status XInitImage  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XInitImage, XImage_p, image)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XInitImage__ 
-__TRACE__(TYPED, FIXED, XInitImage)
+__TRACE__(XInitImage)
 
 
 /*
@@ -204,6 +222,8 @@ XImage * XGetImage  // 8 args
     "unsigned long" "plane_mask"
     "int" "format"
 */
+#define __TRACE_RETSTYLE_XGetImage__ TYPED
+#define __TRACE_ARGSTYLE_XGetImage__ FIXED
 #define __TRACE_SAFERETTYPE_XGetImage__ XImage_p
 #define __TRACE_PROTOARGLIST_XGetImage__ ( Display * display, Drawable d, int x, int y, unsigned int width, unsigned int height, unsigned long plane_mask, int format)
 #define __TRACE_ARGLIST_XGetImage__ ( display, d, x, y, width, height, plane_mask, format)
@@ -222,7 +242,7 @@ XImage * XGetImage  // 8 args
     __TRACE_PRINTF_ARG__(XGetImage, int_ImageFormat, format)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetImage__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetImage, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetImage)
+__TRACE__(XGetImage)
 
 
 /*
@@ -239,6 +259,8 @@ XImage * XGetSubImage  // 11 args
     "int" "dest_x"
     "int" "dest_y"
 */
+#define __TRACE_RETSTYLE_XGetSubImage__ TYPED
+#define __TRACE_ARGSTYLE_XGetSubImage__ FIXED
 #define __TRACE_SAFERETTYPE_XGetSubImage__ XImage_p
 #define __TRACE_PROTOARGLIST_XGetSubImage__ ( Display * display, Drawable d, int x, int y, unsigned int width, unsigned int height, unsigned long plane_mask, int format, XImage * dest_image, int dest_x, int dest_y)
 #define __TRACE_ARGLIST_XGetSubImage__ ( display, d, x, y, width, height, plane_mask, format, dest_image, dest_x, dest_y)
@@ -260,13 +282,15 @@ XImage * XGetSubImage  // 11 args
     __TRACE_PRINTF_ARG__(XGetSubImage, int, dest_y)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetSubImage__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetSubImage, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetSubImage)
+__TRACE__(XGetSubImage)
 
 
 /*
 Display * XOpenDisplay  // 1 args
     "const char *" "display_name"
 */
+#define __TRACE_RETSTYLE_XOpenDisplay__ TYPED
+#define __TRACE_ARGSTYLE_XOpenDisplay__ FIXED
 #define __TRACE_SAFERETTYPE_XOpenDisplay__ Display_p
 #define __TRACE_PROTOARGLIST_XOpenDisplay__ ( const char * display_name)
 #define __TRACE_ARGLIST_XOpenDisplay__ ( display_name)
@@ -276,12 +300,14 @@ Display * XOpenDisplay  // 1 args
 #define __TRACE_PRINTF_BODY_XOpenDisplay__ \
     __TRACE_PRINTF_ARG__(XOpenDisplay, char_p, display_name)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XOpenDisplay__ 
-__TRACE__(TYPED, FIXED, XOpenDisplay)
+__TRACE__(XOpenDisplay)
 
 
 /*
 void XrmInitialize  // 0 args
 */
+#define __TRACE_RETSTYLE_XrmInitialize__ VOID
+#define __TRACE_ARGSTYLE_XrmInitialize__ FIXED
 #define __TRACE_SAFERETTYPE_XrmInitialize__ void
 #define __TRACE_PROTOARGLIST_XrmInitialize__ ()
 #define __TRACE_ARGLIST_XrmInitialize__ ()
@@ -290,7 +316,7 @@ void XrmInitialize  // 0 args
 #define __TRACE_ADDITIONAL_POST_RUN_UNDERLYING_XrmInitialize__
 #define __TRACE_PRINTF_BODY_XrmInitialize__ 
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XrmInitialize__ 
-__TRACE__(VOID, FIXED, XrmInitialize)
+__TRACE__(XrmInitialize)
 
 
 /*
@@ -298,6 +324,8 @@ char * XFetchBytes  // 2 args
     "Display *" "display"
     "int *" "nbytes_return"
 */
+#define __TRACE_RETSTYLE_XFetchBytes__ TYPED
+#define __TRACE_ARGSTYLE_XFetchBytes__ FIXED
 #define __TRACE_SAFERETTYPE_XFetchBytes__ char_p
 #define __TRACE_PROTOARGLIST_XFetchBytes__ ( Display * display, int * nbytes_return)
 #define __TRACE_ARGLIST_XFetchBytes__ ( display, nbytes_return)
@@ -310,7 +338,7 @@ char * XFetchBytes  // 2 args
     __TRACE_PRINTF_ARG__(XFetchBytes, int_p, nbytes_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFetchBytes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFetchBytes, Display_p, display)
-__TRACE__(TYPED, FIXED, XFetchBytes)
+__TRACE__(XFetchBytes)
 
 
 /*
@@ -319,6 +347,8 @@ char * XFetchBuffer  // 3 args
     "int *" "nbytes_return"
     "int" "buffer"
 */
+#define __TRACE_RETSTYLE_XFetchBuffer__ TYPED
+#define __TRACE_ARGSTYLE_XFetchBuffer__ FIXED
 #define __TRACE_SAFERETTYPE_XFetchBuffer__ char_p
 #define __TRACE_PROTOARGLIST_XFetchBuffer__ ( Display * display, int * nbytes_return, int buffer)
 #define __TRACE_ARGLIST_XFetchBuffer__ ( display, nbytes_return, buffer)
@@ -332,7 +362,7 @@ char * XFetchBuffer  // 3 args
     __TRACE_PRINTF_ARG__(XFetchBuffer, int, buffer)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFetchBuffer__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFetchBuffer, Display_p, display)
-__TRACE__(TYPED, FIXED, XFetchBuffer)
+__TRACE__(XFetchBuffer)
 
 
 /*
@@ -340,6 +370,8 @@ char * XGetAtomName  // 2 args
     "Display *" "display"
     "Atom" "atom"
 */
+#define __TRACE_RETSTYLE_XGetAtomName__ TYPED
+#define __TRACE_ARGSTYLE_XGetAtomName__ FIXED
 #define __TRACE_SAFERETTYPE_XGetAtomName__ char_p
 #define __TRACE_PROTOARGLIST_XGetAtomName__ ( Display * display, Atom atom)
 #define __TRACE_ARGLIST_XGetAtomName__ ( display, atom)
@@ -352,7 +384,7 @@ char * XGetAtomName  // 2 args
     __TRACE_PRINTF_ARG__(XGetAtomName, Atom, atom)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetAtomName__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetAtomName, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetAtomName)
+__TRACE__(XGetAtomName)
 
 
 /*
@@ -362,6 +394,8 @@ Status XGetAtomNames  // 4 args
     "int" "count"
     "char **" "names_return"
 */
+#define __TRACE_RETSTYLE_XGetAtomNames__ TYPED
+#define __TRACE_ARGSTYLE_XGetAtomNames__ FIXED
 #define __TRACE_SAFERETTYPE_XGetAtomNames__ Status
 #define __TRACE_PROTOARGLIST_XGetAtomNames__ ( Display * dpy, Atom * atoms, int count, char ** names_return)
 #define __TRACE_ARGLIST_XGetAtomNames__ ( dpy, atoms, count, names_return)
@@ -376,7 +410,7 @@ Status XGetAtomNames  // 4 args
     __TRACE_PRINTF_ARG__(XGetAtomNames, char_pp, names_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetAtomNames__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetAtomNames, Display_p, dpy)
-__TRACE__(TYPED, FIXED, XGetAtomNames)
+__TRACE__(XGetAtomNames)
 
 
 /*
@@ -385,6 +419,8 @@ char * XGetDefault  // 3 args
     "const char *" "program"
     "const char *" "option"
 */
+#define __TRACE_RETSTYLE_XGetDefault__ TYPED
+#define __TRACE_ARGSTYLE_XGetDefault__ FIXED
 #define __TRACE_SAFERETTYPE_XGetDefault__ char_p
 #define __TRACE_PROTOARGLIST_XGetDefault__ ( Display * display, const char * program, const char * option)
 #define __TRACE_ARGLIST_XGetDefault__ ( display, program, option)
@@ -398,13 +434,15 @@ char * XGetDefault  // 3 args
     __TRACE_PRINTF_ARG__(XGetDefault, char_p, option)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetDefault__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetDefault, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetDefault)
+__TRACE__(XGetDefault)
 
 
 /*
 char * XDisplayName  // 1 args
     "const char *" "string"
 */
+#define __TRACE_RETSTYLE_XDisplayName__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayName__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayName__ char_p
 #define __TRACE_PROTOARGLIST_XDisplayName__ ( const char * string)
 #define __TRACE_ARGLIST_XDisplayName__ ( string)
@@ -414,13 +452,15 @@ char * XDisplayName  // 1 args
 #define __TRACE_PRINTF_BODY_XDisplayName__ \
     __TRACE_PRINTF_ARG__(XDisplayName, char_p, string)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayName__ 
-__TRACE__(TYPED, FIXED, XDisplayName)
+__TRACE__(XDisplayName)
 
 
 /*
 char * XKeysymToString  // 1 args
     "KeySym" "keysym"
 */
+#define __TRACE_RETSTYLE_XKeysymToString__ TYPED
+#define __TRACE_ARGSTYLE_XKeysymToString__ FIXED
 #define __TRACE_SAFERETTYPE_XKeysymToString__ char_p
 #define __TRACE_PROTOARGLIST_XKeysymToString__ ( KeySym keysym)
 #define __TRACE_ARGLIST_XKeysymToString__ ( keysym)
@@ -430,7 +470,7 @@ char * XKeysymToString  // 1 args
 #define __TRACE_PRINTF_BODY_XKeysymToString__ \
     __TRACE_PRINTF_ARG__(XKeysymToString, KeySym, keysym)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XKeysymToString__ 
-__TRACE__(TYPED, FIXED, XKeysymToString)
+__TRACE__(XKeysymToString)
 
 
 /*
@@ -439,6 +479,8 @@ Atom XInternAtom  // 3 args
     "const char *" "atom_name"
     "Bool" "only_if_exists"
 */
+#define __TRACE_RETSTYLE_XInternAtom__ TYPED
+#define __TRACE_ARGSTYLE_XInternAtom__ FIXED
 #define __TRACE_SAFERETTYPE_XInternAtom__ Atom
 #define __TRACE_PROTOARGLIST_XInternAtom__ ( Display * display, const char * atom_name, Bool only_if_exists)
 #define __TRACE_ARGLIST_XInternAtom__ ( display, atom_name, only_if_exists)
@@ -452,7 +494,7 @@ Atom XInternAtom  // 3 args
     __TRACE_PRINTF_ARG__(XInternAtom, Bool, only_if_exists)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XInternAtom__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XInternAtom, Display_p, display)
-__TRACE__(TYPED, FIXED, XInternAtom)
+__TRACE__(XInternAtom)
 
 
 /*
@@ -463,6 +505,8 @@ Status XInternAtoms  // 5 args
     "Bool" "onlyIfExists"
     "Atom *" "atoms_return"
 */
+#define __TRACE_RETSTYLE_XInternAtoms__ TYPED
+#define __TRACE_ARGSTYLE_XInternAtoms__ FIXED
 #define __TRACE_SAFERETTYPE_XInternAtoms__ Status
 #define __TRACE_PROTOARGLIST_XInternAtoms__ ( Display * dpy, char ** names, int count, Bool onlyIfExists, Atom * atoms_return)
 #define __TRACE_ARGLIST_XInternAtoms__ ( dpy, names, count, onlyIfExists, atoms_return)
@@ -478,7 +522,7 @@ Status XInternAtoms  // 5 args
     __TRACE_PRINTF_ARG__(XInternAtoms, Atom_p, atoms_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XInternAtoms__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XInternAtoms, Display_p, dpy)
-__TRACE__(TYPED, FIXED, XInternAtoms)
+__TRACE__(XInternAtoms)
 
 
 /*
@@ -486,6 +530,8 @@ Colormap XCopyColormapAndFree  // 2 args
     "Display *" "display"
     "Colormap" "colormap"
 */
+#define __TRACE_RETSTYLE_XCopyColormapAndFree__ TYPED
+#define __TRACE_ARGSTYLE_XCopyColormapAndFree__ FIXED
 #define __TRACE_SAFERETTYPE_XCopyColormapAndFree__ Colormap
 #define __TRACE_PROTOARGLIST_XCopyColormapAndFree__ ( Display * display, Colormap colormap)
 #define __TRACE_ARGLIST_XCopyColormapAndFree__ ( display, colormap)
@@ -498,7 +544,7 @@ Colormap XCopyColormapAndFree  // 2 args
     __TRACE_PRINTF_ARG__(XCopyColormapAndFree, Colormap, colormap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCopyColormapAndFree__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCopyColormapAndFree, Display_p, display)
-__TRACE__(TYPED, FIXED, XCopyColormapAndFree)
+__TRACE__(XCopyColormapAndFree)
 
 
 /*
@@ -508,6 +554,8 @@ Colormap XCreateColormap  // 4 args
     "Visual *" "visual"
     "int" "alloc"
 */
+#define __TRACE_RETSTYLE_XCreateColormap__ TYPED
+#define __TRACE_ARGSTYLE_XCreateColormap__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateColormap__ Colormap
 #define __TRACE_PROTOARGLIST_XCreateColormap__ ( Display * display, Window w, Visual * visual, int alloc)
 #define __TRACE_ARGLIST_XCreateColormap__ ( display, w, visual, alloc)
@@ -522,7 +570,7 @@ Colormap XCreateColormap  // 4 args
     __TRACE_PRINTF_ARG__(XCreateColormap, int_ColormapAlloc, alloc)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateColormap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateColormap, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateColormap)
+__TRACE__(XCreateColormap)
 
 
 /*
@@ -535,6 +583,8 @@ Cursor XCreatePixmapCursor  // 7 args
     "unsigned int" "x"
     "unsigned int" "y"
 */
+#define __TRACE_RETSTYLE_XCreatePixmapCursor__ TYPED
+#define __TRACE_ARGSTYLE_XCreatePixmapCursor__ FIXED
 #define __TRACE_SAFERETTYPE_XCreatePixmapCursor__ Cursor
 #define __TRACE_PROTOARGLIST_XCreatePixmapCursor__ ( Display * display, Pixmap source, Pixmap mask, XColor * foreground_color, XColor * background_color, unsigned int x, unsigned int y)
 #define __TRACE_ARGLIST_XCreatePixmapCursor__ ( display, source, mask, foreground_color, background_color, x, y)
@@ -552,7 +602,7 @@ Cursor XCreatePixmapCursor  // 7 args
     __TRACE_PRINTF_ARG__(XCreatePixmapCursor, unsigned_int, y)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreatePixmapCursor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreatePixmapCursor, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreatePixmapCursor)
+__TRACE__(XCreatePixmapCursor)
 
 
 /*
@@ -565,6 +615,8 @@ Cursor XCreateGlyphCursor  // 7 args
     "XColor const *" "foreground_color"
     "XColor const *" "background_color"
 */
+#define __TRACE_RETSTYLE_XCreateGlyphCursor__ TYPED
+#define __TRACE_ARGSTYLE_XCreateGlyphCursor__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateGlyphCursor__ Cursor
 #define __TRACE_PROTOARGLIST_XCreateGlyphCursor__ ( Display * display, Font source_font, Font mask_font, unsigned int source_char, unsigned int mask_char, XColor const * foreground_color, XColor const * background_color)
 #define __TRACE_ARGLIST_XCreateGlyphCursor__ ( display, source_font, mask_font, source_char, mask_char, foreground_color, background_color)
@@ -582,7 +634,7 @@ Cursor XCreateGlyphCursor  // 7 args
     __TRACE_PRINTF_ARG__(XCreateGlyphCursor, XColor_const_p, background_color)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateGlyphCursor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateGlyphCursor, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateGlyphCursor)
+__TRACE__(XCreateGlyphCursor)
 
 
 /*
@@ -590,6 +642,8 @@ Cursor XCreateFontCursor  // 2 args
     "Display *" "display"
     "unsigned int" "shape"
 */
+#define __TRACE_RETSTYLE_XCreateFontCursor__ TYPED
+#define __TRACE_ARGSTYLE_XCreateFontCursor__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateFontCursor__ Cursor
 #define __TRACE_PROTOARGLIST_XCreateFontCursor__ ( Display * display, unsigned int shape)
 #define __TRACE_ARGLIST_XCreateFontCursor__ ( display, shape)
@@ -602,7 +656,7 @@ Cursor XCreateFontCursor  // 2 args
     __TRACE_PRINTF_ARG__(XCreateFontCursor, unsigned_int, shape)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateFontCursor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateFontCursor, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateFontCursor)
+__TRACE__(XCreateFontCursor)
 
 
 /*
@@ -610,6 +664,8 @@ Font XLoadFont  // 2 args
     "Display *" "display"
     "const char *" "name"
 */
+#define __TRACE_RETSTYLE_XLoadFont__ TYPED
+#define __TRACE_ARGSTYLE_XLoadFont__ FIXED
 #define __TRACE_SAFERETTYPE_XLoadFont__ Font
 #define __TRACE_PROTOARGLIST_XLoadFont__ ( Display * display, const char * name)
 #define __TRACE_ARGLIST_XLoadFont__ ( display, name)
@@ -622,7 +678,7 @@ Font XLoadFont  // 2 args
     __TRACE_PRINTF_ARG__(XLoadFont, char_p, name)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLoadFont__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XLoadFont, Display_p, display)
-__TRACE__(TYPED, FIXED, XLoadFont)
+__TRACE__(XLoadFont)
 
 
 /*
@@ -632,6 +688,8 @@ GC XCreateGC  // 4 args
     "unsigned long" "valuemask"
     "XGCValues *" "values"
 */
+#define __TRACE_RETSTYLE_XCreateGC__ TYPED
+#define __TRACE_ARGSTYLE_XCreateGC__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateGC__ GC
 #define __TRACE_PROTOARGLIST_XCreateGC__ ( Display * display, Drawable d, unsigned long valuemask, XGCValues * values)
 #define __TRACE_ARGLIST_XCreateGC__ ( display, d, valuemask, values)
@@ -646,13 +704,15 @@ GC XCreateGC  // 4 args
     __TRACE_PRINTF_ARG__(XCreateGC, XGCValues_p, values)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateGC__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateGC, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateGC)
+__TRACE__(XCreateGC)
 
 
 /*
 GContext XGContextFromGC  // 1 args
     "GC" "gc"
 */
+#define __TRACE_RETSTYLE_XGContextFromGC__ TYPED
+#define __TRACE_ARGSTYLE_XGContextFromGC__ FIXED
 #define __TRACE_SAFERETTYPE_XGContextFromGC__ GContext
 #define __TRACE_PROTOARGLIST_XGContextFromGC__ ( GC gc)
 #define __TRACE_ARGLIST_XGContextFromGC__ ( gc)
@@ -662,7 +722,7 @@ GContext XGContextFromGC  // 1 args
 #define __TRACE_PRINTF_BODY_XGContextFromGC__ \
     __TRACE_PRINTF_ARG__(XGContextFromGC, GC, gc)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGContextFromGC__ 
-__TRACE__(TYPED, FIXED, XGContextFromGC)
+__TRACE__(XGContextFromGC)
 
 
 /*
@@ -670,6 +730,8 @@ void XFlushGC  // 2 args
     "Display *" "display"
     "GC" "gc"
 */
+#define __TRACE_RETSTYLE_XFlushGC__ VOID
+#define __TRACE_ARGSTYLE_XFlushGC__ FIXED
 #define __TRACE_SAFERETTYPE_XFlushGC__ void
 #define __TRACE_PROTOARGLIST_XFlushGC__ ( Display * display, GC gc)
 #define __TRACE_ARGLIST_XFlushGC__ ( display, gc)
@@ -682,7 +744,7 @@ void XFlushGC  // 2 args
     __TRACE_PRINTF_ARG__(XFlushGC, GC, gc)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFlushGC__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFlushGC, Display_p, display)
-__TRACE__(VOID, FIXED, XFlushGC)
+__TRACE__(XFlushGC)
 
 
 /*
@@ -693,6 +755,8 @@ Pixmap XCreatePixmap  // 5 args
     "unsigned int" "height"
     "unsigned int" "depth"
 */
+#define __TRACE_RETSTYLE_XCreatePixmap__ TYPED
+#define __TRACE_ARGSTYLE_XCreatePixmap__ FIXED
 #define __TRACE_SAFERETTYPE_XCreatePixmap__ Pixmap
 #define __TRACE_PROTOARGLIST_XCreatePixmap__ ( Display * display, Drawable d, unsigned int width, unsigned int height, unsigned int depth)
 #define __TRACE_ARGLIST_XCreatePixmap__ ( display, d, width, height, depth)
@@ -708,7 +772,7 @@ Pixmap XCreatePixmap  // 5 args
     __TRACE_PRINTF_ARG__(XCreatePixmap, unsigned_int, depth)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreatePixmap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreatePixmap, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreatePixmap)
+__TRACE__(XCreatePixmap)
 
 
 /*
@@ -719,6 +783,8 @@ Pixmap XCreateBitmapFromData  // 5 args
     "unsigned int" "width"
     "unsigned int" "height"
 */
+#define __TRACE_RETSTYLE_XCreateBitmapFromData__ TYPED
+#define __TRACE_ARGSTYLE_XCreateBitmapFromData__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateBitmapFromData__ Pixmap
 #define __TRACE_PROTOARGLIST_XCreateBitmapFromData__ ( Display * display, Drawable d, const char * data, unsigned int width, unsigned int height)
 #define __TRACE_ARGLIST_XCreateBitmapFromData__ ( display, d, data, width, height)
@@ -734,7 +800,7 @@ Pixmap XCreateBitmapFromData  // 5 args
     __TRACE_PRINTF_ARG__(XCreateBitmapFromData, unsigned_int, height)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateBitmapFromData__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateBitmapFromData, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateBitmapFromData)
+__TRACE__(XCreateBitmapFromData)
 
 
 /*
@@ -748,6 +814,8 @@ Pixmap XCreatePixmapFromBitmapData  // 8 args
     "unsigned long" "bg"
     "unsigned int" "depth"
 */
+#define __TRACE_RETSTYLE_XCreatePixmapFromBitmapData__ TYPED
+#define __TRACE_ARGSTYLE_XCreatePixmapFromBitmapData__ FIXED
 #define __TRACE_SAFERETTYPE_XCreatePixmapFromBitmapData__ Pixmap
 #define __TRACE_PROTOARGLIST_XCreatePixmapFromBitmapData__ ( Display * display, Drawable d, char * data, unsigned int width, unsigned int height, unsigned long fg, unsigned long bg, unsigned int depth)
 #define __TRACE_ARGLIST_XCreatePixmapFromBitmapData__ ( display, d, data, width, height, fg, bg, depth)
@@ -766,7 +834,7 @@ Pixmap XCreatePixmapFromBitmapData  // 8 args
     __TRACE_PRINTF_ARG__(XCreatePixmapFromBitmapData, unsigned_int, depth)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreatePixmapFromBitmapData__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreatePixmapFromBitmapData, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreatePixmapFromBitmapData)
+__TRACE__(XCreatePixmapFromBitmapData)
 
 
 /*
@@ -781,6 +849,8 @@ Window XCreateSimpleWindow  // 9 args
     "unsigned long" "border"
     "unsigned long" "background"
 */
+#define __TRACE_RETSTYLE_XCreateSimpleWindow__ TYPED
+#define __TRACE_ARGSTYLE_XCreateSimpleWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateSimpleWindow__ Window
 #define __TRACE_PROTOARGLIST_XCreateSimpleWindow__ ( Display * display, Window parent, int x, int y, unsigned int width, unsigned int height, unsigned int border_width, unsigned long border, unsigned long background)
 #define __TRACE_ARGLIST_XCreateSimpleWindow__ ( display, parent, x, y, width, height, border_width, border, background)
@@ -800,7 +870,7 @@ Window XCreateSimpleWindow  // 9 args
     __TRACE_PRINTF_ARG__(XCreateSimpleWindow, unsigned_long, background)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateSimpleWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateSimpleWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateSimpleWindow)
+__TRACE__(XCreateSimpleWindow)
 
 
 /*
@@ -808,6 +878,8 @@ Window XGetSelectionOwner  // 2 args
     "Display *" "display"
     "Atom" "selection"
 */
+#define __TRACE_RETSTYLE_XGetSelectionOwner__ TYPED
+#define __TRACE_ARGSTYLE_XGetSelectionOwner__ FIXED
 #define __TRACE_SAFERETTYPE_XGetSelectionOwner__ Window
 #define __TRACE_PROTOARGLIST_XGetSelectionOwner__ ( Display * display, Atom selection)
 #define __TRACE_ARGLIST_XGetSelectionOwner__ ( display, selection)
@@ -820,7 +892,7 @@ Window XGetSelectionOwner  // 2 args
     __TRACE_PRINTF_ARG__(XGetSelectionOwner, Atom, selection)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetSelectionOwner__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetSelectionOwner, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetSelectionOwner)
+__TRACE__(XGetSelectionOwner)
 
 
 /*
@@ -838,6 +910,8 @@ Window XCreateWindow  // 12 args
     "unsigned long" "valuemask"
     "XSetWindowAttributes *" "attributes"
 */
+#define __TRACE_RETSTYLE_XCreateWindow__ TYPED
+#define __TRACE_ARGSTYLE_XCreateWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateWindow__ Window
 #define __TRACE_PROTOARGLIST_XCreateWindow__ ( Display * display, Window parent, int x, int y, unsigned int width, unsigned int height, unsigned int border_width, int depth, unsigned int class, Visual * visual, unsigned long valuemask, XSetWindowAttributes * attributes)
 #define __TRACE_ARGLIST_XCreateWindow__ ( display, parent, x, y, width, height, border_width, depth, class, visual, valuemask, attributes)
@@ -860,7 +934,7 @@ Window XCreateWindow  // 12 args
     __TRACE_PRINTF_ARG__(XCreateWindow, XSetWindowAttributes_p, attributes)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateWindow)
+__TRACE__(XCreateWindow)
 
 
 /*
@@ -869,6 +943,8 @@ Colormap * XListInstalledColormaps  // 3 args
     "Window" "w"
     "int *" "num_return"
 */
+#define __TRACE_RETSTYLE_XListInstalledColormaps__ TYPED
+#define __TRACE_ARGSTYLE_XListInstalledColormaps__ FIXED
 #define __TRACE_SAFERETTYPE_XListInstalledColormaps__ Colormap_p
 #define __TRACE_PROTOARGLIST_XListInstalledColormaps__ ( Display * display, Window w, int * num_return)
 #define __TRACE_ARGLIST_XListInstalledColormaps__ ( display, w, num_return)
@@ -882,7 +958,7 @@ Colormap * XListInstalledColormaps  // 3 args
     __TRACE_PRINTF_ARG__(XListInstalledColormaps, int_p, num_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XListInstalledColormaps__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XListInstalledColormaps, Display_p, display)
-__TRACE__(TYPED, FIXED, XListInstalledColormaps)
+__TRACE__(XListInstalledColormaps)
 
 
 /*
@@ -892,6 +968,8 @@ char ** XListFonts  // 4 args
     "int" "maxnames"
     "int *" "actual_count_return"
 */
+#define __TRACE_RETSTYLE_XListFonts__ TYPED
+#define __TRACE_ARGSTYLE_XListFonts__ FIXED
 #define __TRACE_SAFERETTYPE_XListFonts__ char_pp
 #define __TRACE_PROTOARGLIST_XListFonts__ ( Display * display, const char * pattern, int maxnames, int * actual_count_return)
 #define __TRACE_ARGLIST_XListFonts__ ( display, pattern, maxnames, actual_count_return)
@@ -906,7 +984,7 @@ char ** XListFonts  // 4 args
     __TRACE_PRINTF_ARG__(XListFonts, int_p, actual_count_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XListFonts__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XListFonts, Display_p, display)
-__TRACE__(TYPED, FIXED, XListFonts)
+__TRACE__(XListFonts)
 
 
 /*
@@ -917,6 +995,8 @@ char ** XListFontsWithInfo  // 5 args
     "int *" "count_return"
     "XFontStruct **" "info_return"
 */
+#define __TRACE_RETSTYLE_XListFontsWithInfo__ TYPED
+#define __TRACE_ARGSTYLE_XListFontsWithInfo__ FIXED
 #define __TRACE_SAFERETTYPE_XListFontsWithInfo__ char_pp
 #define __TRACE_PROTOARGLIST_XListFontsWithInfo__ ( Display * display, const char * pattern, int maxnames, int * count_return, XFontStruct ** info_return)
 #define __TRACE_ARGLIST_XListFontsWithInfo__ ( display, pattern, maxnames, count_return, info_return)
@@ -932,7 +1012,7 @@ char ** XListFontsWithInfo  // 5 args
     __TRACE_PRINTF_ARG__(XListFontsWithInfo, XFontStruct_pp, info_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XListFontsWithInfo__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XListFontsWithInfo, Display_p, display)
-__TRACE__(TYPED, FIXED, XListFontsWithInfo)
+__TRACE__(XListFontsWithInfo)
 
 
 /*
@@ -940,6 +1020,8 @@ char ** XGetFontPath  // 2 args
     "Display *" "display"
     "int *" "npaths_return"
 */
+#define __TRACE_RETSTYLE_XGetFontPath__ TYPED
+#define __TRACE_ARGSTYLE_XGetFontPath__ FIXED
 #define __TRACE_SAFERETTYPE_XGetFontPath__ char_pp
 #define __TRACE_PROTOARGLIST_XGetFontPath__ ( Display * display, int * npaths_return)
 #define __TRACE_ARGLIST_XGetFontPath__ ( display, npaths_return)
@@ -952,7 +1034,7 @@ char ** XGetFontPath  // 2 args
     __TRACE_PRINTF_ARG__(XGetFontPath, int_p, npaths_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetFontPath__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetFontPath, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetFontPath)
+__TRACE__(XGetFontPath)
 
 
 /*
@@ -960,6 +1042,8 @@ char ** XListExtensions  // 2 args
     "Display *" "display"
     "int *" "nextensions_return"
 */
+#define __TRACE_RETSTYLE_XListExtensions__ TYPED
+#define __TRACE_ARGSTYLE_XListExtensions__ FIXED
 #define __TRACE_SAFERETTYPE_XListExtensions__ char_pp
 #define __TRACE_PROTOARGLIST_XListExtensions__ ( Display * display, int * nextensions_return)
 #define __TRACE_ARGLIST_XListExtensions__ ( display, nextensions_return)
@@ -972,7 +1056,7 @@ char ** XListExtensions  // 2 args
     __TRACE_PRINTF_ARG__(XListExtensions, int_p, nextensions_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XListExtensions__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XListExtensions, Display_p, display)
-__TRACE__(TYPED, FIXED, XListExtensions)
+__TRACE__(XListExtensions)
 
 
 /*
@@ -981,6 +1065,8 @@ Atom * XListProperties  // 3 args
     "Window" "w"
     "int *" "num_prop_return"
 */
+#define __TRACE_RETSTYLE_XListProperties__ TYPED
+#define __TRACE_ARGSTYLE_XListProperties__ FIXED
 #define __TRACE_SAFERETTYPE_XListProperties__ Atom_p
 #define __TRACE_PROTOARGLIST_XListProperties__ ( Display * display, Window w, int * num_prop_return)
 #define __TRACE_ARGLIST_XListProperties__ ( display, w, num_prop_return)
@@ -994,7 +1080,7 @@ Atom * XListProperties  // 3 args
     __TRACE_PRINTF_ARG__(XListProperties, int_p, num_prop_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XListProperties__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XListProperties, Display_p, display)
-__TRACE__(TYPED, FIXED, XListProperties)
+__TRACE__(XListProperties)
 
 
 /*
@@ -1003,6 +1089,8 @@ XHostAddress * XListHosts  // 3 args
     "int *" "nhosts_return"
     "Bool *" "state_return"
 */
+#define __TRACE_RETSTYLE_XListHosts__ TYPED
+#define __TRACE_ARGSTYLE_XListHosts__ FIXED
 #define __TRACE_SAFERETTYPE_XListHosts__ XHostAddress_p
 #define __TRACE_PROTOARGLIST_XListHosts__ ( Display * display, int * nhosts_return, Bool * state_return)
 #define __TRACE_ARGLIST_XListHosts__ ( display, nhosts_return, state_return)
@@ -1016,7 +1104,7 @@ XHostAddress * XListHosts  // 3 args
     __TRACE_PRINTF_ARG__(XListHosts, Bool_p, state_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XListHosts__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XListHosts, Display_p, display)
-__TRACE__(TYPED, FIXED, XListHosts)
+__TRACE__(XListHosts)
 
 
 /*
@@ -1025,6 +1113,8 @@ KeySym XKeycodeToKeysym  // 3 args
     "KeyCode" "keycode"
     "int" "index"
 */
+#define __TRACE_RETSTYLE_XKeycodeToKeysym__ TYPED
+#define __TRACE_ARGSTYLE_XKeycodeToKeysym__ FIXED
 #define __TRACE_SAFERETTYPE_XKeycodeToKeysym__ KeySym
 #define __TRACE_PROTOARGLIST_XKeycodeToKeysym__ ( Display * display, KeyCode keycode, int index)
 #define __TRACE_ARGLIST_XKeycodeToKeysym__ ( display, keycode, index)
@@ -1038,7 +1128,7 @@ KeySym XKeycodeToKeysym  // 3 args
     __TRACE_PRINTF_ARG__(XKeycodeToKeysym, int, index)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XKeycodeToKeysym__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XKeycodeToKeysym, Display_p, display)
-__TRACE__(TYPED, FIXED, XKeycodeToKeysym)
+__TRACE__(XKeycodeToKeysym)
 
 
 /*
@@ -1046,6 +1136,8 @@ KeySym XLookupKeysym  // 2 args
     "XKeyEvent *" "key_event"
     "int" "index"
 */
+#define __TRACE_RETSTYLE_XLookupKeysym__ TYPED
+#define __TRACE_ARGSTYLE_XLookupKeysym__ FIXED
 #define __TRACE_SAFERETTYPE_XLookupKeysym__ KeySym
 #define __TRACE_PROTOARGLIST_XLookupKeysym__ ( XKeyEvent * key_event, int index)
 #define __TRACE_ARGLIST_XLookupKeysym__ ( key_event, index)
@@ -1057,7 +1149,7 @@ KeySym XLookupKeysym  // 2 args
     __TRACE_PRINTF_ARG__(XLookupKeysym, XKeyEvent_p, key_event) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XLookupKeysym, int, index)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLookupKeysym__ 
-__TRACE__(TYPED, FIXED, XLookupKeysym)
+__TRACE__(XLookupKeysym)
 
 
 /*
@@ -1067,6 +1159,8 @@ KeySym * XGetKeyboardMapping  // 4 args
     "int" "keycode_count"
     "int *" "keysyms_per_keycode_return"
 */
+#define __TRACE_RETSTYLE_XGetKeyboardMapping__ TYPED
+#define __TRACE_ARGSTYLE_XGetKeyboardMapping__ FIXED
 #define __TRACE_SAFERETTYPE_XGetKeyboardMapping__ KeySym_p
 #define __TRACE_PROTOARGLIST_XGetKeyboardMapping__ ( Display * display, KeyCode first_keycode, int keycode_count, int * keysyms_per_keycode_return)
 #define __TRACE_ARGLIST_XGetKeyboardMapping__ ( display, first_keycode, keycode_count, keysyms_per_keycode_return)
@@ -1081,13 +1175,15 @@ KeySym * XGetKeyboardMapping  // 4 args
     __TRACE_PRINTF_ARG__(XGetKeyboardMapping, int_p, keysyms_per_keycode_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetKeyboardMapping__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetKeyboardMapping, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetKeyboardMapping)
+__TRACE__(XGetKeyboardMapping)
 
 
 /*
 KeySym XStringToKeysym  // 1 args
     "const char *" "string"
 */
+#define __TRACE_RETSTYLE_XStringToKeysym__ TYPED
+#define __TRACE_ARGSTYLE_XStringToKeysym__ FIXED
 #define __TRACE_SAFERETTYPE_XStringToKeysym__ KeySym
 #define __TRACE_PROTOARGLIST_XStringToKeysym__ ( const char * string)
 #define __TRACE_ARGLIST_XStringToKeysym__ ( string)
@@ -1097,13 +1193,15 @@ KeySym XStringToKeysym  // 1 args
 #define __TRACE_PRINTF_BODY_XStringToKeysym__ \
     __TRACE_PRINTF_ARG__(XStringToKeysym, char_p, string)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XStringToKeysym__ 
-__TRACE__(TYPED, FIXED, XStringToKeysym)
+__TRACE__(XStringToKeysym)
 
 
 /*
 long XMaxRequestSize  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XMaxRequestSize__ TYPED
+#define __TRACE_ARGSTYLE_XMaxRequestSize__ FIXED
 #define __TRACE_SAFERETTYPE_XMaxRequestSize__ long
 #define __TRACE_PROTOARGLIST_XMaxRequestSize__ ( Display * display)
 #define __TRACE_ARGLIST_XMaxRequestSize__ ( display)
@@ -1115,13 +1213,15 @@ long XMaxRequestSize  // 1 args
     __TRACE_PRINTF_ARG__(XMaxRequestSize, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMaxRequestSize__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XMaxRequestSize, Display_p, display)
-__TRACE__(TYPED, FIXED, XMaxRequestSize)
+__TRACE__(XMaxRequestSize)
 
 
 /*
 long XExtendedMaxRequestSize  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XExtendedMaxRequestSize__ TYPED
+#define __TRACE_ARGSTYLE_XExtendedMaxRequestSize__ FIXED
 #define __TRACE_SAFERETTYPE_XExtendedMaxRequestSize__ long
 #define __TRACE_PROTOARGLIST_XExtendedMaxRequestSize__ ( Display * display)
 #define __TRACE_ARGLIST_XExtendedMaxRequestSize__ ( display)
@@ -1133,13 +1233,15 @@ long XExtendedMaxRequestSize  // 1 args
     __TRACE_PRINTF_ARG__(XExtendedMaxRequestSize, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XExtendedMaxRequestSize__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XExtendedMaxRequestSize, Display_p, display)
-__TRACE__(TYPED, FIXED, XExtendedMaxRequestSize)
+__TRACE__(XExtendedMaxRequestSize)
 
 
 /*
 char * XResourceManagerString  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XResourceManagerString__ TYPED
+#define __TRACE_ARGSTYLE_XResourceManagerString__ FIXED
 #define __TRACE_SAFERETTYPE_XResourceManagerString__ char_p
 #define __TRACE_PROTOARGLIST_XResourceManagerString__ ( Display * display)
 #define __TRACE_ARGLIST_XResourceManagerString__ ( display)
@@ -1151,13 +1253,15 @@ char * XResourceManagerString  // 1 args
     __TRACE_PRINTF_ARG__(XResourceManagerString, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XResourceManagerString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XResourceManagerString, Display_p, display)
-__TRACE__(TYPED, FIXED, XResourceManagerString)
+__TRACE__(XResourceManagerString)
 
 
 /*
 char * XScreenResourceString  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XScreenResourceString__ TYPED
+#define __TRACE_ARGSTYLE_XScreenResourceString__ FIXED
 #define __TRACE_SAFERETTYPE_XScreenResourceString__ char_p
 #define __TRACE_PROTOARGLIST_XScreenResourceString__ ( Screen * screen)
 #define __TRACE_ARGLIST_XScreenResourceString__ ( screen)
@@ -1168,13 +1272,15 @@ char * XScreenResourceString  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XScreenResourceString, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XScreenResourceString__ 
-__TRACE__(TYPED, FIXED, XScreenResourceString)
+__TRACE__(XScreenResourceString)
 
 
 /*
 unsigned long XDisplayMotionBufferSize  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XDisplayMotionBufferSize__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayMotionBufferSize__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayMotionBufferSize__ unsigned_long
 #define __TRACE_PROTOARGLIST_XDisplayMotionBufferSize__ ( Display * display)
 #define __TRACE_ARGLIST_XDisplayMotionBufferSize__ ( display)
@@ -1186,13 +1292,15 @@ unsigned long XDisplayMotionBufferSize  // 1 args
     __TRACE_PRINTF_ARG__(XDisplayMotionBufferSize, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayMotionBufferSize__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayMotionBufferSize, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayMotionBufferSize)
+__TRACE__(XDisplayMotionBufferSize)
 
 
 /*
 VisualID XVisualIDFromVisual  // 1 args
     "Visual *" "visual"
 */
+#define __TRACE_RETSTYLE_XVisualIDFromVisual__ TYPED
+#define __TRACE_ARGSTYLE_XVisualIDFromVisual__ FIXED
 #define __TRACE_SAFERETTYPE_XVisualIDFromVisual__ VisualID
 #define __TRACE_PROTOARGLIST_XVisualIDFromVisual__ ( Visual * visual)
 #define __TRACE_ARGLIST_XVisualIDFromVisual__ ( visual)
@@ -1203,12 +1311,14 @@ VisualID XVisualIDFromVisual  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XVisualIDFromVisual, Visual_p, visual)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XVisualIDFromVisual__ 
-__TRACE__(TYPED, FIXED, XVisualIDFromVisual)
+__TRACE__(XVisualIDFromVisual)
 
 
 /*
 Status XInitThreads  // 0 args
 */
+#define __TRACE_RETSTYLE_XInitThreads__ TYPED
+#define __TRACE_ARGSTYLE_XInitThreads__ FIXED
 #define __TRACE_SAFERETTYPE_XInitThreads__ Status
 #define __TRACE_PROTOARGLIST_XInitThreads__ ()
 #define __TRACE_ARGLIST_XInitThreads__ ()
@@ -1217,13 +1327,15 @@ Status XInitThreads  // 0 args
 #define __TRACE_ADDITIONAL_POST_RUN_UNDERLYING_XInitThreads__
 #define __TRACE_PRINTF_BODY_XInitThreads__ 
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XInitThreads__ 
-__TRACE__(TYPED, FIXED, XInitThreads)
+__TRACE__(XInitThreads)
 
 
 /*
 void XLockDisplay  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XLockDisplay__ VOID
+#define __TRACE_ARGSTYLE_XLockDisplay__ FIXED
 #define __TRACE_SAFERETTYPE_XLockDisplay__ void
 #define __TRACE_PROTOARGLIST_XLockDisplay__ ( Display * display)
 #define __TRACE_ARGLIST_XLockDisplay__ ( display)
@@ -1235,13 +1347,15 @@ void XLockDisplay  // 1 args
     __TRACE_PRINTF_ARG__(XLockDisplay, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLockDisplay__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XLockDisplay, Display_p, display)
-__TRACE__(VOID, FIXED, XLockDisplay)
+__TRACE__(XLockDisplay)
 
 
 /*
 void XUnlockDisplay  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XUnlockDisplay__ VOID
+#define __TRACE_ARGSTYLE_XUnlockDisplay__ FIXED
 #define __TRACE_SAFERETTYPE_XUnlockDisplay__ void
 #define __TRACE_PROTOARGLIST_XUnlockDisplay__ ( Display * display)
 #define __TRACE_ARGLIST_XUnlockDisplay__ ( display)
@@ -1253,7 +1367,7 @@ void XUnlockDisplay  // 1 args
     __TRACE_PRINTF_ARG__(XUnlockDisplay, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUnlockDisplay__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUnlockDisplay, Display_p, display)
-__TRACE__(VOID, FIXED, XUnlockDisplay)
+__TRACE__(XUnlockDisplay)
 
 
 /*
@@ -1261,6 +1375,8 @@ XExtCodes * XInitExtension  // 2 args
     "Display *" "display"
     "const char *" "name"
 */
+#define __TRACE_RETSTYLE_XInitExtension__ TYPED
+#define __TRACE_ARGSTYLE_XInitExtension__ FIXED
 #define __TRACE_SAFERETTYPE_XInitExtension__ XExtCodes_p
 #define __TRACE_PROTOARGLIST_XInitExtension__ ( Display * display, const char * name)
 #define __TRACE_ARGLIST_XInitExtension__ ( display, name)
@@ -1273,13 +1389,15 @@ XExtCodes * XInitExtension  // 2 args
     __TRACE_PRINTF_ARG__(XInitExtension, char_p, name)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XInitExtension__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XInitExtension, Display_p, display)
-__TRACE__(TYPED, FIXED, XInitExtension)
+__TRACE__(XInitExtension)
 
 
 /*
 XExtCodes * XAddExtension  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XAddExtension__ TYPED
+#define __TRACE_ARGSTYLE_XAddExtension__ FIXED
 #define __TRACE_SAFERETTYPE_XAddExtension__ XExtCodes_p
 #define __TRACE_PROTOARGLIST_XAddExtension__ ( Display * display)
 #define __TRACE_ARGLIST_XAddExtension__ ( display)
@@ -1291,7 +1409,7 @@ XExtCodes * XAddExtension  // 1 args
     __TRACE_PRINTF_ARG__(XAddExtension, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAddExtension__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAddExtension, Display_p, display)
-__TRACE__(TYPED, FIXED, XAddExtension)
+__TRACE__(XAddExtension)
 
 
 /*
@@ -1299,6 +1417,8 @@ XExtData * XFindOnExtensionList  // 2 args
     "XExtData **" "structure"
     "int" "number"
 */
+#define __TRACE_RETSTYLE_XFindOnExtensionList__ TYPED
+#define __TRACE_ARGSTYLE_XFindOnExtensionList__ FIXED
 #define __TRACE_SAFERETTYPE_XFindOnExtensionList__ XExtData_p
 #define __TRACE_PROTOARGLIST_XFindOnExtensionList__ ( XExtData ** structure, int number)
 #define __TRACE_ARGLIST_XFindOnExtensionList__ ( structure, number)
@@ -1310,13 +1430,15 @@ XExtData * XFindOnExtensionList  // 2 args
     __TRACE_PRINTF_ARG__(XFindOnExtensionList, XExtData_pp, structure) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XFindOnExtensionList, int, number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFindOnExtensionList__ 
-__TRACE__(TYPED, FIXED, XFindOnExtensionList)
+__TRACE__(XFindOnExtensionList)
 
 
 /*
 XExtData ** XEHeadOfExtensionList  // 1 args
     "XEDataObject" "object"
 */
+#define __TRACE_RETSTYLE_XEHeadOfExtensionList__ TYPED
+#define __TRACE_ARGSTYLE_XEHeadOfExtensionList__ FIXED
 #define __TRACE_SAFERETTYPE_XEHeadOfExtensionList__ XExtData_pp
 #define __TRACE_PROTOARGLIST_XEHeadOfExtensionList__ ( XEDataObject object)
 #define __TRACE_ARGLIST_XEHeadOfExtensionList__ ( object)
@@ -1326,7 +1448,7 @@ XExtData ** XEHeadOfExtensionList  // 1 args
 #define __TRACE_PRINTF_BODY_XEHeadOfExtensionList__ \
     __TRACE_PRINTF_ARG__(XEHeadOfExtensionList, XEDataObject, object)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XEHeadOfExtensionList__ 
-__TRACE__(TYPED, FIXED, XEHeadOfExtensionList)
+__TRACE__(XEHeadOfExtensionList)
 
 
 /*
@@ -1334,6 +1456,8 @@ Window XRootWindow  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XRootWindow__ TYPED
+#define __TRACE_ARGSTYLE_XRootWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XRootWindow__ Window
 #define __TRACE_PROTOARGLIST_XRootWindow__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XRootWindow__ ( display, screen_number)
@@ -1346,13 +1470,15 @@ Window XRootWindow  // 2 args
     __TRACE_PRINTF_ARG__(XRootWindow, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRootWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRootWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XRootWindow)
+__TRACE__(XRootWindow)
 
 
 /*
 Window XDefaultRootWindow  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XDefaultRootWindow__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultRootWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultRootWindow__ Window
 #define __TRACE_PROTOARGLIST_XDefaultRootWindow__ ( Display * display)
 #define __TRACE_ARGLIST_XDefaultRootWindow__ ( display)
@@ -1364,13 +1490,15 @@ Window XDefaultRootWindow  // 1 args
     __TRACE_PRINTF_ARG__(XDefaultRootWindow, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultRootWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDefaultRootWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XDefaultRootWindow)
+__TRACE__(XDefaultRootWindow)
 
 
 /*
 Window XRootWindowOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XRootWindowOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XRootWindowOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XRootWindowOfScreen__ Window
 #define __TRACE_PROTOARGLIST_XRootWindowOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XRootWindowOfScreen__ ( screen)
@@ -1381,7 +1509,7 @@ Window XRootWindowOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XRootWindowOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRootWindowOfScreen__ 
-__TRACE__(TYPED, FIXED, XRootWindowOfScreen)
+__TRACE__(XRootWindowOfScreen)
 
 
 /*
@@ -1389,6 +1517,8 @@ Visual * XDefaultVisual  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDefaultVisual__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultVisual__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultVisual__ Visual_p
 #define __TRACE_PROTOARGLIST_XDefaultVisual__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDefaultVisual__ ( display, screen_number)
@@ -1401,13 +1531,15 @@ Visual * XDefaultVisual  // 2 args
     __TRACE_PRINTF_ARG__(XDefaultVisual, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultVisual__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDefaultVisual, Display_p, display)
-__TRACE__(TYPED, FIXED, XDefaultVisual)
+__TRACE__(XDefaultVisual)
 
 
 /*
 Visual * XDefaultVisualOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XDefaultVisualOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultVisualOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultVisualOfScreen__ Visual_p
 #define __TRACE_PROTOARGLIST_XDefaultVisualOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XDefaultVisualOfScreen__ ( screen)
@@ -1418,7 +1550,7 @@ Visual * XDefaultVisualOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XDefaultVisualOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultVisualOfScreen__ 
-__TRACE__(TYPED, FIXED, XDefaultVisualOfScreen)
+__TRACE__(XDefaultVisualOfScreen)
 
 
 /*
@@ -1426,6 +1558,8 @@ GC XDefaultGC  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDefaultGC__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultGC__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultGC__ GC
 #define __TRACE_PROTOARGLIST_XDefaultGC__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDefaultGC__ ( display, screen_number)
@@ -1438,13 +1572,15 @@ GC XDefaultGC  // 2 args
     __TRACE_PRINTF_ARG__(XDefaultGC, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultGC__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDefaultGC, Display_p, display)
-__TRACE__(TYPED, FIXED, XDefaultGC)
+__TRACE__(XDefaultGC)
 
 
 /*
 GC XDefaultGCOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XDefaultGCOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultGCOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultGCOfScreen__ GC
 #define __TRACE_PROTOARGLIST_XDefaultGCOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XDefaultGCOfScreen__ ( screen)
@@ -1455,7 +1591,7 @@ GC XDefaultGCOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XDefaultGCOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultGCOfScreen__ 
-__TRACE__(TYPED, FIXED, XDefaultGCOfScreen)
+__TRACE__(XDefaultGCOfScreen)
 
 
 /*
@@ -1463,6 +1599,8 @@ unsigned long XBlackPixel  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XBlackPixel__ TYPED
+#define __TRACE_ARGSTYLE_XBlackPixel__ FIXED
 #define __TRACE_SAFERETTYPE_XBlackPixel__ unsigned_long
 #define __TRACE_PROTOARGLIST_XBlackPixel__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XBlackPixel__ ( display, screen_number)
@@ -1475,7 +1613,7 @@ unsigned long XBlackPixel  // 2 args
     __TRACE_PRINTF_ARG__(XBlackPixel, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XBlackPixel__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XBlackPixel, Display_p, display)
-__TRACE__(TYPED, FIXED, XBlackPixel)
+__TRACE__(XBlackPixel)
 
 
 /*
@@ -1483,6 +1621,8 @@ unsigned long XWhitePixel  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XWhitePixel__ TYPED
+#define __TRACE_ARGSTYLE_XWhitePixel__ FIXED
 #define __TRACE_SAFERETTYPE_XWhitePixel__ unsigned_long
 #define __TRACE_PROTOARGLIST_XWhitePixel__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XWhitePixel__ ( display, screen_number)
@@ -1495,12 +1635,14 @@ unsigned long XWhitePixel  // 2 args
     __TRACE_PRINTF_ARG__(XWhitePixel, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XWhitePixel__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XWhitePixel, Display_p, display)
-__TRACE__(TYPED, FIXED, XWhitePixel)
+__TRACE__(XWhitePixel)
 
 
 /*
 unsigned long XAllPlanes  // 0 args
 */
+#define __TRACE_RETSTYLE_XAllPlanes__ TYPED
+#define __TRACE_ARGSTYLE_XAllPlanes__ FIXED
 #define __TRACE_SAFERETTYPE_XAllPlanes__ unsigned_long
 #define __TRACE_PROTOARGLIST_XAllPlanes__ ()
 #define __TRACE_ARGLIST_XAllPlanes__ ()
@@ -1509,13 +1651,15 @@ unsigned long XAllPlanes  // 0 args
 #define __TRACE_ADDITIONAL_POST_RUN_UNDERLYING_XAllPlanes__
 #define __TRACE_PRINTF_BODY_XAllPlanes__ 
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAllPlanes__ 
-__TRACE__(TYPED, FIXED, XAllPlanes)
+__TRACE__(XAllPlanes)
 
 
 /*
 unsigned long XBlackPixelOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XBlackPixelOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XBlackPixelOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XBlackPixelOfScreen__ unsigned_long
 #define __TRACE_PROTOARGLIST_XBlackPixelOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XBlackPixelOfScreen__ ( screen)
@@ -1526,13 +1670,15 @@ unsigned long XBlackPixelOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XBlackPixelOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XBlackPixelOfScreen__ 
-__TRACE__(TYPED, FIXED, XBlackPixelOfScreen)
+__TRACE__(XBlackPixelOfScreen)
 
 
 /*
 unsigned long XWhitePixelOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XWhitePixelOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XWhitePixelOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XWhitePixelOfScreen__ unsigned_long
 #define __TRACE_PROTOARGLIST_XWhitePixelOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XWhitePixelOfScreen__ ( screen)
@@ -1543,13 +1689,15 @@ unsigned long XWhitePixelOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XWhitePixelOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XWhitePixelOfScreen__ 
-__TRACE__(TYPED, FIXED, XWhitePixelOfScreen)
+__TRACE__(XWhitePixelOfScreen)
 
 
 /*
 unsigned long XNextRequest  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XNextRequest__ TYPED
+#define __TRACE_ARGSTYLE_XNextRequest__ FIXED
 #define __TRACE_SAFERETTYPE_XNextRequest__ unsigned_long
 #define __TRACE_PROTOARGLIST_XNextRequest__ ( Display * display)
 #define __TRACE_ARGLIST_XNextRequest__ ( display)
@@ -1561,13 +1709,15 @@ unsigned long XNextRequest  // 1 args
     __TRACE_PRINTF_ARG__(XNextRequest, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XNextRequest__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XNextRequest, Display_p, display)
-__TRACE__(TYPED, FIXED, XNextRequest)
+__TRACE__(XNextRequest)
 
 
 /*
 unsigned long XLastKnownRequestProcessed  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XLastKnownRequestProcessed__ TYPED
+#define __TRACE_ARGSTYLE_XLastKnownRequestProcessed__ FIXED
 #define __TRACE_SAFERETTYPE_XLastKnownRequestProcessed__ unsigned_long
 #define __TRACE_PROTOARGLIST_XLastKnownRequestProcessed__ ( Display * display)
 #define __TRACE_ARGLIST_XLastKnownRequestProcessed__ ( display)
@@ -1579,13 +1729,15 @@ unsigned long XLastKnownRequestProcessed  // 1 args
     __TRACE_PRINTF_ARG__(XLastKnownRequestProcessed, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLastKnownRequestProcessed__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XLastKnownRequestProcessed, Display_p, display)
-__TRACE__(TYPED, FIXED, XLastKnownRequestProcessed)
+__TRACE__(XLastKnownRequestProcessed)
 
 
 /*
 char * XServerVendor  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XServerVendor__ TYPED
+#define __TRACE_ARGSTYLE_XServerVendor__ FIXED
 #define __TRACE_SAFERETTYPE_XServerVendor__ char_p
 #define __TRACE_PROTOARGLIST_XServerVendor__ ( Display * display)
 #define __TRACE_ARGLIST_XServerVendor__ ( display)
@@ -1597,13 +1749,15 @@ char * XServerVendor  // 1 args
     __TRACE_PRINTF_ARG__(XServerVendor, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XServerVendor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XServerVendor, Display_p, display)
-__TRACE__(TYPED, FIXED, XServerVendor)
+__TRACE__(XServerVendor)
 
 
 /*
 char * XDisplayString  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XDisplayString__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayString__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayString__ char_p
 #define __TRACE_PROTOARGLIST_XDisplayString__ ( Display * display)
 #define __TRACE_ARGLIST_XDisplayString__ ( display)
@@ -1615,7 +1769,7 @@ char * XDisplayString  // 1 args
     __TRACE_PRINTF_ARG__(XDisplayString, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayString, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayString)
+__TRACE__(XDisplayString)
 
 
 /*
@@ -1623,6 +1777,8 @@ Colormap XDefaultColormap  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDefaultColormap__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultColormap__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultColormap__ Colormap
 #define __TRACE_PROTOARGLIST_XDefaultColormap__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDefaultColormap__ ( display, screen_number)
@@ -1635,13 +1791,15 @@ Colormap XDefaultColormap  // 2 args
     __TRACE_PRINTF_ARG__(XDefaultColormap, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultColormap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDefaultColormap, Display_p, display)
-__TRACE__(TYPED, FIXED, XDefaultColormap)
+__TRACE__(XDefaultColormap)
 
 
 /*
 Colormap XDefaultColormapOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XDefaultColormapOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultColormapOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultColormapOfScreen__ Colormap
 #define __TRACE_PROTOARGLIST_XDefaultColormapOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XDefaultColormapOfScreen__ ( screen)
@@ -1652,13 +1810,15 @@ Colormap XDefaultColormapOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XDefaultColormapOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultColormapOfScreen__ 
-__TRACE__(TYPED, FIXED, XDefaultColormapOfScreen)
+__TRACE__(XDefaultColormapOfScreen)
 
 
 /*
 Display * XDisplayOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XDisplayOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayOfScreen__ Display_p
 #define __TRACE_PROTOARGLIST_XDisplayOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XDisplayOfScreen__ ( screen)
@@ -1669,7 +1829,7 @@ Display * XDisplayOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XDisplayOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayOfScreen__ 
-__TRACE__(TYPED, FIXED, XDisplayOfScreen)
+__TRACE__(XDisplayOfScreen)
 
 
 /*
@@ -1677,6 +1837,8 @@ Screen * XScreenOfDisplay  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XScreenOfDisplay__ TYPED
+#define __TRACE_ARGSTYLE_XScreenOfDisplay__ FIXED
 #define __TRACE_SAFERETTYPE_XScreenOfDisplay__ Screen_p
 #define __TRACE_PROTOARGLIST_XScreenOfDisplay__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XScreenOfDisplay__ ( display, screen_number)
@@ -1689,13 +1851,15 @@ Screen * XScreenOfDisplay  // 2 args
     __TRACE_PRINTF_ARG__(XScreenOfDisplay, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XScreenOfDisplay__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XScreenOfDisplay, Display_p, display)
-__TRACE__(TYPED, FIXED, XScreenOfDisplay)
+__TRACE__(XScreenOfDisplay)
 
 
 /*
 Screen * XDefaultScreenOfDisplay  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XDefaultScreenOfDisplay__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultScreenOfDisplay__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultScreenOfDisplay__ Screen_p
 #define __TRACE_PROTOARGLIST_XDefaultScreenOfDisplay__ ( Display * display)
 #define __TRACE_ARGLIST_XDefaultScreenOfDisplay__ ( display)
@@ -1707,13 +1871,15 @@ Screen * XDefaultScreenOfDisplay  // 1 args
     __TRACE_PRINTF_ARG__(XDefaultScreenOfDisplay, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultScreenOfDisplay__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDefaultScreenOfDisplay, Display_p, display)
-__TRACE__(TYPED, FIXED, XDefaultScreenOfDisplay)
+__TRACE__(XDefaultScreenOfDisplay)
 
 
 /*
 long XEventMaskOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XEventMaskOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XEventMaskOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XEventMaskOfScreen__ long
 #define __TRACE_PROTOARGLIST_XEventMaskOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XEventMaskOfScreen__ ( screen)
@@ -1724,13 +1890,15 @@ long XEventMaskOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XEventMaskOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XEventMaskOfScreen__ 
-__TRACE__(TYPED, FIXED, XEventMaskOfScreen)
+__TRACE__(XEventMaskOfScreen)
 
 
 /*
 int XScreenNumberOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XScreenNumberOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XScreenNumberOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XScreenNumberOfScreen__ int
 #define __TRACE_PROTOARGLIST_XScreenNumberOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XScreenNumberOfScreen__ ( screen)
@@ -1741,7 +1909,7 @@ int XScreenNumberOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XScreenNumberOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XScreenNumberOfScreen__ 
-__TRACE__(TYPED, FIXED, XScreenNumberOfScreen)
+__TRACE__(XScreenNumberOfScreen)
 
 
 /*
@@ -1749,6 +1917,8 @@ XPixmapFormatValues * XListPixmapFormats  // 2 args
     "Display *" "display"
     "int *" "count_return"
 */
+#define __TRACE_RETSTYLE_XListPixmapFormats__ TYPED
+#define __TRACE_ARGSTYLE_XListPixmapFormats__ FIXED
 #define __TRACE_SAFERETTYPE_XListPixmapFormats__ XPixmapFormatValues_p
 #define __TRACE_PROTOARGLIST_XListPixmapFormats__ ( Display * display, int * count_return)
 #define __TRACE_ARGLIST_XListPixmapFormats__ ( display, count_return)
@@ -1761,7 +1931,7 @@ XPixmapFormatValues * XListPixmapFormats  // 2 args
     __TRACE_PRINTF_ARG__(XListPixmapFormats, int_p, count_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XListPixmapFormats__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XListPixmapFormats, Display_p, display)
-__TRACE__(TYPED, FIXED, XListPixmapFormats)
+__TRACE__(XListPixmapFormats)
 
 
 /*
@@ -1770,6 +1940,8 @@ int * XListDepths  // 3 args
     "int" "screen_number"
     "int *" "count_return"
 */
+#define __TRACE_RETSTYLE_XListDepths__ TYPED
+#define __TRACE_ARGSTYLE_XListDepths__ FIXED
 #define __TRACE_SAFERETTYPE_XListDepths__ int_p
 #define __TRACE_PROTOARGLIST_XListDepths__ ( Display * display, int screen_number, int * count_return)
 #define __TRACE_ARGLIST_XListDepths__ ( display, screen_number, count_return)
@@ -1783,7 +1955,7 @@ int * XListDepths  // 3 args
     __TRACE_PRINTF_ARG__(XListDepths, int_p, count_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XListDepths__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XListDepths, Display_p, display)
-__TRACE__(TYPED, FIXED, XListDepths)
+__TRACE__(XListDepths)
 
 
 /*
@@ -1794,6 +1966,8 @@ Status XReconfigureWMWindow  // 5 args
     "unsigned int" "mask"
     "XWindowChanges *" "changes"
 */
+#define __TRACE_RETSTYLE_XReconfigureWMWindow__ TYPED
+#define __TRACE_ARGSTYLE_XReconfigureWMWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XReconfigureWMWindow__ Status
 #define __TRACE_PROTOARGLIST_XReconfigureWMWindow__ ( Display * display, Window w, int screen_number, unsigned int mask, XWindowChanges * changes)
 #define __TRACE_ARGLIST_XReconfigureWMWindow__ ( display, w, screen_number, mask, changes)
@@ -1809,7 +1983,7 @@ Status XReconfigureWMWindow  // 5 args
     __TRACE_PRINTF_ARG__(XReconfigureWMWindow, XWindowChanges_p, changes)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XReconfigureWMWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XReconfigureWMWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XReconfigureWMWindow)
+__TRACE__(XReconfigureWMWindow)
 
 
 /*
@@ -1819,6 +1993,8 @@ Status XGetWMProtocols  // 4 args
     "Atom **" "protocols_return"
     "int *" "count_return"
 */
+#define __TRACE_RETSTYLE_XGetWMProtocols__ TYPED
+#define __TRACE_ARGSTYLE_XGetWMProtocols__ FIXED
 #define __TRACE_SAFERETTYPE_XGetWMProtocols__ Status
 #define __TRACE_PROTOARGLIST_XGetWMProtocols__ ( Display * display, Window w, Atom ** protocols_return, int * count_return)
 #define __TRACE_ARGLIST_XGetWMProtocols__ ( display, w, protocols_return, count_return)
@@ -1833,7 +2009,7 @@ Status XGetWMProtocols  // 4 args
     __TRACE_PRINTF_ARG__(XGetWMProtocols, int_p, count_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetWMProtocols__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetWMProtocols, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetWMProtocols)
+__TRACE__(XGetWMProtocols)
 
 
 /*
@@ -1843,6 +2019,8 @@ Status XSetWMProtocols  // 4 args
     "Atom *" "protocols"
     "int" "count"
 */
+#define __TRACE_RETSTYLE_XSetWMProtocols__ TYPED
+#define __TRACE_ARGSTYLE_XSetWMProtocols__ FIXED
 #define __TRACE_SAFERETTYPE_XSetWMProtocols__ Status
 #define __TRACE_PROTOARGLIST_XSetWMProtocols__ ( Display * display, Window w, Atom * protocols, int count)
 #define __TRACE_ARGLIST_XSetWMProtocols__ ( display, w, protocols, count)
@@ -1857,7 +2035,7 @@ Status XSetWMProtocols  // 4 args
     __TRACE_PRINTF_ARG__(XSetWMProtocols, int, count)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetWMProtocols__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetWMProtocols, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetWMProtocols)
+__TRACE__(XSetWMProtocols)
 
 
 /*
@@ -1866,6 +2044,8 @@ Status XIconifyWindow  // 3 args
     "Window" "w"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XIconifyWindow__ TYPED
+#define __TRACE_ARGSTYLE_XIconifyWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XIconifyWindow__ Status
 #define __TRACE_PROTOARGLIST_XIconifyWindow__ ( Display * display, Window w, int screen_number)
 #define __TRACE_ARGLIST_XIconifyWindow__ ( display, w, screen_number)
@@ -1879,7 +2059,7 @@ Status XIconifyWindow  // 3 args
     __TRACE_PRINTF_ARG__(XIconifyWindow, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XIconifyWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XIconifyWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XIconifyWindow)
+__TRACE__(XIconifyWindow)
 
 
 /*
@@ -1888,6 +2068,8 @@ Status XWithdrawWindow  // 3 args
     "Window" "w"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XWithdrawWindow__ TYPED
+#define __TRACE_ARGSTYLE_XWithdrawWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XWithdrawWindow__ Status
 #define __TRACE_PROTOARGLIST_XWithdrawWindow__ ( Display * display, Window w, int screen_number)
 #define __TRACE_ARGLIST_XWithdrawWindow__ ( display, w, screen_number)
@@ -1901,7 +2083,7 @@ Status XWithdrawWindow  // 3 args
     __TRACE_PRINTF_ARG__(XWithdrawWindow, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XWithdrawWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XWithdrawWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XWithdrawWindow)
+__TRACE__(XWithdrawWindow)
 
 
 /*
@@ -1911,6 +2093,8 @@ Status XGetCommand  // 4 args
     "char ***" "argv_return"
     "int *" "argc_return"
 */
+#define __TRACE_RETSTYLE_XGetCommand__ TYPED
+#define __TRACE_ARGSTYLE_XGetCommand__ FIXED
 #define __TRACE_SAFERETTYPE_XGetCommand__ Status
 #define __TRACE_PROTOARGLIST_XGetCommand__ ( Display * display, Window w, char *** argv_return, int * argc_return)
 #define __TRACE_ARGLIST_XGetCommand__ ( display, w, argv_return, argc_return)
@@ -1925,7 +2109,7 @@ Status XGetCommand  // 4 args
     __TRACE_PRINTF_ARG__(XGetCommand, int_p, argc_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetCommand__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetCommand, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetCommand)
+__TRACE__(XGetCommand)
 
 
 /*
@@ -1935,6 +2119,8 @@ Status XGetWMColormapWindows  // 4 args
     "Window **" "windows_return"
     "int *" "count_return"
 */
+#define __TRACE_RETSTYLE_XGetWMColormapWindows__ TYPED
+#define __TRACE_ARGSTYLE_XGetWMColormapWindows__ FIXED
 #define __TRACE_SAFERETTYPE_XGetWMColormapWindows__ Status
 #define __TRACE_PROTOARGLIST_XGetWMColormapWindows__ ( Display * display, Window w, Window ** windows_return, int * count_return)
 #define __TRACE_ARGLIST_XGetWMColormapWindows__ ( display, w, windows_return, count_return)
@@ -1949,7 +2135,7 @@ Status XGetWMColormapWindows  // 4 args
     __TRACE_PRINTF_ARG__(XGetWMColormapWindows, int_p, count_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetWMColormapWindows__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetWMColormapWindows, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetWMColormapWindows)
+__TRACE__(XGetWMColormapWindows)
 
 
 /*
@@ -1959,6 +2145,8 @@ Status XSetWMColormapWindows  // 4 args
     "Window *" "colormap_windows"
     "int" "count"
 */
+#define __TRACE_RETSTYLE_XSetWMColormapWindows__ TYPED
+#define __TRACE_ARGSTYLE_XSetWMColormapWindows__ FIXED
 #define __TRACE_SAFERETTYPE_XSetWMColormapWindows__ Status
 #define __TRACE_PROTOARGLIST_XSetWMColormapWindows__ ( Display * display, Window w, Window * colormap_windows, int count)
 #define __TRACE_ARGLIST_XSetWMColormapWindows__ ( display, w, colormap_windows, count)
@@ -1973,13 +2161,15 @@ Status XSetWMColormapWindows  // 4 args
     __TRACE_PRINTF_ARG__(XSetWMColormapWindows, int, count)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetWMColormapWindows__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetWMColormapWindows, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetWMColormapWindows)
+__TRACE__(XSetWMColormapWindows)
 
 
 /*
 void XFreeStringList  // 1 args
     "char **" "list"
 */
+#define __TRACE_RETSTYLE_XFreeStringList__ VOID
+#define __TRACE_ARGSTYLE_XFreeStringList__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeStringList__ void
 #define __TRACE_PROTOARGLIST_XFreeStringList__ ( char ** list)
 #define __TRACE_ARGLIST_XFreeStringList__ ( list)
@@ -1990,7 +2180,7 @@ void XFreeStringList  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XFreeStringList, char_pp, list)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeStringList__ 
-__TRACE__(VOID, FIXED, XFreeStringList)
+__TRACE__(XFreeStringList)
 
 
 /*
@@ -1999,6 +2189,8 @@ int XSetTransientForHint  // 3 args
     "Window" "w"
     "Window" "prop_window"
 */
+#define __TRACE_RETSTYLE_XSetTransientForHint__ TYPED
+#define __TRACE_ARGSTYLE_XSetTransientForHint__ FIXED
 #define __TRACE_SAFERETTYPE_XSetTransientForHint__ int
 #define __TRACE_PROTOARGLIST_XSetTransientForHint__ ( Display * display, Window w, Window prop_window)
 #define __TRACE_ARGLIST_XSetTransientForHint__ ( display, w, prop_window)
@@ -2012,13 +2204,15 @@ int XSetTransientForHint  // 3 args
     __TRACE_PRINTF_ARG__(XSetTransientForHint, Window, prop_window)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetTransientForHint__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetTransientForHint, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetTransientForHint)
+__TRACE__(XSetTransientForHint)
 
 
 /*
 int XActivateScreenSaver  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XActivateScreenSaver__ TYPED
+#define __TRACE_ARGSTYLE_XActivateScreenSaver__ FIXED
 #define __TRACE_SAFERETTYPE_XActivateScreenSaver__ int
 #define __TRACE_PROTOARGLIST_XActivateScreenSaver__ ( Display * display)
 #define __TRACE_ARGLIST_XActivateScreenSaver__ ( display)
@@ -2030,7 +2224,7 @@ int XActivateScreenSaver  // 1 args
     __TRACE_PRINTF_ARG__(XActivateScreenSaver, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XActivateScreenSaver__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XActivateScreenSaver, Display_p, display)
-__TRACE__(TYPED, FIXED, XActivateScreenSaver)
+__TRACE__(XActivateScreenSaver)
 
 
 /*
@@ -2038,6 +2232,8 @@ int XAddHost  // 2 args
     "Display *" "display"
     "XHostAddress *" "host"
 */
+#define __TRACE_RETSTYLE_XAddHost__ TYPED
+#define __TRACE_ARGSTYLE_XAddHost__ FIXED
 #define __TRACE_SAFERETTYPE_XAddHost__ int
 #define __TRACE_PROTOARGLIST_XAddHost__ ( Display * display, XHostAddress * host)
 #define __TRACE_ARGLIST_XAddHost__ ( display, host)
@@ -2050,7 +2246,7 @@ int XAddHost  // 2 args
     __TRACE_PRINTF_ARG__(XAddHost, XHostAddress_p, host)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAddHost__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAddHost, Display_p, display)
-__TRACE__(TYPED, FIXED, XAddHost)
+__TRACE__(XAddHost)
 
 
 /*
@@ -2059,6 +2255,8 @@ int XAddHosts  // 3 args
     "XHostAddress *" "hosts"
     "int" "num_hosts"
 */
+#define __TRACE_RETSTYLE_XAddHosts__ TYPED
+#define __TRACE_ARGSTYLE_XAddHosts__ FIXED
 #define __TRACE_SAFERETTYPE_XAddHosts__ int
 #define __TRACE_PROTOARGLIST_XAddHosts__ ( Display * display, XHostAddress * hosts, int num_hosts)
 #define __TRACE_ARGLIST_XAddHosts__ ( display, hosts, num_hosts)
@@ -2072,7 +2270,7 @@ int XAddHosts  // 3 args
     __TRACE_PRINTF_ARG__(XAddHosts, int, num_hosts)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAddHosts__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAddHosts, Display_p, display)
-__TRACE__(TYPED, FIXED, XAddHosts)
+__TRACE__(XAddHosts)
 
 
 /*
@@ -2080,6 +2278,8 @@ int XAddToExtensionList  // 2 args
     "struct _XExtData **" "structure"
     "XExtData *" "ext_data"
 */
+#define __TRACE_RETSTYLE_XAddToExtensionList__ TYPED
+#define __TRACE_ARGSTYLE_XAddToExtensionList__ FIXED
 #define __TRACE_SAFERETTYPE_XAddToExtensionList__ int
 #define __TRACE_PROTOARGLIST_XAddToExtensionList__ ( struct _XExtData ** structure, XExtData * ext_data)
 #define __TRACE_ARGLIST_XAddToExtensionList__ ( structure, ext_data)
@@ -2091,7 +2291,7 @@ int XAddToExtensionList  // 2 args
     __TRACE_PRINTF_ARG__(XAddToExtensionList, struct__XExtData_pp, structure) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XAddToExtensionList, XExtData_p, ext_data)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAddToExtensionList__ 
-__TRACE__(TYPED, FIXED, XAddToExtensionList)
+__TRACE__(XAddToExtensionList)
 
 
 /*
@@ -2099,6 +2299,8 @@ int XAddToSaveSet  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XAddToSaveSet__ TYPED
+#define __TRACE_ARGSTYLE_XAddToSaveSet__ FIXED
 #define __TRACE_SAFERETTYPE_XAddToSaveSet__ int
 #define __TRACE_PROTOARGLIST_XAddToSaveSet__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XAddToSaveSet__ ( display, w)
@@ -2111,7 +2313,7 @@ int XAddToSaveSet  // 2 args
     __TRACE_PRINTF_ARG__(XAddToSaveSet, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAddToSaveSet__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAddToSaveSet, Display_p, display)
-__TRACE__(TYPED, FIXED, XAddToSaveSet)
+__TRACE__(XAddToSaveSet)
 
 
 /*
@@ -2120,6 +2322,8 @@ Status XAllocColor  // 3 args
     "Colormap" "colormap"
     "XColor *" "screen_in_out"
 */
+#define __TRACE_RETSTYLE_XAllocColor__ TYPED
+#define __TRACE_ARGSTYLE_XAllocColor__ FIXED
 #define __TRACE_SAFERETTYPE_XAllocColor__ Status
 #define __TRACE_PROTOARGLIST_XAllocColor__ ( Display * display, Colormap colormap, XColor * screen_in_out)
 #define __TRACE_ARGLIST_XAllocColor__ ( display, colormap, screen_in_out)
@@ -2133,7 +2337,7 @@ Status XAllocColor  // 3 args
     __TRACE_PRINTF_ARG__(XAllocColor, XColor_p, screen_in_out)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAllocColor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAllocColor, Display_p, display)
-__TRACE__(TYPED, FIXED, XAllocColor)
+__TRACE__(XAllocColor)
 
 
 /*
@@ -2146,6 +2350,8 @@ Status XAllocColorCells  // 7 args
     "unsigned long *" "pixels_return"
     "unsigned int" "npixels"
 */
+#define __TRACE_RETSTYLE_XAllocColorCells__ TYPED
+#define __TRACE_ARGSTYLE_XAllocColorCells__ FIXED
 #define __TRACE_SAFERETTYPE_XAllocColorCells__ Status
 #define __TRACE_PROTOARGLIST_XAllocColorCells__ ( Display * display, Colormap colormap, Bool contig, unsigned long * plane_masks_return, unsigned int nplanes, unsigned long * pixels_return, unsigned int npixels)
 #define __TRACE_ARGLIST_XAllocColorCells__ ( display, colormap, contig, plane_masks_return, nplanes, pixels_return, npixels)
@@ -2163,7 +2369,7 @@ Status XAllocColorCells  // 7 args
     __TRACE_PRINTF_ARG__(XAllocColorCells, unsigned_int, npixels)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAllocColorCells__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAllocColorCells, Display_p, display)
-__TRACE__(TYPED, FIXED, XAllocColorCells)
+__TRACE__(XAllocColorCells)
 
 
 /*
@@ -2180,6 +2386,8 @@ Status XAllocColorPlanes  // 11 args
     "unsigned long *" "gmask_return"
     "unsigned long *" "bmask_return"
 */
+#define __TRACE_RETSTYLE_XAllocColorPlanes__ TYPED
+#define __TRACE_ARGSTYLE_XAllocColorPlanes__ FIXED
 #define __TRACE_SAFERETTYPE_XAllocColorPlanes__ Status
 #define __TRACE_PROTOARGLIST_XAllocColorPlanes__ ( Display * display, Colormap colormap, Bool contig, unsigned long * pixels_return, int ncolors, int nreds, int ngreens, int nblues, unsigned long * rmask_return, unsigned long * gmask_return, unsigned long * bmask_return)
 #define __TRACE_ARGLIST_XAllocColorPlanes__ ( display, colormap, contig, pixels_return, ncolors, nreds, ngreens, nblues, rmask_return, gmask_return, bmask_return)
@@ -2201,7 +2409,7 @@ Status XAllocColorPlanes  // 11 args
     __TRACE_PRINTF_ARG__(XAllocColorPlanes, unsigned_long_p, bmask_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAllocColorPlanes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAllocColorPlanes, Display_p, display)
-__TRACE__(TYPED, FIXED, XAllocColorPlanes)
+__TRACE__(XAllocColorPlanes)
 
 
 /*
@@ -2212,6 +2420,8 @@ Status XAllocNamedColor  // 5 args
     "XColor *" "screen_def_return"
     "XColor *" "exact_def_return"
 */
+#define __TRACE_RETSTYLE_XAllocNamedColor__ TYPED
+#define __TRACE_ARGSTYLE_XAllocNamedColor__ FIXED
 #define __TRACE_SAFERETTYPE_XAllocNamedColor__ Status
 #define __TRACE_PROTOARGLIST_XAllocNamedColor__ ( Display * display, Colormap colormap, const char * color_name, XColor * screen_def_return, XColor * exact_def_return)
 #define __TRACE_ARGLIST_XAllocNamedColor__ ( display, colormap, color_name, screen_def_return, exact_def_return)
@@ -2227,7 +2437,7 @@ Status XAllocNamedColor  // 5 args
     __TRACE_PRINTF_ARG__(XAllocNamedColor, XColor_p, exact_def_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAllocNamedColor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAllocNamedColor, Display_p, display)
-__TRACE__(TYPED, FIXED, XAllocNamedColor)
+__TRACE__(XAllocNamedColor)
 
 
 /*
@@ -2236,6 +2446,8 @@ int XAllowEvents  // 3 args
     "int" "event_mode"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XAllowEvents__ TYPED
+#define __TRACE_ARGSTYLE_XAllowEvents__ FIXED
 #define __TRACE_SAFERETTYPE_XAllowEvents__ int
 #define __TRACE_PROTOARGLIST_XAllowEvents__ ( Display * display, int event_mode, Time time)
 #define __TRACE_ARGLIST_XAllowEvents__ ( display, event_mode, time)
@@ -2249,13 +2461,15 @@ int XAllowEvents  // 3 args
     __TRACE_PRINTF_ARG__(XAllowEvents, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAllowEvents__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAllowEvents, Display_p, display)
-__TRACE__(TYPED, FIXED, XAllowEvents)
+__TRACE__(XAllowEvents)
 
 
 /*
 int XAutoRepeatOff  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XAutoRepeatOff__ TYPED
+#define __TRACE_ARGSTYLE_XAutoRepeatOff__ FIXED
 #define __TRACE_SAFERETTYPE_XAutoRepeatOff__ int
 #define __TRACE_PROTOARGLIST_XAutoRepeatOff__ ( Display * display)
 #define __TRACE_ARGLIST_XAutoRepeatOff__ ( display)
@@ -2267,13 +2481,15 @@ int XAutoRepeatOff  // 1 args
     __TRACE_PRINTF_ARG__(XAutoRepeatOff, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAutoRepeatOff__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAutoRepeatOff, Display_p, display)
-__TRACE__(TYPED, FIXED, XAutoRepeatOff)
+__TRACE__(XAutoRepeatOff)
 
 
 /*
 int XAutoRepeatOn  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XAutoRepeatOn__ TYPED
+#define __TRACE_ARGSTYLE_XAutoRepeatOn__ FIXED
 #define __TRACE_SAFERETTYPE_XAutoRepeatOn__ int
 #define __TRACE_PROTOARGLIST_XAutoRepeatOn__ ( Display * display)
 #define __TRACE_ARGLIST_XAutoRepeatOn__ ( display)
@@ -2285,7 +2501,7 @@ int XAutoRepeatOn  // 1 args
     __TRACE_PRINTF_ARG__(XAutoRepeatOn, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAutoRepeatOn__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAutoRepeatOn, Display_p, display)
-__TRACE__(TYPED, FIXED, XAutoRepeatOn)
+__TRACE__(XAutoRepeatOn)
 
 
 /*
@@ -2293,6 +2509,8 @@ int XBell  // 2 args
     "Display *" "display"
     "int" "percent"
 */
+#define __TRACE_RETSTYLE_XBell__ TYPED
+#define __TRACE_ARGSTYLE_XBell__ FIXED
 #define __TRACE_SAFERETTYPE_XBell__ int
 #define __TRACE_PROTOARGLIST_XBell__ ( Display * display, int percent)
 #define __TRACE_ARGLIST_XBell__ ( display, percent)
@@ -2305,13 +2523,15 @@ int XBell  // 2 args
     __TRACE_PRINTF_ARG__(XBell, int, percent)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XBell__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XBell, Display_p, display)
-__TRACE__(TYPED, FIXED, XBell)
+__TRACE__(XBell)
 
 
 /*
 int XBitmapBitOrder  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XBitmapBitOrder__ TYPED
+#define __TRACE_ARGSTYLE_XBitmapBitOrder__ FIXED
 #define __TRACE_SAFERETTYPE_XBitmapBitOrder__ int
 #define __TRACE_PROTOARGLIST_XBitmapBitOrder__ ( Display * display)
 #define __TRACE_ARGLIST_XBitmapBitOrder__ ( display)
@@ -2323,13 +2543,15 @@ int XBitmapBitOrder  // 1 args
     __TRACE_PRINTF_ARG__(XBitmapBitOrder, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XBitmapBitOrder__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XBitmapBitOrder, Display_p, display)
-__TRACE__(TYPED, FIXED, XBitmapBitOrder)
+__TRACE__(XBitmapBitOrder)
 
 
 /*
 int XBitmapPad  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XBitmapPad__ TYPED
+#define __TRACE_ARGSTYLE_XBitmapPad__ FIXED
 #define __TRACE_SAFERETTYPE_XBitmapPad__ int
 #define __TRACE_PROTOARGLIST_XBitmapPad__ ( Display * display)
 #define __TRACE_ARGLIST_XBitmapPad__ ( display)
@@ -2341,13 +2563,15 @@ int XBitmapPad  // 1 args
     __TRACE_PRINTF_ARG__(XBitmapPad, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XBitmapPad__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XBitmapPad, Display_p, display)
-__TRACE__(TYPED, FIXED, XBitmapPad)
+__TRACE__(XBitmapPad)
 
 
 /*
 int XBitmapUnit  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XBitmapUnit__ TYPED
+#define __TRACE_ARGSTYLE_XBitmapUnit__ FIXED
 #define __TRACE_SAFERETTYPE_XBitmapUnit__ int
 #define __TRACE_PROTOARGLIST_XBitmapUnit__ ( Display * display)
 #define __TRACE_ARGLIST_XBitmapUnit__ ( display)
@@ -2359,13 +2583,15 @@ int XBitmapUnit  // 1 args
     __TRACE_PRINTF_ARG__(XBitmapUnit, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XBitmapUnit__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XBitmapUnit, Display_p, display)
-__TRACE__(TYPED, FIXED, XBitmapUnit)
+__TRACE__(XBitmapUnit)
 
 
 /*
 int XCellsOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XCellsOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XCellsOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XCellsOfScreen__ int
 #define __TRACE_PROTOARGLIST_XCellsOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XCellsOfScreen__ ( screen)
@@ -2376,7 +2602,7 @@ int XCellsOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XCellsOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCellsOfScreen__ 
-__TRACE__(TYPED, FIXED, XCellsOfScreen)
+__TRACE__(XCellsOfScreen)
 
 
 /*
@@ -2386,6 +2612,8 @@ int XChangeActivePointerGrab  // 4 args
     "Cursor" "cursor"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XChangeActivePointerGrab__ TYPED
+#define __TRACE_ARGSTYLE_XChangeActivePointerGrab__ FIXED
 #define __TRACE_SAFERETTYPE_XChangeActivePointerGrab__ int
 #define __TRACE_PROTOARGLIST_XChangeActivePointerGrab__ ( Display * display, unsigned int event_mask, Cursor cursor, Time time)
 #define __TRACE_ARGLIST_XChangeActivePointerGrab__ ( display, event_mask, cursor, time)
@@ -2400,7 +2628,7 @@ int XChangeActivePointerGrab  // 4 args
     __TRACE_PRINTF_ARG__(XChangeActivePointerGrab, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XChangeActivePointerGrab__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XChangeActivePointerGrab, Display_p, display)
-__TRACE__(TYPED, FIXED, XChangeActivePointerGrab)
+__TRACE__(XChangeActivePointerGrab)
 
 
 /*
@@ -2410,6 +2638,8 @@ int XChangeGC  // 4 args
     "unsigned long" "valuemask"
     "XGCValues *" "values"
 */
+#define __TRACE_RETSTYLE_XChangeGC__ TYPED
+#define __TRACE_ARGSTYLE_XChangeGC__ FIXED
 #define __TRACE_SAFERETTYPE_XChangeGC__ int
 #define __TRACE_PROTOARGLIST_XChangeGC__ ( Display * display, GC gc, unsigned long valuemask, XGCValues * values)
 #define __TRACE_ARGLIST_XChangeGC__ ( display, gc, valuemask, values)
@@ -2424,7 +2654,7 @@ int XChangeGC  // 4 args
     __TRACE_PRINTF_ARG__(XChangeGC, XGCValues_p, values)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XChangeGC__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XChangeGC, Display_p, display)
-__TRACE__(TYPED, FIXED, XChangeGC)
+__TRACE__(XChangeGC)
 
 
 /*
@@ -2433,6 +2663,8 @@ int XChangeKeyboardControl  // 3 args
     "unsigned long" "value_mask"
     "XKeyboardControl *" "values"
 */
+#define __TRACE_RETSTYLE_XChangeKeyboardControl__ TYPED
+#define __TRACE_ARGSTYLE_XChangeKeyboardControl__ FIXED
 #define __TRACE_SAFERETTYPE_XChangeKeyboardControl__ int
 #define __TRACE_PROTOARGLIST_XChangeKeyboardControl__ ( Display * display, unsigned long value_mask, XKeyboardControl * values)
 #define __TRACE_ARGLIST_XChangeKeyboardControl__ ( display, value_mask, values)
@@ -2446,7 +2678,7 @@ int XChangeKeyboardControl  // 3 args
     __TRACE_PRINTF_ARG__(XChangeKeyboardControl, XKeyboardControl_p, values)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XChangeKeyboardControl__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XChangeKeyboardControl, Display_p, display)
-__TRACE__(TYPED, FIXED, XChangeKeyboardControl)
+__TRACE__(XChangeKeyboardControl)
 
 
 /*
@@ -2457,6 +2689,8 @@ int XChangeKeyboardMapping  // 5 args
     "KeySym *" "keysyms"
     "int" "num_codes"
 */
+#define __TRACE_RETSTYLE_XChangeKeyboardMapping__ TYPED
+#define __TRACE_ARGSTYLE_XChangeKeyboardMapping__ FIXED
 #define __TRACE_SAFERETTYPE_XChangeKeyboardMapping__ int
 #define __TRACE_PROTOARGLIST_XChangeKeyboardMapping__ ( Display * display, int first_keycode, int keysyms_per_keycode, KeySym * keysyms, int num_codes)
 #define __TRACE_ARGLIST_XChangeKeyboardMapping__ ( display, first_keycode, keysyms_per_keycode, keysyms, num_codes)
@@ -2472,7 +2706,7 @@ int XChangeKeyboardMapping  // 5 args
     __TRACE_PRINTF_ARG__(XChangeKeyboardMapping, int, num_codes)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XChangeKeyboardMapping__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XChangeKeyboardMapping, Display_p, display)
-__TRACE__(TYPED, FIXED, XChangeKeyboardMapping)
+__TRACE__(XChangeKeyboardMapping)
 
 
 /*
@@ -2484,6 +2718,8 @@ int XChangePointerControl  // 6 args
     "int" "accel_denominator"
     "int" "threshold"
 */
+#define __TRACE_RETSTYLE_XChangePointerControl__ TYPED
+#define __TRACE_ARGSTYLE_XChangePointerControl__ FIXED
 #define __TRACE_SAFERETTYPE_XChangePointerControl__ int
 #define __TRACE_PROTOARGLIST_XChangePointerControl__ ( Display * display, Bool do_accel, Bool do_threshold, int accel_numerator, int accel_denominator, int threshold)
 #define __TRACE_ARGLIST_XChangePointerControl__ ( display, do_accel, do_threshold, accel_numerator, accel_denominator, threshold)
@@ -2500,7 +2736,7 @@ int XChangePointerControl  // 6 args
     __TRACE_PRINTF_ARG__(XChangePointerControl, int, threshold)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XChangePointerControl__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XChangePointerControl, Display_p, display)
-__TRACE__(TYPED, FIXED, XChangePointerControl)
+__TRACE__(XChangePointerControl)
 
 
 /*
@@ -2514,6 +2750,8 @@ int XChangeProperty  // 8 args
     "const unsigned char *" "data"
     "int" "nelements"
 */
+#define __TRACE_RETSTYLE_XChangeProperty__ TYPED
+#define __TRACE_ARGSTYLE_XChangeProperty__ FIXED
 #define __TRACE_SAFERETTYPE_XChangeProperty__ int
 #define __TRACE_PROTOARGLIST_XChangeProperty__ ( Display * display, Window w, Atom property, Atom type, int format, int mode, const unsigned char * data, int nelements)
 #define __TRACE_ARGLIST_XChangeProperty__ ( display, w, property, type, format, mode, data, nelements)
@@ -2532,7 +2770,7 @@ int XChangeProperty  // 8 args
     __TRACE_PRINTF_ARG__(XChangeProperty, int, nelements)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XChangeProperty__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XChangeProperty, Display_p, display)
-__TRACE__(TYPED, FIXED, XChangeProperty)
+__TRACE__(XChangeProperty)
 
 
 /*
@@ -2541,6 +2779,8 @@ int XChangeSaveSet  // 3 args
     "Window" "w"
     "int" "change_mode"
 */
+#define __TRACE_RETSTYLE_XChangeSaveSet__ TYPED
+#define __TRACE_ARGSTYLE_XChangeSaveSet__ FIXED
 #define __TRACE_SAFERETTYPE_XChangeSaveSet__ int
 #define __TRACE_PROTOARGLIST_XChangeSaveSet__ ( Display * display, Window w, int change_mode)
 #define __TRACE_ARGLIST_XChangeSaveSet__ ( display, w, change_mode)
@@ -2554,7 +2794,7 @@ int XChangeSaveSet  // 3 args
     __TRACE_PRINTF_ARG__(XChangeSaveSet, int_SetMode, change_mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XChangeSaveSet__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XChangeSaveSet, Display_p, display)
-__TRACE__(TYPED, FIXED, XChangeSaveSet)
+__TRACE__(XChangeSaveSet)
 
 
 /*
@@ -2564,6 +2804,8 @@ int XChangeWindowAttributes  // 4 args
     "unsigned long" "valuemask"
     "XSetWindowAttributes *" "attributes"
 */
+#define __TRACE_RETSTYLE_XChangeWindowAttributes__ TYPED
+#define __TRACE_ARGSTYLE_XChangeWindowAttributes__ FIXED
 #define __TRACE_SAFERETTYPE_XChangeWindowAttributes__ int
 #define __TRACE_PROTOARGLIST_XChangeWindowAttributes__ ( Display * display, Window w, unsigned long valuemask, XSetWindowAttributes * attributes)
 #define __TRACE_ARGLIST_XChangeWindowAttributes__ ( display, w, valuemask, attributes)
@@ -2578,7 +2820,7 @@ int XChangeWindowAttributes  // 4 args
     __TRACE_PRINTF_ARG__(XChangeWindowAttributes, XSetWindowAttributes_p, attributes)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XChangeWindowAttributes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XChangeWindowAttributes, Display_p, display)
-__TRACE__(TYPED, FIXED, XChangeWindowAttributes)
+__TRACE__(XChangeWindowAttributes)
 
 
 /*
@@ -2588,6 +2830,8 @@ Bool XCheckIfEvent  // 4 args
     "Bool (*) ( Display * , XEvent * , XPointer )" "predicate"
     "XPointer" "arg"
 */
+#define __TRACE_RETSTYLE_XCheckIfEvent__ TYPED
+#define __TRACE_ARGSTYLE_XCheckIfEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XCheckIfEvent__ Bool
 #define __TRACE_PROTOARGLIST_XCheckIfEvent__ ( Display * display, XEvent * event_return, Bool (*predicate) ( Display * , XEvent * , XPointer ), XPointer arg)
 #define __TRACE_ARGLIST_XCheckIfEvent__ ( display, event_return, predicate, arg)
@@ -2602,7 +2846,7 @@ Bool XCheckIfEvent  // 4 args
     __TRACE_PRINTF_ARG__(XCheckIfEvent, XPointer, arg)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCheckIfEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCheckIfEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XCheckIfEvent)
+__TRACE__(XCheckIfEvent)
 
 
 /*
@@ -2611,6 +2855,8 @@ Bool XCheckMaskEvent  // 3 args
     "long" "event_mask"
     "XEvent *" "event_return"
 */
+#define __TRACE_RETSTYLE_XCheckMaskEvent__ TYPED
+#define __TRACE_ARGSTYLE_XCheckMaskEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XCheckMaskEvent__ Bool
 #define __TRACE_PROTOARGLIST_XCheckMaskEvent__ ( Display * display, long event_mask, XEvent * event_return)
 #define __TRACE_ARGLIST_XCheckMaskEvent__ ( display, event_mask, event_return)
@@ -2624,7 +2870,7 @@ Bool XCheckMaskEvent  // 3 args
     __TRACE_PRINTF_ARG__(XCheckMaskEvent, XEvent_p, event_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCheckMaskEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCheckMaskEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XCheckMaskEvent)
+__TRACE__(XCheckMaskEvent)
 
 
 /*
@@ -2633,6 +2879,8 @@ Bool XCheckTypedEvent  // 3 args
     "int" "event_type"
     "XEvent *" "event_return"
 */
+#define __TRACE_RETSTYLE_XCheckTypedEvent__ TYPED
+#define __TRACE_ARGSTYLE_XCheckTypedEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XCheckTypedEvent__ Bool
 #define __TRACE_PROTOARGLIST_XCheckTypedEvent__ ( Display * display, int event_type, XEvent * event_return)
 #define __TRACE_ARGLIST_XCheckTypedEvent__ ( display, event_type, event_return)
@@ -2646,7 +2894,7 @@ Bool XCheckTypedEvent  // 3 args
     __TRACE_PRINTF_ARG__(XCheckTypedEvent, XEvent_p, event_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCheckTypedEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCheckTypedEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XCheckTypedEvent)
+__TRACE__(XCheckTypedEvent)
 
 
 /*
@@ -2656,6 +2904,8 @@ Bool XCheckTypedWindowEvent  // 4 args
     "int" "event_type"
     "XEvent *" "event_return"
 */
+#define __TRACE_RETSTYLE_XCheckTypedWindowEvent__ TYPED
+#define __TRACE_ARGSTYLE_XCheckTypedWindowEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XCheckTypedWindowEvent__ Bool
 #define __TRACE_PROTOARGLIST_XCheckTypedWindowEvent__ ( Display * display, Window w, int event_type, XEvent * event_return)
 #define __TRACE_ARGLIST_XCheckTypedWindowEvent__ ( display, w, event_type, event_return)
@@ -2670,7 +2920,7 @@ Bool XCheckTypedWindowEvent  // 4 args
     __TRACE_PRINTF_ARG__(XCheckTypedWindowEvent, XEvent_p, event_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCheckTypedWindowEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCheckTypedWindowEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XCheckTypedWindowEvent)
+__TRACE__(XCheckTypedWindowEvent)
 
 
 /*
@@ -2680,6 +2930,8 @@ Bool XCheckWindowEvent  // 4 args
     "long" "event_mask"
     "XEvent *" "event_return"
 */
+#define __TRACE_RETSTYLE_XCheckWindowEvent__ TYPED
+#define __TRACE_ARGSTYLE_XCheckWindowEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XCheckWindowEvent__ Bool
 #define __TRACE_PROTOARGLIST_XCheckWindowEvent__ ( Display * display, Window w, long event_mask, XEvent * event_return)
 #define __TRACE_ARGLIST_XCheckWindowEvent__ ( display, w, event_mask, event_return)
@@ -2694,7 +2946,7 @@ Bool XCheckWindowEvent  // 4 args
     __TRACE_PRINTF_ARG__(XCheckWindowEvent, XEvent_p, event_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCheckWindowEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCheckWindowEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XCheckWindowEvent)
+__TRACE__(XCheckWindowEvent)
 
 
 /*
@@ -2703,6 +2955,8 @@ int XCirculateSubwindows  // 3 args
     "Window" "w"
     "int" "direction"
 */
+#define __TRACE_RETSTYLE_XCirculateSubwindows__ TYPED
+#define __TRACE_ARGSTYLE_XCirculateSubwindows__ FIXED
 #define __TRACE_SAFERETTYPE_XCirculateSubwindows__ int
 #define __TRACE_PROTOARGLIST_XCirculateSubwindows__ ( Display * display, Window w, int direction)
 #define __TRACE_ARGLIST_XCirculateSubwindows__ ( display, w, direction)
@@ -2716,7 +2970,7 @@ int XCirculateSubwindows  // 3 args
     __TRACE_PRINTF_ARG__(XCirculateSubwindows, int_CirculationDirection, direction)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCirculateSubwindows__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCirculateSubwindows, Display_p, display)
-__TRACE__(TYPED, FIXED, XCirculateSubwindows)
+__TRACE__(XCirculateSubwindows)
 
 
 /*
@@ -2724,6 +2978,8 @@ int XCirculateSubwindowsDown  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XCirculateSubwindowsDown__ TYPED
+#define __TRACE_ARGSTYLE_XCirculateSubwindowsDown__ FIXED
 #define __TRACE_SAFERETTYPE_XCirculateSubwindowsDown__ int
 #define __TRACE_PROTOARGLIST_XCirculateSubwindowsDown__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XCirculateSubwindowsDown__ ( display, w)
@@ -2736,7 +2992,7 @@ int XCirculateSubwindowsDown  // 2 args
     __TRACE_PRINTF_ARG__(XCirculateSubwindowsDown, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCirculateSubwindowsDown__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCirculateSubwindowsDown, Display_p, display)
-__TRACE__(TYPED, FIXED, XCirculateSubwindowsDown)
+__TRACE__(XCirculateSubwindowsDown)
 
 
 /*
@@ -2744,6 +3000,8 @@ int XCirculateSubwindowsUp  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XCirculateSubwindowsUp__ TYPED
+#define __TRACE_ARGSTYLE_XCirculateSubwindowsUp__ FIXED
 #define __TRACE_SAFERETTYPE_XCirculateSubwindowsUp__ int
 #define __TRACE_PROTOARGLIST_XCirculateSubwindowsUp__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XCirculateSubwindowsUp__ ( display, w)
@@ -2756,7 +3014,7 @@ int XCirculateSubwindowsUp  // 2 args
     __TRACE_PRINTF_ARG__(XCirculateSubwindowsUp, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCirculateSubwindowsUp__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCirculateSubwindowsUp, Display_p, display)
-__TRACE__(TYPED, FIXED, XCirculateSubwindowsUp)
+__TRACE__(XCirculateSubwindowsUp)
 
 
 /*
@@ -2769,6 +3027,8 @@ int XClearArea  // 7 args
     "unsigned int" "height"
     "Bool" "exposures"
 */
+#define __TRACE_RETSTYLE_XClearArea__ TYPED
+#define __TRACE_ARGSTYLE_XClearArea__ FIXED
 #define __TRACE_SAFERETTYPE_XClearArea__ int
 #define __TRACE_PROTOARGLIST_XClearArea__ ( Display * display, Window w, int x, int y, unsigned int width, unsigned int height, Bool exposures)
 #define __TRACE_ARGLIST_XClearArea__ ( display, w, x, y, width, height, exposures)
@@ -2786,7 +3046,7 @@ int XClearArea  // 7 args
     __TRACE_PRINTF_ARG__(XClearArea, Bool, exposures)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XClearArea__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XClearArea, Display_p, display)
-__TRACE__(TYPED, FIXED, XClearArea)
+__TRACE__(XClearArea)
 
 
 /*
@@ -2794,6 +3054,8 @@ int XClearWindow  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XClearWindow__ TYPED
+#define __TRACE_ARGSTYLE_XClearWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XClearWindow__ int
 #define __TRACE_PROTOARGLIST_XClearWindow__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XClearWindow__ ( display, w)
@@ -2806,13 +3068,15 @@ int XClearWindow  // 2 args
     __TRACE_PRINTF_ARG__(XClearWindow, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XClearWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XClearWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XClearWindow)
+__TRACE__(XClearWindow)
 
 
 /*
 int XCloseDisplay  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XCloseDisplay__ TYPED
+#define __TRACE_ARGSTYLE_XCloseDisplay__ FIXED
 #define __TRACE_SAFERETTYPE_XCloseDisplay__ int
 #define __TRACE_PROTOARGLIST_XCloseDisplay__ ( Display * display)
 #define __TRACE_ARGLIST_XCloseDisplay__ ( display)
@@ -2824,7 +3088,7 @@ int XCloseDisplay  // 1 args
     __TRACE_PRINTF_ARG__(XCloseDisplay, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCloseDisplay__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCloseDisplay, Display_p, display)
-__TRACE__(TYPED, FIXED, XCloseDisplay)
+__TRACE__(XCloseDisplay)
 
 
 /*
@@ -2834,6 +3098,8 @@ int XConfigureWindow  // 4 args
     "unsigned int" "value_mask"
     "XWindowChanges *" "values"
 */
+#define __TRACE_RETSTYLE_XConfigureWindow__ TYPED
+#define __TRACE_ARGSTYLE_XConfigureWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XConfigureWindow__ int
 #define __TRACE_PROTOARGLIST_XConfigureWindow__ ( Display * display, Window w, unsigned int value_mask, XWindowChanges * values)
 #define __TRACE_ARGLIST_XConfigureWindow__ ( display, w, value_mask, values)
@@ -2848,13 +3114,15 @@ int XConfigureWindow  // 4 args
     __TRACE_PRINTF_ARG__(XConfigureWindow, XWindowChanges_p, values)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XConfigureWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XConfigureWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XConfigureWindow)
+__TRACE__(XConfigureWindow)
 
 
 /*
 int XConnectionNumber  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XConnectionNumber__ TYPED
+#define __TRACE_ARGSTYLE_XConnectionNumber__ FIXED
 #define __TRACE_SAFERETTYPE_XConnectionNumber__ int
 #define __TRACE_PROTOARGLIST_XConnectionNumber__ ( Display * display)
 #define __TRACE_ARGLIST_XConnectionNumber__ ( display)
@@ -2866,7 +3134,7 @@ int XConnectionNumber  // 1 args
     __TRACE_PRINTF_ARG__(XConnectionNumber, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XConnectionNumber__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XConnectionNumber, Display_p, display)
-__TRACE__(TYPED, FIXED, XConnectionNumber)
+__TRACE__(XConnectionNumber)
 
 
 /*
@@ -2878,6 +3146,8 @@ int XConvertSelection  // 6 args
     "Window" "requestor"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XConvertSelection__ TYPED
+#define __TRACE_ARGSTYLE_XConvertSelection__ FIXED
 #define __TRACE_SAFERETTYPE_XConvertSelection__ int
 #define __TRACE_PROTOARGLIST_XConvertSelection__ ( Display * display, Atom selection, Atom target, Atom property, Window requestor, Time time)
 #define __TRACE_ARGLIST_XConvertSelection__ ( display, selection, target, property, requestor, time)
@@ -2894,7 +3164,7 @@ int XConvertSelection  // 6 args
     __TRACE_PRINTF_ARG__(XConvertSelection, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XConvertSelection__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XConvertSelection, Display_p, display)
-__TRACE__(TYPED, FIXED, XConvertSelection)
+__TRACE__(XConvertSelection)
 
 
 /*
@@ -2910,6 +3180,8 @@ int XCopyArea  // 10 args
     "int" "dest_x"
     "int" "dest_y"
 */
+#define __TRACE_RETSTYLE_XCopyArea__ TYPED
+#define __TRACE_ARGSTYLE_XCopyArea__ FIXED
 #define __TRACE_SAFERETTYPE_XCopyArea__ int
 #define __TRACE_PROTOARGLIST_XCopyArea__ ( Display * display, Drawable src, Drawable dest, GC gc, int src_x, int src_y, unsigned int width, unsigned int height, int dest_x, int dest_y)
 #define __TRACE_ARGLIST_XCopyArea__ ( display, src, dest, gc, src_x, src_y, width, height, dest_x, dest_y)
@@ -2930,7 +3202,7 @@ int XCopyArea  // 10 args
     __TRACE_PRINTF_ARG__(XCopyArea, int, dest_y)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCopyArea__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCopyArea, Display_p, display)
-__TRACE__(TYPED, FIXED, XCopyArea)
+__TRACE__(XCopyArea)
 
 
 /*
@@ -2940,6 +3212,8 @@ int XCopyGC  // 4 args
     "unsigned long" "valuemask"
     "GC" "dest"
 */
+#define __TRACE_RETSTYLE_XCopyGC__ TYPED
+#define __TRACE_ARGSTYLE_XCopyGC__ FIXED
 #define __TRACE_SAFERETTYPE_XCopyGC__ int
 #define __TRACE_PROTOARGLIST_XCopyGC__ ( Display * display, GC src, unsigned long valuemask, GC dest)
 #define __TRACE_ARGLIST_XCopyGC__ ( display, src, valuemask, dest)
@@ -2954,7 +3228,7 @@ int XCopyGC  // 4 args
     __TRACE_PRINTF_ARG__(XCopyGC, GC, dest)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCopyGC__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCopyGC, Display_p, display)
-__TRACE__(TYPED, FIXED, XCopyGC)
+__TRACE__(XCopyGC)
 
 
 /*
@@ -2971,6 +3245,8 @@ int XCopyPlane  // 11 args
     "int" "dest_y"
     "unsigned long" "plane"
 */
+#define __TRACE_RETSTYLE_XCopyPlane__ TYPED
+#define __TRACE_ARGSTYLE_XCopyPlane__ FIXED
 #define __TRACE_SAFERETTYPE_XCopyPlane__ int
 #define __TRACE_PROTOARGLIST_XCopyPlane__ ( Display * display, Drawable src, Drawable dest, GC gc, int src_x, int src_y, unsigned int width, unsigned int height, int dest_x, int dest_y, unsigned long plane)
 #define __TRACE_ARGLIST_XCopyPlane__ ( display, src, dest, gc, src_x, src_y, width, height, dest_x, dest_y, plane)
@@ -2992,7 +3268,7 @@ int XCopyPlane  // 11 args
     __TRACE_PRINTF_ARG__(XCopyPlane, unsigned_long, plane)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCopyPlane__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCopyPlane, Display_p, display)
-__TRACE__(TYPED, FIXED, XCopyPlane)
+__TRACE__(XCopyPlane)
 
 
 /*
@@ -3000,6 +3276,8 @@ int XDefaultDepth  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDefaultDepth__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultDepth__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultDepth__ int
 #define __TRACE_PROTOARGLIST_XDefaultDepth__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDefaultDepth__ ( display, screen_number)
@@ -3012,13 +3290,15 @@ int XDefaultDepth  // 2 args
     __TRACE_PRINTF_ARG__(XDefaultDepth, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultDepth__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDefaultDepth, Display_p, display)
-__TRACE__(TYPED, FIXED, XDefaultDepth)
+__TRACE__(XDefaultDepth)
 
 
 /*
 int XDefaultDepthOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XDefaultDepthOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultDepthOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultDepthOfScreen__ int
 #define __TRACE_PROTOARGLIST_XDefaultDepthOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XDefaultDepthOfScreen__ ( screen)
@@ -3029,13 +3309,15 @@ int XDefaultDepthOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XDefaultDepthOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultDepthOfScreen__ 
-__TRACE__(TYPED, FIXED, XDefaultDepthOfScreen)
+__TRACE__(XDefaultDepthOfScreen)
 
 
 /*
 int XDefaultScreen  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XDefaultScreen__ TYPED
+#define __TRACE_ARGSTYLE_XDefaultScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XDefaultScreen__ int
 #define __TRACE_PROTOARGLIST_XDefaultScreen__ ( Display * display)
 #define __TRACE_ARGLIST_XDefaultScreen__ ( display)
@@ -3047,7 +3329,7 @@ int XDefaultScreen  // 1 args
     __TRACE_PRINTF_ARG__(XDefaultScreen, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefaultScreen__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDefaultScreen, Display_p, display)
-__TRACE__(TYPED, FIXED, XDefaultScreen)
+__TRACE__(XDefaultScreen)
 
 
 /*
@@ -3056,6 +3338,8 @@ int XDefineCursor  // 3 args
     "Window" "w"
     "Cursor" "cursor"
 */
+#define __TRACE_RETSTYLE_XDefineCursor__ TYPED
+#define __TRACE_ARGSTYLE_XDefineCursor__ FIXED
 #define __TRACE_SAFERETTYPE_XDefineCursor__ int
 #define __TRACE_PROTOARGLIST_XDefineCursor__ ( Display * display, Window w, Cursor cursor)
 #define __TRACE_ARGLIST_XDefineCursor__ ( display, w, cursor)
@@ -3069,7 +3353,7 @@ int XDefineCursor  // 3 args
     __TRACE_PRINTF_ARG__(XDefineCursor, Cursor, cursor)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDefineCursor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDefineCursor, Display_p, display)
-__TRACE__(TYPED, FIXED, XDefineCursor)
+__TRACE__(XDefineCursor)
 
 
 /*
@@ -3078,6 +3362,8 @@ int XDeleteProperty  // 3 args
     "Window" "w"
     "Atom" "property"
 */
+#define __TRACE_RETSTYLE_XDeleteProperty__ TYPED
+#define __TRACE_ARGSTYLE_XDeleteProperty__ FIXED
 #define __TRACE_SAFERETTYPE_XDeleteProperty__ int
 #define __TRACE_PROTOARGLIST_XDeleteProperty__ ( Display * display, Window w, Atom property)
 #define __TRACE_ARGLIST_XDeleteProperty__ ( display, w, property)
@@ -3091,7 +3377,7 @@ int XDeleteProperty  // 3 args
     __TRACE_PRINTF_ARG__(XDeleteProperty, Atom, property)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDeleteProperty__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDeleteProperty, Display_p, display)
-__TRACE__(TYPED, FIXED, XDeleteProperty)
+__TRACE__(XDeleteProperty)
 
 
 /*
@@ -3099,6 +3385,8 @@ int XDestroyWindow  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XDestroyWindow__ TYPED
+#define __TRACE_ARGSTYLE_XDestroyWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XDestroyWindow__ int
 #define __TRACE_PROTOARGLIST_XDestroyWindow__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XDestroyWindow__ ( display, w)
@@ -3111,7 +3399,7 @@ int XDestroyWindow  // 2 args
     __TRACE_PRINTF_ARG__(XDestroyWindow, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDestroyWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDestroyWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XDestroyWindow)
+__TRACE__(XDestroyWindow)
 
 
 /*
@@ -3119,6 +3407,8 @@ int XDestroySubwindows  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XDestroySubwindows__ TYPED
+#define __TRACE_ARGSTYLE_XDestroySubwindows__ FIXED
 #define __TRACE_SAFERETTYPE_XDestroySubwindows__ int
 #define __TRACE_PROTOARGLIST_XDestroySubwindows__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XDestroySubwindows__ ( display, w)
@@ -3131,13 +3421,15 @@ int XDestroySubwindows  // 2 args
     __TRACE_PRINTF_ARG__(XDestroySubwindows, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDestroySubwindows__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDestroySubwindows, Display_p, display)
-__TRACE__(TYPED, FIXED, XDestroySubwindows)
+__TRACE__(XDestroySubwindows)
 
 
 /*
 int XDoesBackingStore  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XDoesBackingStore__ TYPED
+#define __TRACE_ARGSTYLE_XDoesBackingStore__ FIXED
 #define __TRACE_SAFERETTYPE_XDoesBackingStore__ int
 #define __TRACE_PROTOARGLIST_XDoesBackingStore__ ( Screen * screen)
 #define __TRACE_ARGLIST_XDoesBackingStore__ ( screen)
@@ -3148,13 +3440,15 @@ int XDoesBackingStore  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XDoesBackingStore, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDoesBackingStore__ 
-__TRACE__(TYPED, FIXED, XDoesBackingStore)
+__TRACE__(XDoesBackingStore)
 
 
 /*
 Bool XDoesSaveUnders  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XDoesSaveUnders__ TYPED
+#define __TRACE_ARGSTYLE_XDoesSaveUnders__ FIXED
 #define __TRACE_SAFERETTYPE_XDoesSaveUnders__ Bool
 #define __TRACE_PROTOARGLIST_XDoesSaveUnders__ ( Screen * screen)
 #define __TRACE_ARGLIST_XDoesSaveUnders__ ( screen)
@@ -3165,13 +3459,15 @@ Bool XDoesSaveUnders  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XDoesSaveUnders, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDoesSaveUnders__ 
-__TRACE__(TYPED, FIXED, XDoesSaveUnders)
+__TRACE__(XDoesSaveUnders)
 
 
 /*
 int XDisableAccessControl  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XDisableAccessControl__ TYPED
+#define __TRACE_ARGSTYLE_XDisableAccessControl__ FIXED
 #define __TRACE_SAFERETTYPE_XDisableAccessControl__ int
 #define __TRACE_PROTOARGLIST_XDisableAccessControl__ ( Display * display)
 #define __TRACE_ARGLIST_XDisableAccessControl__ ( display)
@@ -3183,7 +3479,7 @@ int XDisableAccessControl  // 1 args
     __TRACE_PRINTF_ARG__(XDisableAccessControl, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisableAccessControl__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisableAccessControl, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisableAccessControl)
+__TRACE__(XDisableAccessControl)
 
 
 /*
@@ -3191,6 +3487,8 @@ int XDisplayCells  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDisplayCells__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayCells__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayCells__ int
 #define __TRACE_PROTOARGLIST_XDisplayCells__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDisplayCells__ ( display, screen_number)
@@ -3203,7 +3501,7 @@ int XDisplayCells  // 2 args
     __TRACE_PRINTF_ARG__(XDisplayCells, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayCells__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayCells, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayCells)
+__TRACE__(XDisplayCells)
 
 
 /*
@@ -3211,6 +3509,8 @@ int XDisplayHeight  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDisplayHeight__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayHeight__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayHeight__ int
 #define __TRACE_PROTOARGLIST_XDisplayHeight__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDisplayHeight__ ( display, screen_number)
@@ -3223,7 +3523,7 @@ int XDisplayHeight  // 2 args
     __TRACE_PRINTF_ARG__(XDisplayHeight, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayHeight__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayHeight, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayHeight)
+__TRACE__(XDisplayHeight)
 
 
 /*
@@ -3231,6 +3531,8 @@ int XDisplayHeightMM  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDisplayHeightMM__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayHeightMM__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayHeightMM__ int
 #define __TRACE_PROTOARGLIST_XDisplayHeightMM__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDisplayHeightMM__ ( display, screen_number)
@@ -3243,7 +3545,7 @@ int XDisplayHeightMM  // 2 args
     __TRACE_PRINTF_ARG__(XDisplayHeightMM, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayHeightMM__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayHeightMM, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayHeightMM)
+__TRACE__(XDisplayHeightMM)
 
 
 /*
@@ -3252,6 +3554,8 @@ int XDisplayKeycodes  // 3 args
     "int *" "min_keycodes_return"
     "int *" "max_keycodes_return"
 */
+#define __TRACE_RETSTYLE_XDisplayKeycodes__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayKeycodes__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayKeycodes__ int
 #define __TRACE_PROTOARGLIST_XDisplayKeycodes__ ( Display * display, int * min_keycodes_return, int * max_keycodes_return)
 #define __TRACE_ARGLIST_XDisplayKeycodes__ ( display, min_keycodes_return, max_keycodes_return)
@@ -3265,7 +3569,7 @@ int XDisplayKeycodes  // 3 args
     __TRACE_PRINTF_ARG__(XDisplayKeycodes, int_p, max_keycodes_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayKeycodes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayKeycodes, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayKeycodes)
+__TRACE__(XDisplayKeycodes)
 
 
 /*
@@ -3273,6 +3577,8 @@ int XDisplayPlanes  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDisplayPlanes__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayPlanes__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayPlanes__ int
 #define __TRACE_PROTOARGLIST_XDisplayPlanes__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDisplayPlanes__ ( display, screen_number)
@@ -3285,7 +3591,7 @@ int XDisplayPlanes  // 2 args
     __TRACE_PRINTF_ARG__(XDisplayPlanes, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayPlanes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayPlanes, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayPlanes)
+__TRACE__(XDisplayPlanes)
 
 
 /*
@@ -3293,6 +3599,8 @@ int XDisplayWidth  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDisplayWidth__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayWidth__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayWidth__ int
 #define __TRACE_PROTOARGLIST_XDisplayWidth__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDisplayWidth__ ( display, screen_number)
@@ -3305,7 +3613,7 @@ int XDisplayWidth  // 2 args
     __TRACE_PRINTF_ARG__(XDisplayWidth, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayWidth__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayWidth, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayWidth)
+__TRACE__(XDisplayWidth)
 
 
 /*
@@ -3313,6 +3621,8 @@ int XDisplayWidthMM  // 2 args
     "Display *" "display"
     "int" "screen_number"
 */
+#define __TRACE_RETSTYLE_XDisplayWidthMM__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayWidthMM__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayWidthMM__ int
 #define __TRACE_PROTOARGLIST_XDisplayWidthMM__ ( Display * display, int screen_number)
 #define __TRACE_ARGLIST_XDisplayWidthMM__ ( display, screen_number)
@@ -3325,7 +3635,7 @@ int XDisplayWidthMM  // 2 args
     __TRACE_PRINTF_ARG__(XDisplayWidthMM, int, screen_number)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayWidthMM__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDisplayWidthMM, Display_p, display)
-__TRACE__(TYPED, FIXED, XDisplayWidthMM)
+__TRACE__(XDisplayWidthMM)
 
 
 /*
@@ -3340,6 +3650,8 @@ int XDrawArc  // 9 args
     "int" "angle1"
     "int" "angle2"
 */
+#define __TRACE_RETSTYLE_XDrawArc__ TYPED
+#define __TRACE_ARGSTYLE_XDrawArc__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawArc__ int
 #define __TRACE_PROTOARGLIST_XDrawArc__ ( Display * display, Drawable d, GC gc, int x, int y, unsigned int width, unsigned int height, int angle1, int angle2)
 #define __TRACE_ARGLIST_XDrawArc__ ( display, d, gc, x, y, width, height, angle1, angle2)
@@ -3359,7 +3671,7 @@ int XDrawArc  // 9 args
     __TRACE_PRINTF_ARG__(XDrawArc, int, angle2)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawArc__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawArc, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawArc)
+__TRACE__(XDrawArc)
 
 
 /*
@@ -3370,6 +3682,8 @@ int XDrawArcs  // 5 args
     "XArc *" "arcs"
     "int" "narcs"
 */
+#define __TRACE_RETSTYLE_XDrawArcs__ TYPED
+#define __TRACE_ARGSTYLE_XDrawArcs__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawArcs__ int
 #define __TRACE_PROTOARGLIST_XDrawArcs__ ( Display * display, Drawable d, GC gc, XArc * arcs, int narcs)
 #define __TRACE_ARGLIST_XDrawArcs__ ( display, d, gc, arcs, narcs)
@@ -3385,7 +3699,7 @@ int XDrawArcs  // 5 args
     __TRACE_PRINTF_ARG__(XDrawArcs, int, narcs)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawArcs__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawArcs, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawArcs)
+__TRACE__(XDrawArcs)
 
 
 /*
@@ -3398,6 +3712,8 @@ int XDrawImageString  // 7 args
     "const char *" "string"
     "int" "length"
 */
+#define __TRACE_RETSTYLE_XDrawImageString__ TYPED
+#define __TRACE_ARGSTYLE_XDrawImageString__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawImageString__ int
 #define __TRACE_PROTOARGLIST_XDrawImageString__ ( Display * display, Drawable d, GC gc, int x, int y, const char * string, int length)
 #define __TRACE_ARGLIST_XDrawImageString__ ( display, d, gc, x, y, string, length)
@@ -3415,7 +3731,7 @@ int XDrawImageString  // 7 args
     __TRACE_PRINTF_ARG__(XDrawImageString, int, length)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawImageString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawImageString, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawImageString)
+__TRACE__(XDrawImageString)
 
 
 /*
@@ -3428,6 +3744,8 @@ int XDrawImageString16  // 7 args
     "const XChar2b *" "string"
     "int" "length"
 */
+#define __TRACE_RETSTYLE_XDrawImageString16__ TYPED
+#define __TRACE_ARGSTYLE_XDrawImageString16__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawImageString16__ int
 #define __TRACE_PROTOARGLIST_XDrawImageString16__ ( Display * display, Drawable d, GC gc, int x, int y, const XChar2b * string, int length)
 #define __TRACE_ARGLIST_XDrawImageString16__ ( display, d, gc, x, y, string, length)
@@ -3445,7 +3763,7 @@ int XDrawImageString16  // 7 args
     __TRACE_PRINTF_ARG__(XDrawImageString16, int, length)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawImageString16__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawImageString16, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawImageString16)
+__TRACE__(XDrawImageString16)
 
 
 /*
@@ -3458,6 +3776,8 @@ int XDrawLine  // 7 args
     "int" "x2"
     "int" "y2"
 */
+#define __TRACE_RETSTYLE_XDrawLine__ TYPED
+#define __TRACE_ARGSTYLE_XDrawLine__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawLine__ int
 #define __TRACE_PROTOARGLIST_XDrawLine__ ( Display * display, Drawable d, GC gc, int x1, int y1, int x2, int y2)
 #define __TRACE_ARGLIST_XDrawLine__ ( display, d, gc, x1, y1, x2, y2)
@@ -3475,7 +3795,7 @@ int XDrawLine  // 7 args
     __TRACE_PRINTF_ARG__(XDrawLine, int, y2)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawLine__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawLine, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawLine)
+__TRACE__(XDrawLine)
 
 
 /*
@@ -3487,6 +3807,8 @@ int XDrawLines  // 6 args
     "int" "npoints"
     "int" "mode"
 */
+#define __TRACE_RETSTYLE_XDrawLines__ TYPED
+#define __TRACE_ARGSTYLE_XDrawLines__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawLines__ int
 #define __TRACE_PROTOARGLIST_XDrawLines__ ( Display * display, Drawable d, GC gc, XPoint * points, int npoints, int mode)
 #define __TRACE_ARGLIST_XDrawLines__ ( display, d, gc, points, npoints, mode)
@@ -3503,7 +3825,7 @@ int XDrawLines  // 6 args
     __TRACE_PRINTF_ARG__(XDrawLines, int_CoordinateMode, mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawLines__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawLines, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawLines)
+__TRACE__(XDrawLines)
 
 
 /*
@@ -3514,6 +3836,8 @@ int XDrawPoint  // 5 args
     "int" "x"
     "int" "y"
 */
+#define __TRACE_RETSTYLE_XDrawPoint__ TYPED
+#define __TRACE_ARGSTYLE_XDrawPoint__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawPoint__ int
 #define __TRACE_PROTOARGLIST_XDrawPoint__ ( Display * display, Drawable d, GC gc, int x, int y)
 #define __TRACE_ARGLIST_XDrawPoint__ ( display, d, gc, x, y)
@@ -3529,7 +3853,7 @@ int XDrawPoint  // 5 args
     __TRACE_PRINTF_ARG__(XDrawPoint, int, y)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawPoint__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawPoint, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawPoint)
+__TRACE__(XDrawPoint)
 
 
 /*
@@ -3541,6 +3865,8 @@ int XDrawPoints  // 6 args
     "int" "npoints"
     "int" "mode"
 */
+#define __TRACE_RETSTYLE_XDrawPoints__ TYPED
+#define __TRACE_ARGSTYLE_XDrawPoints__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawPoints__ int
 #define __TRACE_PROTOARGLIST_XDrawPoints__ ( Display * display, Drawable d, GC gc, XPoint * points, int npoints, int mode)
 #define __TRACE_ARGLIST_XDrawPoints__ ( display, d, gc, points, npoints, mode)
@@ -3557,7 +3883,7 @@ int XDrawPoints  // 6 args
     __TRACE_PRINTF_ARG__(XDrawPoints, int_CoordinateMode, mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawPoints__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawPoints, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawPoints)
+__TRACE__(XDrawPoints)
 
 
 /*
@@ -3570,6 +3896,8 @@ int XDrawRectangle  // 7 args
     "unsigned int" "width"
     "unsigned int" "height"
 */
+#define __TRACE_RETSTYLE_XDrawRectangle__ TYPED
+#define __TRACE_ARGSTYLE_XDrawRectangle__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawRectangle__ int
 #define __TRACE_PROTOARGLIST_XDrawRectangle__ ( Display * display, Drawable d, GC gc, int x, int y, unsigned int width, unsigned int height)
 #define __TRACE_ARGLIST_XDrawRectangle__ ( display, d, gc, x, y, width, height)
@@ -3587,7 +3915,7 @@ int XDrawRectangle  // 7 args
     __TRACE_PRINTF_ARG__(XDrawRectangle, unsigned_int, height)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawRectangle__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawRectangle, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawRectangle)
+__TRACE__(XDrawRectangle)
 
 
 /*
@@ -3598,6 +3926,8 @@ int XDrawRectangles  // 5 args
     "XRectangle *" "rectangles"
     "int" "nrectangles"
 */
+#define __TRACE_RETSTYLE_XDrawRectangles__ TYPED
+#define __TRACE_ARGSTYLE_XDrawRectangles__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawRectangles__ int
 #define __TRACE_PROTOARGLIST_XDrawRectangles__ ( Display * display, Drawable d, GC gc, XRectangle * rectangles, int nrectangles)
 #define __TRACE_ARGLIST_XDrawRectangles__ ( display, d, gc, rectangles, nrectangles)
@@ -3613,7 +3943,7 @@ int XDrawRectangles  // 5 args
     __TRACE_PRINTF_ARG__(XDrawRectangles, int, nrectangles)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawRectangles__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawRectangles, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawRectangles)
+__TRACE__(XDrawRectangles)
 
 
 /*
@@ -3624,6 +3954,8 @@ int XDrawSegments  // 5 args
     "XSegment *" "segments"
     "int" "nsegments"
 */
+#define __TRACE_RETSTYLE_XDrawSegments__ TYPED
+#define __TRACE_ARGSTYLE_XDrawSegments__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawSegments__ int
 #define __TRACE_PROTOARGLIST_XDrawSegments__ ( Display * display, Drawable d, GC gc, XSegment * segments, int nsegments)
 #define __TRACE_ARGLIST_XDrawSegments__ ( display, d, gc, segments, nsegments)
@@ -3639,7 +3971,7 @@ int XDrawSegments  // 5 args
     __TRACE_PRINTF_ARG__(XDrawSegments, int, nsegments)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawSegments__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawSegments, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawSegments)
+__TRACE__(XDrawSegments)
 
 
 /*
@@ -3652,6 +3984,8 @@ int XDrawString  // 7 args
     "const char *" "string"
     "int" "length"
 */
+#define __TRACE_RETSTYLE_XDrawString__ TYPED
+#define __TRACE_ARGSTYLE_XDrawString__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawString__ int
 #define __TRACE_PROTOARGLIST_XDrawString__ ( Display * display, Drawable d, GC gc, int x, int y, const char * string, int length)
 #define __TRACE_ARGLIST_XDrawString__ ( display, d, gc, x, y, string, length)
@@ -3669,7 +4003,7 @@ int XDrawString  // 7 args
     __TRACE_PRINTF_ARG__(XDrawString, int, length)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawString, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawString)
+__TRACE__(XDrawString)
 
 
 /*
@@ -3682,6 +4016,8 @@ int XDrawString16  // 7 args
     "const XChar2b *" "string"
     "int" "length"
 */
+#define __TRACE_RETSTYLE_XDrawString16__ TYPED
+#define __TRACE_ARGSTYLE_XDrawString16__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawString16__ int
 #define __TRACE_PROTOARGLIST_XDrawString16__ ( Display * display, Drawable d, GC gc, int x, int y, const XChar2b * string, int length)
 #define __TRACE_ARGLIST_XDrawString16__ ( display, d, gc, x, y, string, length)
@@ -3699,7 +4035,7 @@ int XDrawString16  // 7 args
     __TRACE_PRINTF_ARG__(XDrawString16, int, length)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawString16__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawString16, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawString16)
+__TRACE__(XDrawString16)
 
 
 /*
@@ -3712,6 +4048,8 @@ int XDrawText  // 7 args
     "XTextItem *" "items"
     "int" "nitems"
 */
+#define __TRACE_RETSTYLE_XDrawText__ TYPED
+#define __TRACE_ARGSTYLE_XDrawText__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawText__ int
 #define __TRACE_PROTOARGLIST_XDrawText__ ( Display * display, Drawable d, GC gc, int x, int y, XTextItem * items, int nitems)
 #define __TRACE_ARGLIST_XDrawText__ ( display, d, gc, x, y, items, nitems)
@@ -3729,7 +4067,7 @@ int XDrawText  // 7 args
     __TRACE_PRINTF_ARG__(XDrawText, int, nitems)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawText__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawText, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawText)
+__TRACE__(XDrawText)
 
 
 /*
@@ -3742,6 +4080,8 @@ int XDrawText16  // 7 args
     "XTextItem16 *" "items"
     "int" "nitems"
 */
+#define __TRACE_RETSTYLE_XDrawText16__ TYPED
+#define __TRACE_ARGSTYLE_XDrawText16__ FIXED
 #define __TRACE_SAFERETTYPE_XDrawText16__ int
 #define __TRACE_PROTOARGLIST_XDrawText16__ ( Display * display, Drawable d, GC gc, int x, int y, XTextItem16 * items, int nitems)
 #define __TRACE_ARGLIST_XDrawText16__ ( display, d, gc, x, y, items, nitems)
@@ -3759,13 +4099,15 @@ int XDrawText16  // 7 args
     __TRACE_PRINTF_ARG__(XDrawText16, int, nitems)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDrawText16__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XDrawText16, Display_p, display)
-__TRACE__(TYPED, FIXED, XDrawText16)
+__TRACE__(XDrawText16)
 
 
 /*
 int XEnableAccessControl  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XEnableAccessControl__ TYPED
+#define __TRACE_ARGSTYLE_XEnableAccessControl__ FIXED
 #define __TRACE_SAFERETTYPE_XEnableAccessControl__ int
 #define __TRACE_PROTOARGLIST_XEnableAccessControl__ ( Display * display)
 #define __TRACE_ARGLIST_XEnableAccessControl__ ( display)
@@ -3777,7 +4119,7 @@ int XEnableAccessControl  // 1 args
     __TRACE_PRINTF_ARG__(XEnableAccessControl, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XEnableAccessControl__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XEnableAccessControl, Display_p, display)
-__TRACE__(TYPED, FIXED, XEnableAccessControl)
+__TRACE__(XEnableAccessControl)
 
 
 /*
@@ -3785,6 +4127,8 @@ int XEventsQueued  // 2 args
     "Display *" "display"
     "int" "mode"
 */
+#define __TRACE_RETSTYLE_XEventsQueued__ TYPED
+#define __TRACE_ARGSTYLE_XEventsQueued__ FIXED
 #define __TRACE_SAFERETTYPE_XEventsQueued__ int
 #define __TRACE_PROTOARGLIST_XEventsQueued__ ( Display * display, int mode)
 #define __TRACE_ARGLIST_XEventsQueued__ ( display, mode)
@@ -3797,7 +4141,7 @@ int XEventsQueued  // 2 args
     __TRACE_PRINTF_ARG__(XEventsQueued, int_QueueMode, mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XEventsQueued__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XEventsQueued, Display_p, display)
-__TRACE__(TYPED, FIXED, XEventsQueued)
+__TRACE__(XEventsQueued)
 
 
 /*
@@ -3806,6 +4150,8 @@ Status XFetchName  // 3 args
     "Window" "w"
     "char **" "window_name_return"
 */
+#define __TRACE_RETSTYLE_XFetchName__ TYPED
+#define __TRACE_ARGSTYLE_XFetchName__ FIXED
 #define __TRACE_SAFERETTYPE_XFetchName__ Status
 #define __TRACE_PROTOARGLIST_XFetchName__ ( Display * display, Window w, char ** window_name_return)
 #define __TRACE_ARGLIST_XFetchName__ ( display, w, window_name_return)
@@ -3819,7 +4165,7 @@ Status XFetchName  // 3 args
     __TRACE_PRINTF_ARG__(XFetchName, char_pp, window_name_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFetchName__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFetchName, Display_p, display)
-__TRACE__(TYPED, FIXED, XFetchName)
+__TRACE__(XFetchName)
 
 
 /*
@@ -3834,6 +4180,8 @@ int XFillArc  // 9 args
     "int" "angle1"
     "int" "angle2"
 */
+#define __TRACE_RETSTYLE_XFillArc__ TYPED
+#define __TRACE_ARGSTYLE_XFillArc__ FIXED
 #define __TRACE_SAFERETTYPE_XFillArc__ int
 #define __TRACE_PROTOARGLIST_XFillArc__ ( Display * display, Drawable d, GC gc, int x, int y, unsigned int width, unsigned int height, int angle1, int angle2)
 #define __TRACE_ARGLIST_XFillArc__ ( display, d, gc, x, y, width, height, angle1, angle2)
@@ -3853,7 +4201,7 @@ int XFillArc  // 9 args
     __TRACE_PRINTF_ARG__(XFillArc, int, angle2)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFillArc__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFillArc, Display_p, display)
-__TRACE__(TYPED, FIXED, XFillArc)
+__TRACE__(XFillArc)
 
 
 /*
@@ -3864,6 +4212,8 @@ int XFillArcs  // 5 args
     "XArc *" "arcs"
     "int" "narcs"
 */
+#define __TRACE_RETSTYLE_XFillArcs__ TYPED
+#define __TRACE_ARGSTYLE_XFillArcs__ FIXED
 #define __TRACE_SAFERETTYPE_XFillArcs__ int
 #define __TRACE_PROTOARGLIST_XFillArcs__ ( Display * display, Drawable d, GC gc, XArc * arcs, int narcs)
 #define __TRACE_ARGLIST_XFillArcs__ ( display, d, gc, arcs, narcs)
@@ -3879,7 +4229,7 @@ int XFillArcs  // 5 args
     __TRACE_PRINTF_ARG__(XFillArcs, int, narcs)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFillArcs__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFillArcs, Display_p, display)
-__TRACE__(TYPED, FIXED, XFillArcs)
+__TRACE__(XFillArcs)
 
 
 /*
@@ -3892,6 +4242,8 @@ int XFillPolygon  // 7 args
     "int" "shape"
     "int" "mode"
 */
+#define __TRACE_RETSTYLE_XFillPolygon__ TYPED
+#define __TRACE_ARGSTYLE_XFillPolygon__ FIXED
 #define __TRACE_SAFERETTYPE_XFillPolygon__ int
 #define __TRACE_PROTOARGLIST_XFillPolygon__ ( Display * display, Drawable d, GC gc, XPoint * points, int npoints, int shape, int mode)
 #define __TRACE_ARGLIST_XFillPolygon__ ( display, d, gc, points, npoints, shape, mode)
@@ -3909,7 +4261,7 @@ int XFillPolygon  // 7 args
     __TRACE_PRINTF_ARG__(XFillPolygon, int_CoordinateMode, mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFillPolygon__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFillPolygon, Display_p, display)
-__TRACE__(TYPED, FIXED, XFillPolygon)
+__TRACE__(XFillPolygon)
 
 
 /*
@@ -3922,6 +4274,8 @@ int XFillRectangle  // 7 args
     "unsigned int" "width"
     "unsigned int" "height"
 */
+#define __TRACE_RETSTYLE_XFillRectangle__ TYPED
+#define __TRACE_ARGSTYLE_XFillRectangle__ FIXED
 #define __TRACE_SAFERETTYPE_XFillRectangle__ int
 #define __TRACE_PROTOARGLIST_XFillRectangle__ ( Display * display, Drawable d, GC gc, int x, int y, unsigned int width, unsigned int height)
 #define __TRACE_ARGLIST_XFillRectangle__ ( display, d, gc, x, y, width, height)
@@ -3939,7 +4293,7 @@ int XFillRectangle  // 7 args
     __TRACE_PRINTF_ARG__(XFillRectangle, unsigned_int, height)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFillRectangle__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFillRectangle, Display_p, display)
-__TRACE__(TYPED, FIXED, XFillRectangle)
+__TRACE__(XFillRectangle)
 
 
 /*
@@ -3950,6 +4304,8 @@ int XFillRectangles  // 5 args
     "XRectangle *" "rectangles"
     "int" "nrectangles"
 */
+#define __TRACE_RETSTYLE_XFillRectangles__ TYPED
+#define __TRACE_ARGSTYLE_XFillRectangles__ FIXED
 #define __TRACE_SAFERETTYPE_XFillRectangles__ int
 #define __TRACE_PROTOARGLIST_XFillRectangles__ ( Display * display, Drawable d, GC gc, XRectangle * rectangles, int nrectangles)
 #define __TRACE_ARGLIST_XFillRectangles__ ( display, d, gc, rectangles, nrectangles)
@@ -3965,13 +4321,15 @@ int XFillRectangles  // 5 args
     __TRACE_PRINTF_ARG__(XFillRectangles, int, nrectangles)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFillRectangles__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFillRectangles, Display_p, display)
-__TRACE__(TYPED, FIXED, XFillRectangles)
+__TRACE__(XFillRectangles)
 
 
 /*
 int XFlush  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XFlush__ TYPED
+#define __TRACE_ARGSTYLE_XFlush__ FIXED
 #define __TRACE_SAFERETTYPE_XFlush__ int
 #define __TRACE_PROTOARGLIST_XFlush__ ( Display * display)
 #define __TRACE_ARGLIST_XFlush__ ( display)
@@ -3982,7 +4340,7 @@ int XFlush  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XFlush, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFlush__ 
-__TRACE__(TYPED, FIXED, XFlush)
+__TRACE__(XFlush)
 
 
 /*
@@ -3990,6 +4348,8 @@ int XForceScreenSaver  // 2 args
     "Display *" "display"
     "int" "mode"
 */
+#define __TRACE_RETSTYLE_XForceScreenSaver__ TYPED
+#define __TRACE_ARGSTYLE_XForceScreenSaver__ FIXED
 #define __TRACE_SAFERETTYPE_XForceScreenSaver__ int
 #define __TRACE_PROTOARGLIST_XForceScreenSaver__ ( Display * display, int mode)
 #define __TRACE_ARGLIST_XForceScreenSaver__ ( display, mode)
@@ -4002,13 +4362,15 @@ int XForceScreenSaver  // 2 args
     __TRACE_PRINTF_ARG__(XForceScreenSaver, int_ForceScreenSaver, mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XForceScreenSaver__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XForceScreenSaver, Display_p, display)
-__TRACE__(TYPED, FIXED, XForceScreenSaver)
+__TRACE__(XForceScreenSaver)
 
 
 /*
 int XFree  // 1 args
     "void *" "data"
 */
+#define __TRACE_RETSTYLE_XFree__ TYPED
+#define __TRACE_ARGSTYLE_XFree__ FIXED
 #define __TRACE_SAFERETTYPE_XFree__ int
 #define __TRACE_PROTOARGLIST_XFree__ ( void * data)
 #define __TRACE_ARGLIST_XFree__ ( data)
@@ -4018,7 +4380,7 @@ int XFree  // 1 args
 #define __TRACE_PRINTF_BODY_XFree__ \
     __TRACE_PRINTF_ARG__(XFree, void_p, data)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFree__ 
-__TRACE__(TYPED, FIXED, XFree)
+__TRACE__(XFree)
 
 
 /*
@@ -4026,6 +4388,8 @@ int XFreeColormap  // 2 args
     "Display *" "display"
     "Colormap" "colormap"
 */
+#define __TRACE_RETSTYLE_XFreeColormap__ TYPED
+#define __TRACE_ARGSTYLE_XFreeColormap__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeColormap__ int
 #define __TRACE_PROTOARGLIST_XFreeColormap__ ( Display * display, Colormap colormap)
 #define __TRACE_ARGLIST_XFreeColormap__ ( display, colormap)
@@ -4038,7 +4402,7 @@ int XFreeColormap  // 2 args
     __TRACE_PRINTF_ARG__(XFreeColormap, Colormap, colormap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeColormap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFreeColormap, Display_p, display)
-__TRACE__(TYPED, FIXED, XFreeColormap)
+__TRACE__(XFreeColormap)
 
 
 /*
@@ -4049,6 +4413,8 @@ int XFreeColors  // 5 args
     "int" "npixels"
     "unsigned long" "planes"
 */
+#define __TRACE_RETSTYLE_XFreeColors__ TYPED
+#define __TRACE_ARGSTYLE_XFreeColors__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeColors__ int
 #define __TRACE_PROTOARGLIST_XFreeColors__ ( Display * display, Colormap colormap, unsigned long * pixels, int npixels, unsigned long planes)
 #define __TRACE_ARGLIST_XFreeColors__ ( display, colormap, pixels, npixels, planes)
@@ -4064,7 +4430,7 @@ int XFreeColors  // 5 args
     __TRACE_PRINTF_ARG__(XFreeColors, unsigned_long, planes)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeColors__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFreeColors, Display_p, display)
-__TRACE__(TYPED, FIXED, XFreeColors)
+__TRACE__(XFreeColors)
 
 
 /*
@@ -4072,6 +4438,8 @@ int XFreeCursor  // 2 args
     "Display *" "display"
     "Cursor" "cursor"
 */
+#define __TRACE_RETSTYLE_XFreeCursor__ TYPED
+#define __TRACE_ARGSTYLE_XFreeCursor__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeCursor__ int
 #define __TRACE_PROTOARGLIST_XFreeCursor__ ( Display * display, Cursor cursor)
 #define __TRACE_ARGLIST_XFreeCursor__ ( display, cursor)
@@ -4084,13 +4452,15 @@ int XFreeCursor  // 2 args
     __TRACE_PRINTF_ARG__(XFreeCursor, Cursor, cursor)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeCursor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFreeCursor, Display_p, display)
-__TRACE__(TYPED, FIXED, XFreeCursor)
+__TRACE__(XFreeCursor)
 
 
 /*
 int XFreeExtensionList  // 1 args
     "char **" "list"
 */
+#define __TRACE_RETSTYLE_XFreeExtensionList__ TYPED
+#define __TRACE_ARGSTYLE_XFreeExtensionList__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeExtensionList__ int
 #define __TRACE_PROTOARGLIST_XFreeExtensionList__ ( char ** list)
 #define __TRACE_ARGLIST_XFreeExtensionList__ ( list)
@@ -4101,7 +4471,7 @@ int XFreeExtensionList  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XFreeExtensionList, char_pp, list)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeExtensionList__ 
-__TRACE__(TYPED, FIXED, XFreeExtensionList)
+__TRACE__(XFreeExtensionList)
 
 
 /*
@@ -4109,6 +4479,8 @@ int XFreeFont  // 2 args
     "Display *" "display"
     "XFontStruct *" "font_struct"
 */
+#define __TRACE_RETSTYLE_XFreeFont__ TYPED
+#define __TRACE_ARGSTYLE_XFreeFont__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeFont__ int
 #define __TRACE_PROTOARGLIST_XFreeFont__ ( Display * display, XFontStruct * font_struct)
 #define __TRACE_ARGLIST_XFreeFont__ ( display, font_struct)
@@ -4121,7 +4493,7 @@ int XFreeFont  // 2 args
     __TRACE_PRINTF_ARG__(XFreeFont, XFontStruct_p, font_struct)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeFont__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFreeFont, Display_p, display)
-__TRACE__(TYPED, FIXED, XFreeFont)
+__TRACE__(XFreeFont)
 
 
 /*
@@ -4130,6 +4502,8 @@ int XFreeFontInfo  // 3 args
     "XFontStruct *" "free_info"
     "int" "actual_count"
 */
+#define __TRACE_RETSTYLE_XFreeFontInfo__ TYPED
+#define __TRACE_ARGSTYLE_XFreeFontInfo__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeFontInfo__ int
 #define __TRACE_PROTOARGLIST_XFreeFontInfo__ ( char ** names, XFontStruct * free_info, int actual_count)
 #define __TRACE_ARGLIST_XFreeFontInfo__ ( names, free_info, actual_count)
@@ -4142,13 +4516,15 @@ int XFreeFontInfo  // 3 args
     __TRACE_PRINTF_ARG__(XFreeFontInfo, XFontStruct_p, free_info) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XFreeFontInfo, int, actual_count)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeFontInfo__ 
-__TRACE__(TYPED, FIXED, XFreeFontInfo)
+__TRACE__(XFreeFontInfo)
 
 
 /*
 int XFreeFontNames  // 1 args
     "char **" "list"
 */
+#define __TRACE_RETSTYLE_XFreeFontNames__ TYPED
+#define __TRACE_ARGSTYLE_XFreeFontNames__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeFontNames__ int
 #define __TRACE_PROTOARGLIST_XFreeFontNames__ ( char ** list)
 #define __TRACE_ARGLIST_XFreeFontNames__ ( list)
@@ -4159,13 +4535,15 @@ int XFreeFontNames  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XFreeFontNames, char_pp, list)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeFontNames__ 
-__TRACE__(TYPED, FIXED, XFreeFontNames)
+__TRACE__(XFreeFontNames)
 
 
 /*
 int XFreeFontPath  // 1 args
     "char **" "list"
 */
+#define __TRACE_RETSTYLE_XFreeFontPath__ TYPED
+#define __TRACE_ARGSTYLE_XFreeFontPath__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeFontPath__ int
 #define __TRACE_PROTOARGLIST_XFreeFontPath__ ( char ** list)
 #define __TRACE_ARGLIST_XFreeFontPath__ ( list)
@@ -4176,7 +4554,7 @@ int XFreeFontPath  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XFreeFontPath, char_pp, list)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeFontPath__ 
-__TRACE__(TYPED, FIXED, XFreeFontPath)
+__TRACE__(XFreeFontPath)
 
 
 /*
@@ -4184,6 +4562,8 @@ int XFreeGC  // 2 args
     "Display *" "display"
     "GC" "gc"
 */
+#define __TRACE_RETSTYLE_XFreeGC__ TYPED
+#define __TRACE_ARGSTYLE_XFreeGC__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeGC__ int
 #define __TRACE_PROTOARGLIST_XFreeGC__ ( Display * display, GC gc)
 #define __TRACE_ARGLIST_XFreeGC__ ( display, gc)
@@ -4196,13 +4576,15 @@ int XFreeGC  // 2 args
     __TRACE_PRINTF_ARG__(XFreeGC, GC, gc)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeGC__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFreeGC, Display_p, display)
-__TRACE__(TYPED, FIXED, XFreeGC)
+__TRACE__(XFreeGC)
 
 
 /*
 int XFreeModifiermap  // 1 args
     "XModifierKeymap *" "modmap"
 */
+#define __TRACE_RETSTYLE_XFreeModifiermap__ TYPED
+#define __TRACE_ARGSTYLE_XFreeModifiermap__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeModifiermap__ int
 #define __TRACE_PROTOARGLIST_XFreeModifiermap__ ( XModifierKeymap * modmap)
 #define __TRACE_ARGLIST_XFreeModifiermap__ ( modmap)
@@ -4213,7 +4595,7 @@ int XFreeModifiermap  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XFreeModifiermap, XModifierKeymap_p, modmap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeModifiermap__ 
-__TRACE__(TYPED, FIXED, XFreeModifiermap)
+__TRACE__(XFreeModifiermap)
 
 
 /*
@@ -4221,6 +4603,8 @@ int XFreePixmap  // 2 args
     "Display *" "display"
     "Pixmap" "pixmap"
 */
+#define __TRACE_RETSTYLE_XFreePixmap__ TYPED
+#define __TRACE_ARGSTYLE_XFreePixmap__ FIXED
 #define __TRACE_SAFERETTYPE_XFreePixmap__ int
 #define __TRACE_PROTOARGLIST_XFreePixmap__ ( Display * display, Pixmap pixmap)
 #define __TRACE_ARGLIST_XFreePixmap__ ( display, pixmap)
@@ -4233,7 +4617,7 @@ int XFreePixmap  // 2 args
     __TRACE_PRINTF_ARG__(XFreePixmap, Pixmap, pixmap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreePixmap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFreePixmap, Display_p, display)
-__TRACE__(TYPED, FIXED, XFreePixmap)
+__TRACE__(XFreePixmap)
 
 
 /*
@@ -4252,6 +4636,8 @@ int XGeometry  // 13 args
     "int *" "width_return"
     "int *" "height_return"
 */
+#define __TRACE_RETSTYLE_XGeometry__ TYPED
+#define __TRACE_ARGSTYLE_XGeometry__ FIXED
 #define __TRACE_SAFERETTYPE_XGeometry__ int
 #define __TRACE_PROTOARGLIST_XGeometry__ ( Display * display, int screen, const char * position, const char * default_position, unsigned int bwidth, unsigned int fwidth, unsigned int fheight, int xadder, int yadder, int * x_return, int * y_return, int * width_return, int * height_return)
 #define __TRACE_ARGLIST_XGeometry__ ( display, screen, position, default_position, bwidth, fwidth, fheight, xadder, yadder, x_return, y_return, width_return, height_return)
@@ -4275,7 +4661,7 @@ int XGeometry  // 13 args
     __TRACE_PRINTF_ARG__(XGeometry, int_p, height_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGeometry__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGeometry, Display_p, display)
-__TRACE__(TYPED, FIXED, XGeometry)
+__TRACE__(XGeometry)
 
 
 /*
@@ -4287,6 +4673,8 @@ int XGetErrorDatabaseText  // 6 args
     "char *" "buffer_return"
     "int" "length"
 */
+#define __TRACE_RETSTYLE_XGetErrorDatabaseText__ TYPED
+#define __TRACE_ARGSTYLE_XGetErrorDatabaseText__ FIXED
 #define __TRACE_SAFERETTYPE_XGetErrorDatabaseText__ int
 #define __TRACE_PROTOARGLIST_XGetErrorDatabaseText__ ( Display * display, const char * name, const char * message, const char * default_string, char * buffer_return, int length)
 #define __TRACE_ARGLIST_XGetErrorDatabaseText__ ( display, name, message, default_string, buffer_return, length)
@@ -4303,7 +4691,7 @@ int XGetErrorDatabaseText  // 6 args
     __TRACE_PRINTF_ARG__(XGetErrorDatabaseText, int, length)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetErrorDatabaseText__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetErrorDatabaseText, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetErrorDatabaseText)
+__TRACE__(XGetErrorDatabaseText)
 
 
 /*
@@ -4313,6 +4701,8 @@ int XGetErrorText  // 4 args
     "char *" "buffer_return"
     "int" "length"
 */
+#define __TRACE_RETSTYLE_XGetErrorText__ TYPED
+#define __TRACE_ARGSTYLE_XGetErrorText__ FIXED
 #define __TRACE_SAFERETTYPE_XGetErrorText__ int
 #define __TRACE_PROTOARGLIST_XGetErrorText__ ( Display * display, int code, char * buffer_return, int length)
 #define __TRACE_ARGLIST_XGetErrorText__ ( display, code, buffer_return, length)
@@ -4327,7 +4717,7 @@ int XGetErrorText  // 4 args
     __TRACE_PRINTF_ARG__(XGetErrorText, int, length)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetErrorText__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetErrorText, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetErrorText)
+__TRACE__(XGetErrorText)
 
 
 /*
@@ -4336,6 +4726,8 @@ Bool XGetFontProperty  // 3 args
     "Atom" "atom"
     "unsigned long *" "value_return"
 */
+#define __TRACE_RETSTYLE_XGetFontProperty__ TYPED
+#define __TRACE_ARGSTYLE_XGetFontProperty__ FIXED
 #define __TRACE_SAFERETTYPE_XGetFontProperty__ Bool
 #define __TRACE_PROTOARGLIST_XGetFontProperty__ ( XFontStruct * font_struct, Atom atom, unsigned long * value_return)
 #define __TRACE_ARGLIST_XGetFontProperty__ ( font_struct, atom, value_return)
@@ -4348,7 +4740,7 @@ Bool XGetFontProperty  // 3 args
     __TRACE_PRINTF_ARG__(XGetFontProperty, Atom, atom) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XGetFontProperty, unsigned_long_p, value_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetFontProperty__ 
-__TRACE__(TYPED, FIXED, XGetFontProperty)
+__TRACE__(XGetFontProperty)
 
 
 /*
@@ -4358,6 +4750,8 @@ Status XGetGCValues  // 4 args
     "unsigned long" "valuemask"
     "XGCValues *" "values_return"
 */
+#define __TRACE_RETSTYLE_XGetGCValues__ TYPED
+#define __TRACE_ARGSTYLE_XGetGCValues__ FIXED
 #define __TRACE_SAFERETTYPE_XGetGCValues__ Status
 #define __TRACE_PROTOARGLIST_XGetGCValues__ ( Display * display, GC gc, unsigned long valuemask, XGCValues * values_return)
 #define __TRACE_ARGLIST_XGetGCValues__ ( display, gc, valuemask, values_return)
@@ -4372,7 +4766,7 @@ Status XGetGCValues  // 4 args
     __TRACE_PRINTF_ARG__(XGetGCValues, XGCValues_p, values_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetGCValues__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetGCValues, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetGCValues)
+__TRACE__(XGetGCValues)
 
 
 /*
@@ -4387,6 +4781,8 @@ Status XGetGeometry  // 9 args
     "unsigned int *" "border_width_return"
     "unsigned int *" "depth_return"
 */
+#define __TRACE_RETSTYLE_XGetGeometry__ TYPED
+#define __TRACE_ARGSTYLE_XGetGeometry__ FIXED
 #define __TRACE_SAFERETTYPE_XGetGeometry__ Status
 #define __TRACE_PROTOARGLIST_XGetGeometry__ ( Display * display, Drawable d, Window * root_return, int * x_return, int * y_return, unsigned int * width_return, unsigned int * height_return, unsigned int * border_width_return, unsigned int * depth_return)
 #define __TRACE_ARGLIST_XGetGeometry__ ( display, d, root_return, x_return, y_return, width_return, height_return, border_width_return, depth_return)
@@ -4406,7 +4802,7 @@ Status XGetGeometry  // 9 args
     __TRACE_PRINTF_ARG__(XGetGeometry, unsigned_int_p, depth_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetGeometry__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetGeometry, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetGeometry)
+__TRACE__(XGetGeometry)
 
 
 /*
@@ -4415,6 +4811,8 @@ Status XGetIconName  // 3 args
     "Window" "w"
     "char **" "icon_name_return"
 */
+#define __TRACE_RETSTYLE_XGetIconName__ TYPED
+#define __TRACE_ARGSTYLE_XGetIconName__ FIXED
 #define __TRACE_SAFERETTYPE_XGetIconName__ Status
 #define __TRACE_PROTOARGLIST_XGetIconName__ ( Display * display, Window w, char ** icon_name_return)
 #define __TRACE_ARGLIST_XGetIconName__ ( display, w, icon_name_return)
@@ -4428,7 +4826,7 @@ Status XGetIconName  // 3 args
     __TRACE_PRINTF_ARG__(XGetIconName, char_pp, icon_name_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetIconName__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetIconName, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetIconName)
+__TRACE__(XGetIconName)
 
 
 /*
@@ -4437,6 +4835,8 @@ int XGetInputFocus  // 3 args
     "Window *" "focus_return"
     "int *" "revert_to_return"
 */
+#define __TRACE_RETSTYLE_XGetInputFocus__ TYPED
+#define __TRACE_ARGSTYLE_XGetInputFocus__ FIXED
 #define __TRACE_SAFERETTYPE_XGetInputFocus__ int
 #define __TRACE_PROTOARGLIST_XGetInputFocus__ ( Display * display, Window * focus_return, int * revert_to_return)
 #define __TRACE_ARGLIST_XGetInputFocus__ ( display, focus_return, revert_to_return)
@@ -4450,7 +4850,7 @@ int XGetInputFocus  // 3 args
     __TRACE_PRINTF_ARG__(XGetInputFocus, int_InputFocus_p, revert_to_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetInputFocus__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetInputFocus, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetInputFocus)
+__TRACE__(XGetInputFocus)
 
 
 /*
@@ -4458,6 +4858,8 @@ int XGetKeyboardControl  // 2 args
     "Display *" "display"
     "XKeyboardState *" "values_return"
 */
+#define __TRACE_RETSTYLE_XGetKeyboardControl__ TYPED
+#define __TRACE_ARGSTYLE_XGetKeyboardControl__ FIXED
 #define __TRACE_SAFERETTYPE_XGetKeyboardControl__ int
 #define __TRACE_PROTOARGLIST_XGetKeyboardControl__ ( Display * display, XKeyboardState * values_return)
 #define __TRACE_ARGLIST_XGetKeyboardControl__ ( display, values_return)
@@ -4470,7 +4872,7 @@ int XGetKeyboardControl  // 2 args
     __TRACE_PRINTF_ARG__(XGetKeyboardControl, XKeyboardState_p, values_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetKeyboardControl__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetKeyboardControl, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetKeyboardControl)
+__TRACE__(XGetKeyboardControl)
 
 
 /*
@@ -4480,6 +4882,8 @@ int XGetPointerControl  // 4 args
     "int *" "accel_denominator_return"
     "int *" "threshold_return"
 */
+#define __TRACE_RETSTYLE_XGetPointerControl__ TYPED
+#define __TRACE_ARGSTYLE_XGetPointerControl__ FIXED
 #define __TRACE_SAFERETTYPE_XGetPointerControl__ int
 #define __TRACE_PROTOARGLIST_XGetPointerControl__ ( Display * display, int * accel_numerator_return, int * accel_denominator_return, int * threshold_return)
 #define __TRACE_ARGLIST_XGetPointerControl__ ( display, accel_numerator_return, accel_denominator_return, threshold_return)
@@ -4494,7 +4898,7 @@ int XGetPointerControl  // 4 args
     __TRACE_PRINTF_ARG__(XGetPointerControl, int_p, threshold_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetPointerControl__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetPointerControl, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetPointerControl)
+__TRACE__(XGetPointerControl)
 
 
 /*
@@ -4503,6 +4907,8 @@ int XGetPointerMapping  // 3 args
     "unsigned char *" "map_return"
     "int" "nmap"
 */
+#define __TRACE_RETSTYLE_XGetPointerMapping__ TYPED
+#define __TRACE_ARGSTYLE_XGetPointerMapping__ FIXED
 #define __TRACE_SAFERETTYPE_XGetPointerMapping__ int
 #define __TRACE_PROTOARGLIST_XGetPointerMapping__ ( Display * display, unsigned char * map_return, int nmap)
 #define __TRACE_ARGLIST_XGetPointerMapping__ ( display, map_return, nmap)
@@ -4516,7 +4922,7 @@ int XGetPointerMapping  // 3 args
     __TRACE_PRINTF_ARG__(XGetPointerMapping, int, nmap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetPointerMapping__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetPointerMapping, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetPointerMapping)
+__TRACE__(XGetPointerMapping)
 
 
 /*
@@ -4527,6 +4933,8 @@ int XGetScreenSaver  // 5 args
     "int *" "prefer_blanking_return"
     "int *" "allow_exposures_return"
 */
+#define __TRACE_RETSTYLE_XGetScreenSaver__ TYPED
+#define __TRACE_ARGSTYLE_XGetScreenSaver__ FIXED
 #define __TRACE_SAFERETTYPE_XGetScreenSaver__ int
 #define __TRACE_PROTOARGLIST_XGetScreenSaver__ ( Display * display, int * timeout_return, int * interval_return, int * prefer_blanking_return, int * allow_exposures_return)
 #define __TRACE_ARGLIST_XGetScreenSaver__ ( display, timeout_return, interval_return, prefer_blanking_return, allow_exposures_return)
@@ -4542,7 +4950,7 @@ int XGetScreenSaver  // 5 args
     __TRACE_PRINTF_ARG__(XGetScreenSaver, int_ScreenSaverExposures_p, allow_exposures_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetScreenSaver__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetScreenSaver, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetScreenSaver)
+__TRACE__(XGetScreenSaver)
 
 
 /*
@@ -4551,6 +4959,8 @@ Status XGetTransientForHint  // 3 args
     "Window" "w"
     "Window *" "prop_window_return"
 */
+#define __TRACE_RETSTYLE_XGetTransientForHint__ TYPED
+#define __TRACE_ARGSTYLE_XGetTransientForHint__ FIXED
 #define __TRACE_SAFERETTYPE_XGetTransientForHint__ Status
 #define __TRACE_PROTOARGLIST_XGetTransientForHint__ ( Display * display, Window w, Window * prop_window_return)
 #define __TRACE_ARGLIST_XGetTransientForHint__ ( display, w, prop_window_return)
@@ -4564,7 +4974,7 @@ Status XGetTransientForHint  // 3 args
     __TRACE_PRINTF_ARG__(XGetTransientForHint, Window_p, prop_window_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetTransientForHint__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetTransientForHint, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetTransientForHint)
+__TRACE__(XGetTransientForHint)
 
 
 /*
@@ -4582,6 +4992,8 @@ int XGetWindowProperty  // 12 args
     "unsigned long *" "bytes_after_return"
     "unsigned char **" "prop_return"
 */
+#define __TRACE_RETSTYLE_XGetWindowProperty__ TYPED
+#define __TRACE_ARGSTYLE_XGetWindowProperty__ FIXED
 #define __TRACE_SAFERETTYPE_XGetWindowProperty__ int
 #define __TRACE_PROTOARGLIST_XGetWindowProperty__ ( Display * display, Window w, Atom property, long long_offset, long long_length, Bool delete, Atom req_type, Atom * actual_type_return, int * actual_format_return, unsigned long * nitems_return, unsigned long * bytes_after_return, unsigned char ** prop_return)
 #define __TRACE_ARGLIST_XGetWindowProperty__ ( display, w, property, long_offset, long_length, delete, req_type, actual_type_return, actual_format_return, nitems_return, bytes_after_return, prop_return)
@@ -4604,7 +5016,7 @@ int XGetWindowProperty  // 12 args
     __TRACE_PRINTF_ARG__(XGetWindowProperty, unsigned_char_pp, prop_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetWindowProperty__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetWindowProperty, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetWindowProperty)
+__TRACE__(XGetWindowProperty)
 
 
 /*
@@ -4613,6 +5025,8 @@ Status XGetWindowAttributes  // 3 args
     "Window" "w"
     "XWindowAttributes *" "window_attributes_return"
 */
+#define __TRACE_RETSTYLE_XGetWindowAttributes__ TYPED
+#define __TRACE_ARGSTYLE_XGetWindowAttributes__ FIXED
 #define __TRACE_SAFERETTYPE_XGetWindowAttributes__ Status
 #define __TRACE_PROTOARGLIST_XGetWindowAttributes__ ( Display * display, Window w, XWindowAttributes * window_attributes_return)
 #define __TRACE_ARGLIST_XGetWindowAttributes__ ( display, w, window_attributes_return)
@@ -4626,7 +5040,7 @@ Status XGetWindowAttributes  // 3 args
     __TRACE_PRINTF_ARG__(XGetWindowAttributes, XWindowAttributes_p, window_attributes_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetWindowAttributes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGetWindowAttributes, Display_p, display)
-__TRACE__(TYPED, FIXED, XGetWindowAttributes)
+__TRACE__(XGetWindowAttributes)
 
 
 /*
@@ -4642,6 +5056,8 @@ int XGrabButton  // 10 args
     "Window" "confine_to"
     "Cursor" "cursor"
 */
+#define __TRACE_RETSTYLE_XGrabButton__ TYPED
+#define __TRACE_ARGSTYLE_XGrabButton__ FIXED
 #define __TRACE_SAFERETTYPE_XGrabButton__ int_GrabReply
 #define __TRACE_PROTOARGLIST_XGrabButton__ ( Display * display, unsigned int button, unsigned int modifiers, Window grab_window, Bool owner_events, unsigned int event_mask, int pointer_mode, int keyboard_mode, Window confine_to, Cursor cursor)
 #define __TRACE_ARGLIST_XGrabButton__ ( display, button, modifiers, grab_window, owner_events, event_mask, pointer_mode, keyboard_mode, confine_to, cursor)
@@ -4662,7 +5078,7 @@ int XGrabButton  // 10 args
     __TRACE_PRINTF_ARG__(XGrabButton, Cursor, cursor)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGrabButton__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGrabButton, Display_p, display)
-__TRACE__(TYPED, FIXED, XGrabButton)
+__TRACE__(XGrabButton)
 
 
 /*
@@ -4675,6 +5091,8 @@ int XGrabKey  // 7 args
     "int" "pointer_mode"
     "int" "keyboard_mode"
 */
+#define __TRACE_RETSTYLE_XGrabKey__ TYPED
+#define __TRACE_ARGSTYLE_XGrabKey__ FIXED
 #define __TRACE_SAFERETTYPE_XGrabKey__ int_GrabReply
 #define __TRACE_PROTOARGLIST_XGrabKey__ ( Display * display, int keycode, unsigned int modifiers, Window grab_window, Bool owner_events, int pointer_mode, int keyboard_mode)
 #define __TRACE_ARGLIST_XGrabKey__ ( display, keycode, modifiers, grab_window, owner_events, pointer_mode, keyboard_mode)
@@ -4692,7 +5110,7 @@ int XGrabKey  // 7 args
     __TRACE_PRINTF_ARG__(XGrabKey, int_GrabMode, keyboard_mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGrabKey__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGrabKey, Display_p, display)
-__TRACE__(TYPED, FIXED, XGrabKey)
+__TRACE__(XGrabKey)
 
 
 /*
@@ -4704,6 +5122,8 @@ int XGrabKeyboard  // 6 args
     "int" "keyboard_mode"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XGrabKeyboard__ TYPED
+#define __TRACE_ARGSTYLE_XGrabKeyboard__ FIXED
 #define __TRACE_SAFERETTYPE_XGrabKeyboard__ int_GrabReply
 #define __TRACE_PROTOARGLIST_XGrabKeyboard__ ( Display * display, Window grab_window, Bool owner_events, int pointer_mode, int keyboard_mode, Time time)
 #define __TRACE_ARGLIST_XGrabKeyboard__ ( display, grab_window, owner_events, pointer_mode, keyboard_mode, time)
@@ -4720,7 +5140,7 @@ int XGrabKeyboard  // 6 args
     __TRACE_PRINTF_ARG__(XGrabKeyboard, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGrabKeyboard__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGrabKeyboard, Display_p, display)
-__TRACE__(TYPED, FIXED, XGrabKeyboard)
+__TRACE__(XGrabKeyboard)
 
 
 /*
@@ -4735,6 +5155,8 @@ int XGrabPointer  // 9 args
     "Cursor" "cursor"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XGrabPointer__ TYPED
+#define __TRACE_ARGSTYLE_XGrabPointer__ FIXED
 #define __TRACE_SAFERETTYPE_XGrabPointer__ int_GrabReply
 #define __TRACE_PROTOARGLIST_XGrabPointer__ ( Display * display, Window grab_window, Bool owner_events, unsigned int event_mask, int pointer_mode, int keyboard_mode, Window confine_to, Cursor cursor, Time time)
 #define __TRACE_ARGLIST_XGrabPointer__ ( display, grab_window, owner_events, event_mask, pointer_mode, keyboard_mode, confine_to, cursor, time)
@@ -4754,13 +5176,15 @@ int XGrabPointer  // 9 args
     __TRACE_PRINTF_ARG__(XGrabPointer, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGrabPointer__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGrabPointer, Display_p, display)
-__TRACE__(TYPED, FIXED, XGrabPointer)
+__TRACE__(XGrabPointer)
 
 
 /*
 int XGrabServer  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XGrabServer__ TYPED
+#define __TRACE_ARGSTYLE_XGrabServer__ FIXED
 #define __TRACE_SAFERETTYPE_XGrabServer__ int
 #define __TRACE_PROTOARGLIST_XGrabServer__ ( Display * display)
 #define __TRACE_ARGLIST_XGrabServer__ ( display)
@@ -4772,13 +5196,15 @@ int XGrabServer  // 1 args
     __TRACE_PRINTF_ARG__(XGrabServer, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGrabServer__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XGrabServer, Display_p, display)
-__TRACE__(TYPED, FIXED, XGrabServer)
+__TRACE__(XGrabServer)
 
 
 /*
 int XHeightMMOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XHeightMMOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XHeightMMOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XHeightMMOfScreen__ int
 #define __TRACE_PROTOARGLIST_XHeightMMOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XHeightMMOfScreen__ ( screen)
@@ -4789,13 +5215,15 @@ int XHeightMMOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XHeightMMOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XHeightMMOfScreen__ 
-__TRACE__(TYPED, FIXED, XHeightMMOfScreen)
+__TRACE__(XHeightMMOfScreen)
 
 
 /*
 int XHeightOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XHeightOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XHeightOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XHeightOfScreen__ int
 #define __TRACE_PROTOARGLIST_XHeightOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XHeightOfScreen__ ( screen)
@@ -4806,7 +5234,7 @@ int XHeightOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XHeightOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XHeightOfScreen__ 
-__TRACE__(TYPED, FIXED, XHeightOfScreen)
+__TRACE__(XHeightOfScreen)
 
 
 /*
@@ -4816,6 +5244,8 @@ int XIfEvent  // 4 args
     "Bool (*) ( Display * , XEvent * , XPointer )" "predicate"
     "XPointer" "arg"
 */
+#define __TRACE_RETSTYLE_XIfEvent__ TYPED
+#define __TRACE_ARGSTYLE_XIfEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XIfEvent__ int
 #define __TRACE_PROTOARGLIST_XIfEvent__ ( Display * display, XEvent * event_return, Bool (*predicate) ( Display * , XEvent * , XPointer ), XPointer arg)
 #define __TRACE_ARGLIST_XIfEvent__ ( display, event_return, predicate, arg)
@@ -4830,13 +5260,15 @@ int XIfEvent  // 4 args
     __TRACE_PRINTF_ARG__(XIfEvent, XPointer, arg)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XIfEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XIfEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XIfEvent)
+__TRACE__(XIfEvent)
 
 
 /*
 int XImageByteOrder  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XImageByteOrder__ TYPED
+#define __TRACE_ARGSTYLE_XImageByteOrder__ FIXED
 #define __TRACE_SAFERETTYPE_XImageByteOrder__ int
 #define __TRACE_PROTOARGLIST_XImageByteOrder__ ( Display * display)
 #define __TRACE_ARGLIST_XImageByteOrder__ ( display)
@@ -4848,7 +5280,7 @@ int XImageByteOrder  // 1 args
     __TRACE_PRINTF_ARG__(XImageByteOrder, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XImageByteOrder__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XImageByteOrder, Display_p, display)
-__TRACE__(TYPED, FIXED, XImageByteOrder)
+__TRACE__(XImageByteOrder)
 
 
 /*
@@ -4856,6 +5288,8 @@ int XInstallColormap  // 2 args
     "Display *" "display"
     "Colormap" "colormap"
 */
+#define __TRACE_RETSTYLE_XInstallColormap__ TYPED
+#define __TRACE_ARGSTYLE_XInstallColormap__ FIXED
 #define __TRACE_SAFERETTYPE_XInstallColormap__ int
 #define __TRACE_PROTOARGLIST_XInstallColormap__ ( Display * display, Colormap colormap)
 #define __TRACE_ARGLIST_XInstallColormap__ ( display, colormap)
@@ -4868,7 +5302,7 @@ int XInstallColormap  // 2 args
     __TRACE_PRINTF_ARG__(XInstallColormap, Colormap, colormap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XInstallColormap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XInstallColormap, Display_p, display)
-__TRACE__(TYPED, FIXED, XInstallColormap)
+__TRACE__(XInstallColormap)
 
 
 /*
@@ -4876,6 +5310,8 @@ KeyCode XKeysymToKeycode  // 2 args
     "Display *" "display"
     "KeySym" "keysym"
 */
+#define __TRACE_RETSTYLE_XKeysymToKeycode__ TYPED
+#define __TRACE_ARGSTYLE_XKeysymToKeycode__ FIXED
 #define __TRACE_SAFERETTYPE_XKeysymToKeycode__ KeyCode
 #define __TRACE_PROTOARGLIST_XKeysymToKeycode__ ( Display * display, KeySym keysym)
 #define __TRACE_ARGLIST_XKeysymToKeycode__ ( display, keysym)
@@ -4888,7 +5324,7 @@ KeyCode XKeysymToKeycode  // 2 args
     __TRACE_PRINTF_ARG__(XKeysymToKeycode, KeySym, keysym)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XKeysymToKeycode__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XKeysymToKeycode, Display_p, display)
-__TRACE__(TYPED, FIXED, XKeysymToKeycode)
+__TRACE__(XKeysymToKeycode)
 
 
 /*
@@ -4896,6 +5332,8 @@ int XKillClient  // 2 args
     "Display *" "display"
     "XID" "resource"
 */
+#define __TRACE_RETSTYLE_XKillClient__ TYPED
+#define __TRACE_ARGSTYLE_XKillClient__ FIXED
 #define __TRACE_SAFERETTYPE_XKillClient__ int
 #define __TRACE_PROTOARGLIST_XKillClient__ ( Display * display, XID resource)
 #define __TRACE_ARGLIST_XKillClient__ ( display, resource)
@@ -4908,7 +5346,7 @@ int XKillClient  // 2 args
     __TRACE_PRINTF_ARG__(XKillClient, XID, resource)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XKillClient__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XKillClient, Display_p, display)
-__TRACE__(TYPED, FIXED, XKillClient)
+__TRACE__(XKillClient)
 
 
 /*
@@ -4919,6 +5357,8 @@ Status XLookupColor  // 5 args
     "XColor *" "exact_def_return"
     "XColor *" "screen_def_return"
 */
+#define __TRACE_RETSTYLE_XLookupColor__ TYPED
+#define __TRACE_ARGSTYLE_XLookupColor__ FIXED
 #define __TRACE_SAFERETTYPE_XLookupColor__ Status
 #define __TRACE_PROTOARGLIST_XLookupColor__ ( Display * display, Colormap colormap, const char * color_name, XColor * exact_def_return, XColor * screen_def_return)
 #define __TRACE_ARGLIST_XLookupColor__ ( display, colormap, color_name, exact_def_return, screen_def_return)
@@ -4934,7 +5374,7 @@ Status XLookupColor  // 5 args
     __TRACE_PRINTF_ARG__(XLookupColor, XColor_p, screen_def_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLookupColor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XLookupColor, Display_p, display)
-__TRACE__(TYPED, FIXED, XLookupColor)
+__TRACE__(XLookupColor)
 
 
 /*
@@ -4942,6 +5382,8 @@ int XLowerWindow  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XLowerWindow__ TYPED
+#define __TRACE_ARGSTYLE_XLowerWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XLowerWindow__ int
 #define __TRACE_PROTOARGLIST_XLowerWindow__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XLowerWindow__ ( display, w)
@@ -4954,7 +5396,7 @@ int XLowerWindow  // 2 args
     __TRACE_PRINTF_ARG__(XLowerWindow, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLowerWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XLowerWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XLowerWindow)
+__TRACE__(XLowerWindow)
 
 
 /*
@@ -4962,6 +5404,8 @@ int XMapRaised  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XMapRaised__ TYPED
+#define __TRACE_ARGSTYLE_XMapRaised__ FIXED
 #define __TRACE_SAFERETTYPE_XMapRaised__ int
 #define __TRACE_PROTOARGLIST_XMapRaised__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XMapRaised__ ( display, w)
@@ -4974,7 +5418,7 @@ int XMapRaised  // 2 args
     __TRACE_PRINTF_ARG__(XMapRaised, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMapRaised__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XMapRaised, Display_p, display)
-__TRACE__(TYPED, FIXED, XMapRaised)
+__TRACE__(XMapRaised)
 
 
 /*
@@ -4982,6 +5426,8 @@ int XMapSubwindows  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XMapSubwindows__ TYPED
+#define __TRACE_ARGSTYLE_XMapSubwindows__ FIXED
 #define __TRACE_SAFERETTYPE_XMapSubwindows__ int
 #define __TRACE_PROTOARGLIST_XMapSubwindows__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XMapSubwindows__ ( display, w)
@@ -4994,7 +5440,7 @@ int XMapSubwindows  // 2 args
     __TRACE_PRINTF_ARG__(XMapSubwindows, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMapSubwindows__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XMapSubwindows, Display_p, display)
-__TRACE__(TYPED, FIXED, XMapSubwindows)
+__TRACE__(XMapSubwindows)
 
 
 /*
@@ -5002,6 +5448,8 @@ int XMapWindow  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XMapWindow__ TYPED
+#define __TRACE_ARGSTYLE_XMapWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XMapWindow__ int
 #define __TRACE_PROTOARGLIST_XMapWindow__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XMapWindow__ ( display, w)
@@ -5014,7 +5462,7 @@ int XMapWindow  // 2 args
     __TRACE_PRINTF_ARG__(XMapWindow, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMapWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XMapWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XMapWindow)
+__TRACE__(XMapWindow)
 
 
 /*
@@ -5023,6 +5471,8 @@ int XMaskEvent  // 3 args
     "long" "event_mask"
     "XEvent *" "event_return"
 */
+#define __TRACE_RETSTYLE_XMaskEvent__ TYPED
+#define __TRACE_ARGSTYLE_XMaskEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XMaskEvent__ int
 #define __TRACE_PROTOARGLIST_XMaskEvent__ ( Display * display, long event_mask, XEvent * event_return)
 #define __TRACE_ARGLIST_XMaskEvent__ ( display, event_mask, event_return)
@@ -5036,13 +5486,15 @@ int XMaskEvent  // 3 args
     __TRACE_PRINTF_ARG__(XMaskEvent, XEvent_p, event_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMaskEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XMaskEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XMaskEvent)
+__TRACE__(XMaskEvent)
 
 
 /*
 int XMaxCmapsOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XMaxCmapsOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XMaxCmapsOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XMaxCmapsOfScreen__ int
 #define __TRACE_PROTOARGLIST_XMaxCmapsOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XMaxCmapsOfScreen__ ( screen)
@@ -5053,13 +5505,15 @@ int XMaxCmapsOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XMaxCmapsOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMaxCmapsOfScreen__ 
-__TRACE__(TYPED, FIXED, XMaxCmapsOfScreen)
+__TRACE__(XMaxCmapsOfScreen)
 
 
 /*
 int XMinCmapsOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XMinCmapsOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XMinCmapsOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XMinCmapsOfScreen__ int
 #define __TRACE_PROTOARGLIST_XMinCmapsOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XMinCmapsOfScreen__ ( screen)
@@ -5070,7 +5524,7 @@ int XMinCmapsOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XMinCmapsOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMinCmapsOfScreen__ 
-__TRACE__(TYPED, FIXED, XMinCmapsOfScreen)
+__TRACE__(XMinCmapsOfScreen)
 
 
 /*
@@ -5082,6 +5536,8 @@ int XMoveResizeWindow  // 6 args
     "unsigned int" "width"
     "unsigned int" "height"
 */
+#define __TRACE_RETSTYLE_XMoveResizeWindow__ TYPED
+#define __TRACE_ARGSTYLE_XMoveResizeWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XMoveResizeWindow__ int
 #define __TRACE_PROTOARGLIST_XMoveResizeWindow__ ( Display * display, Window w, int x, int y, unsigned int width, unsigned int height)
 #define __TRACE_ARGLIST_XMoveResizeWindow__ ( display, w, x, y, width, height)
@@ -5098,7 +5554,7 @@ int XMoveResizeWindow  // 6 args
     __TRACE_PRINTF_ARG__(XMoveResizeWindow, unsigned_int, height)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMoveResizeWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XMoveResizeWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XMoveResizeWindow)
+__TRACE__(XMoveResizeWindow)
 
 
 /*
@@ -5108,6 +5564,8 @@ int XMoveWindow  // 4 args
     "int" "x"
     "int" "y"
 */
+#define __TRACE_RETSTYLE_XMoveWindow__ TYPED
+#define __TRACE_ARGSTYLE_XMoveWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XMoveWindow__ int
 #define __TRACE_PROTOARGLIST_XMoveWindow__ ( Display * display, Window w, int x, int y)
 #define __TRACE_ARGLIST_XMoveWindow__ ( display, w, x, y)
@@ -5122,7 +5580,7 @@ int XMoveWindow  // 4 args
     __TRACE_PRINTF_ARG__(XMoveWindow, int, y)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XMoveWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XMoveWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XMoveWindow)
+__TRACE__(XMoveWindow)
 
 
 /*
@@ -5130,6 +5588,8 @@ int XNextEvent  // 2 args
     "Display *" "display"
     "XEvent *" "event_return"
 */
+#define __TRACE_RETSTYLE_XNextEvent__ TYPED
+#define __TRACE_ARGSTYLE_XNextEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XNextEvent__ int
 #define __TRACE_PROTOARGLIST_XNextEvent__ ( Display * display, XEvent * event_return)
 #define __TRACE_ARGLIST_XNextEvent__ ( display, event_return)
@@ -5142,13 +5602,15 @@ int XNextEvent  // 2 args
     __TRACE_PRINTF_ARG__(XNextEvent, XEvent_p, event_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XNextEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XNextEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XNextEvent)
+__TRACE__(XNextEvent)
 
 
 /*
 int XNoOp  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XNoOp__ TYPED
+#define __TRACE_ARGSTYLE_XNoOp__ FIXED
 #define __TRACE_SAFERETTYPE_XNoOp__ int
 #define __TRACE_PROTOARGLIST_XNoOp__ ( Display * display)
 #define __TRACE_ARGLIST_XNoOp__ ( display)
@@ -5160,7 +5622,7 @@ int XNoOp  // 1 args
     __TRACE_PRINTF_ARG__(XNoOp, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XNoOp__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XNoOp, Display_p, display)
-__TRACE__(TYPED, FIXED, XNoOp)
+__TRACE__(XNoOp)
 
 
 /*
@@ -5170,6 +5632,8 @@ Status XParseColor  // 4 args
     "const char *" "spec"
     "XColor *" "exact_def_return"
 */
+#define __TRACE_RETSTYLE_XParseColor__ TYPED
+#define __TRACE_ARGSTYLE_XParseColor__ FIXED
 #define __TRACE_SAFERETTYPE_XParseColor__ Status
 #define __TRACE_PROTOARGLIST_XParseColor__ ( Display * display, Colormap colormap, const char * spec, XColor * exact_def_return)
 #define __TRACE_ARGLIST_XParseColor__ ( display, colormap, spec, exact_def_return)
@@ -5184,7 +5648,7 @@ Status XParseColor  // 4 args
     __TRACE_PRINTF_ARG__(XParseColor, XColor_p, exact_def_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XParseColor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XParseColor, Display_p, display)
-__TRACE__(TYPED, FIXED, XParseColor)
+__TRACE__(XParseColor)
 
 
 /*
@@ -5195,6 +5659,8 @@ int XParseGeometry  // 5 args
     "unsigned int *" "width_return"
     "unsigned int *" "height_return"
 */
+#define __TRACE_RETSTYLE_XParseGeometry__ TYPED
+#define __TRACE_ARGSTYLE_XParseGeometry__ FIXED
 #define __TRACE_SAFERETTYPE_XParseGeometry__ int
 #define __TRACE_PROTOARGLIST_XParseGeometry__ ( const char * parsestring, int * x_return, int * y_return, unsigned int * width_return, unsigned int * height_return)
 #define __TRACE_ARGLIST_XParseGeometry__ ( parsestring, x_return, y_return, width_return, height_return)
@@ -5209,7 +5675,7 @@ int XParseGeometry  // 5 args
     __TRACE_PRINTF_ARG__(XParseGeometry, unsigned_int_p, width_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XParseGeometry, unsigned_int_p, height_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XParseGeometry__ 
-__TRACE__(TYPED, FIXED, XParseGeometry)
+__TRACE__(XParseGeometry)
 
 
 /*
@@ -5217,6 +5683,8 @@ int XPeekEvent  // 2 args
     "Display *" "display"
     "XEvent *" "event_return"
 */
+#define __TRACE_RETSTYLE_XPeekEvent__ TYPED
+#define __TRACE_ARGSTYLE_XPeekEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XPeekEvent__ int
 #define __TRACE_PROTOARGLIST_XPeekEvent__ ( Display * display, XEvent * event_return)
 #define __TRACE_ARGLIST_XPeekEvent__ ( display, event_return)
@@ -5229,7 +5697,7 @@ int XPeekEvent  // 2 args
     __TRACE_PRINTF_ARG__(XPeekEvent, XEvent_p, event_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XPeekEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XPeekEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XPeekEvent)
+__TRACE__(XPeekEvent)
 
 
 /*
@@ -5239,6 +5707,8 @@ int XPeekIfEvent  // 4 args
     "Bool (*) ( Display * , XEvent * , XPointer )" "predicate"
     "XPointer" "arg"
 */
+#define __TRACE_RETSTYLE_XPeekIfEvent__ TYPED
+#define __TRACE_ARGSTYLE_XPeekIfEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XPeekIfEvent__ int
 #define __TRACE_PROTOARGLIST_XPeekIfEvent__ ( Display * display, XEvent * event_return, Bool (*predicate) ( Display * , XEvent * , XPointer ), XPointer arg)
 #define __TRACE_ARGLIST_XPeekIfEvent__ ( display, event_return, predicate, arg)
@@ -5253,13 +5723,15 @@ int XPeekIfEvent  // 4 args
     __TRACE_PRINTF_ARG__(XPeekIfEvent, XPointer, arg)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XPeekIfEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XPeekIfEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XPeekIfEvent)
+__TRACE__(XPeekIfEvent)
 
 
 /*
 int XPending  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XPending__ TYPED
+#define __TRACE_ARGSTYLE_XPending__ FIXED
 #define __TRACE_SAFERETTYPE_XPending__ int
 #define __TRACE_PROTOARGLIST_XPending__ ( Display * display)
 #define __TRACE_ARGLIST_XPending__ ( display)
@@ -5271,13 +5743,15 @@ int XPending  // 1 args
     __TRACE_PRINTF_ARG__(XPending, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XPending__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XPending, Display_p, display)
-__TRACE__(TYPED, FIXED, XPending)
+__TRACE__(XPending)
 
 
 /*
 int XPlanesOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XPlanesOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XPlanesOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XPlanesOfScreen__ int
 #define __TRACE_PROTOARGLIST_XPlanesOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XPlanesOfScreen__ ( screen)
@@ -5288,13 +5762,15 @@ int XPlanesOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XPlanesOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XPlanesOfScreen__ 
-__TRACE__(TYPED, FIXED, XPlanesOfScreen)
+__TRACE__(XPlanesOfScreen)
 
 
 /*
 int XProtocolRevision  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XProtocolRevision__ TYPED
+#define __TRACE_ARGSTYLE_XProtocolRevision__ FIXED
 #define __TRACE_SAFERETTYPE_XProtocolRevision__ int
 #define __TRACE_PROTOARGLIST_XProtocolRevision__ ( Display * display)
 #define __TRACE_ARGLIST_XProtocolRevision__ ( display)
@@ -5306,13 +5782,15 @@ int XProtocolRevision  // 1 args
     __TRACE_PRINTF_ARG__(XProtocolRevision, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XProtocolRevision__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XProtocolRevision, Display_p, display)
-__TRACE__(TYPED, FIXED, XProtocolRevision)
+__TRACE__(XProtocolRevision)
 
 
 /*
 int XProtocolVersion  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XProtocolVersion__ TYPED
+#define __TRACE_ARGSTYLE_XProtocolVersion__ FIXED
 #define __TRACE_SAFERETTYPE_XProtocolVersion__ int
 #define __TRACE_PROTOARGLIST_XProtocolVersion__ ( Display * display)
 #define __TRACE_ARGLIST_XProtocolVersion__ ( display)
@@ -5324,7 +5802,7 @@ int XProtocolVersion  // 1 args
     __TRACE_PRINTF_ARG__(XProtocolVersion, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XProtocolVersion__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XProtocolVersion, Display_p, display)
-__TRACE__(TYPED, FIXED, XProtocolVersion)
+__TRACE__(XProtocolVersion)
 
 
 /*
@@ -5332,6 +5810,8 @@ int XPutBackEvent  // 2 args
     "Display *" "display"
     "XEvent *" "event"
 */
+#define __TRACE_RETSTYLE_XPutBackEvent__ TYPED
+#define __TRACE_ARGSTYLE_XPutBackEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XPutBackEvent__ int
 #define __TRACE_PROTOARGLIST_XPutBackEvent__ ( Display * display, XEvent * event)
 #define __TRACE_ARGLIST_XPutBackEvent__ ( display, event)
@@ -5344,7 +5824,7 @@ int XPutBackEvent  // 2 args
     __TRACE_PRINTF_ARG__(XPutBackEvent, XEvent_p, event)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XPutBackEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XPutBackEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XPutBackEvent)
+__TRACE__(XPutBackEvent)
 
 
 /*
@@ -5360,6 +5840,8 @@ int XPutImage  // 10 args
     "unsigned int" "width"
     "unsigned int" "height"
 */
+#define __TRACE_RETSTYLE_XPutImage__ TYPED
+#define __TRACE_ARGSTYLE_XPutImage__ FIXED
 #define __TRACE_SAFERETTYPE_XPutImage__ int
 #define __TRACE_PROTOARGLIST_XPutImage__ ( Display * display, Drawable d, GC gc, XImage * image, int src_x, int src_y, int dest_x, int dest_y, unsigned int width, unsigned int height)
 #define __TRACE_ARGLIST_XPutImage__ ( display, d, gc, image, src_x, src_y, dest_x, dest_y, width, height)
@@ -5380,13 +5862,15 @@ int XPutImage  // 10 args
     __TRACE_PRINTF_ARG__(XPutImage, unsigned_int, height)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XPutImage__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XPutImage, Display_p, display)
-__TRACE__(TYPED, FIXED, XPutImage)
+__TRACE__(XPutImage)
 
 
 /*
 int XQLength  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XQLength__ TYPED
+#define __TRACE_ARGSTYLE_XQLength__ FIXED
 #define __TRACE_SAFERETTYPE_XQLength__ int
 #define __TRACE_PROTOARGLIST_XQLength__ ( Display * display)
 #define __TRACE_ARGLIST_XQLength__ ( display)
@@ -5398,7 +5882,7 @@ int XQLength  // 1 args
     __TRACE_PRINTF_ARG__(XQLength, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQLength__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQLength, Display_p, display)
-__TRACE__(TYPED, FIXED, XQLength)
+__TRACE__(XQLength)
 
 
 /*
@@ -5410,6 +5894,8 @@ Status XQueryBestCursor  // 6 args
     "unsigned int *" "width_return"
     "unsigned int *" "height_return"
 */
+#define __TRACE_RETSTYLE_XQueryBestCursor__ TYPED
+#define __TRACE_ARGSTYLE_XQueryBestCursor__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryBestCursor__ Status
 #define __TRACE_PROTOARGLIST_XQueryBestCursor__ ( Display * display, Drawable d, unsigned int width, unsigned int height, unsigned int * width_return, unsigned int * height_return)
 #define __TRACE_ARGLIST_XQueryBestCursor__ ( display, d, width, height, width_return, height_return)
@@ -5426,7 +5912,7 @@ Status XQueryBestCursor  // 6 args
     __TRACE_PRINTF_ARG__(XQueryBestCursor, unsigned_int_p, height_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryBestCursor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryBestCursor, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryBestCursor)
+__TRACE__(XQueryBestCursor)
 
 
 /*
@@ -5439,6 +5925,8 @@ Status XQueryBestSize  // 7 args
     "unsigned int *" "width_return"
     "unsigned int *" "height_return"
 */
+#define __TRACE_RETSTYLE_XQueryBestSize__ TYPED
+#define __TRACE_ARGSTYLE_XQueryBestSize__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryBestSize__ Status
 #define __TRACE_PROTOARGLIST_XQueryBestSize__ ( Display * display, int class, Drawable which_screen, unsigned int width, unsigned int height, unsigned int * width_return, unsigned int * height_return)
 #define __TRACE_ARGLIST_XQueryBestSize__ ( display, class, which_screen, width, height, width_return, height_return)
@@ -5456,7 +5944,7 @@ Status XQueryBestSize  // 7 args
     __TRACE_PRINTF_ARG__(XQueryBestSize, unsigned_int_p, height_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryBestSize__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryBestSize, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryBestSize)
+__TRACE__(XQueryBestSize)
 
 
 /*
@@ -5468,6 +5956,8 @@ Status XQueryBestStipple  // 6 args
     "unsigned int *" "width_return"
     "unsigned int *" "height_return"
 */
+#define __TRACE_RETSTYLE_XQueryBestStipple__ TYPED
+#define __TRACE_ARGSTYLE_XQueryBestStipple__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryBestStipple__ Status
 #define __TRACE_PROTOARGLIST_XQueryBestStipple__ ( Display * display, Drawable which_screen, unsigned int width, unsigned int height, unsigned int * width_return, unsigned int * height_return)
 #define __TRACE_ARGLIST_XQueryBestStipple__ ( display, which_screen, width, height, width_return, height_return)
@@ -5484,7 +5974,7 @@ Status XQueryBestStipple  // 6 args
     __TRACE_PRINTF_ARG__(XQueryBestStipple, unsigned_int_p, height_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryBestStipple__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryBestStipple, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryBestStipple)
+__TRACE__(XQueryBestStipple)
 
 
 /*
@@ -5496,6 +5986,8 @@ Status XQueryBestTile  // 6 args
     "unsigned int *" "width_return"
     "unsigned int *" "height_return"
 */
+#define __TRACE_RETSTYLE_XQueryBestTile__ TYPED
+#define __TRACE_ARGSTYLE_XQueryBestTile__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryBestTile__ Status
 #define __TRACE_PROTOARGLIST_XQueryBestTile__ ( Display * display, Drawable which_screen, unsigned int width, unsigned int height, unsigned int * width_return, unsigned int * height_return)
 #define __TRACE_ARGLIST_XQueryBestTile__ ( display, which_screen, width, height, width_return, height_return)
@@ -5512,7 +6004,7 @@ Status XQueryBestTile  // 6 args
     __TRACE_PRINTF_ARG__(XQueryBestTile, unsigned_int_p, height_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryBestTile__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryBestTile, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryBestTile)
+__TRACE__(XQueryBestTile)
 
 
 /*
@@ -5521,6 +6013,8 @@ int XQueryColor  // 3 args
     "Colormap" "colormap"
     "XColor *" "def_in_out"
 */
+#define __TRACE_RETSTYLE_XQueryColor__ TYPED
+#define __TRACE_ARGSTYLE_XQueryColor__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryColor__ int
 #define __TRACE_PROTOARGLIST_XQueryColor__ ( Display * display, Colormap colormap, XColor * def_in_out)
 #define __TRACE_ARGLIST_XQueryColor__ ( display, colormap, def_in_out)
@@ -5534,7 +6028,7 @@ int XQueryColor  // 3 args
     __TRACE_PRINTF_ARG__(XQueryColor, XColor_p, def_in_out)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryColor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryColor, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryColor)
+__TRACE__(XQueryColor)
 
 
 /*
@@ -5544,6 +6038,8 @@ int XQueryColors  // 4 args
     "XColor *" "defs_in_out"
     "int" "ncolors"
 */
+#define __TRACE_RETSTYLE_XQueryColors__ TYPED
+#define __TRACE_ARGSTYLE_XQueryColors__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryColors__ int
 #define __TRACE_PROTOARGLIST_XQueryColors__ ( Display * display, Colormap colormap, XColor * defs_in_out, int ncolors)
 #define __TRACE_ARGLIST_XQueryColors__ ( display, colormap, defs_in_out, ncolors)
@@ -5558,7 +6054,7 @@ int XQueryColors  // 4 args
     __TRACE_PRINTF_ARG__(XQueryColors, int, ncolors)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryColors__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryColors, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryColors)
+__TRACE__(XQueryColors)
 
 
 /*
@@ -5569,6 +6065,8 @@ Bool XQueryExtension  // 5 args
     "int *" "first_event_return"
     "int *" "first_error_return"
 */
+#define __TRACE_RETSTYLE_XQueryExtension__ TYPED
+#define __TRACE_ARGSTYLE_XQueryExtension__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryExtension__ Bool
 #define __TRACE_PROTOARGLIST_XQueryExtension__ ( Display * display, const char * name, int * major_opcode_return, int * first_event_return, int * first_error_return)
 #define __TRACE_ARGLIST_XQueryExtension__ ( display, name, major_opcode_return, first_event_return, first_error_return)
@@ -5584,7 +6082,7 @@ Bool XQueryExtension  // 5 args
     __TRACE_PRINTF_ARG__(XQueryExtension, int_p, first_error_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryExtension__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryExtension, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryExtension)
+__TRACE__(XQueryExtension)
 
 
 /*
@@ -5592,6 +6090,8 @@ int XQueryKeymap  // 2 args
     "Display *" "display"
     "char [32]" "keys_return"
 */
+#define __TRACE_RETSTYLE_XQueryKeymap__ TYPED
+#define __TRACE_ARGSTYLE_XQueryKeymap__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryKeymap__ int
 #define __TRACE_PROTOARGLIST_XQueryKeymap__ ( Display * display, char keys_return[32])
 #define __TRACE_ARGLIST_XQueryKeymap__ ( display, keys_return)
@@ -5604,7 +6104,7 @@ int XQueryKeymap  // 2 args
     __TRACE_PRINTF_ARG__(XQueryKeymap, char__32_, keys_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryKeymap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryKeymap, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryKeymap)
+__TRACE__(XQueryKeymap)
 
 
 /*
@@ -5619,6 +6119,8 @@ Bool XQueryPointer  // 9 args
     "int *" "win_y_return"
     "unsigned int *" "mask_return"
 */
+#define __TRACE_RETSTYLE_XQueryPointer__ TYPED
+#define __TRACE_ARGSTYLE_XQueryPointer__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryPointer__ Bool
 #define __TRACE_PROTOARGLIST_XQueryPointer__ ( Display * display, Window w, Window * root_return, Window * child_return, int * root_x_return, int * root_y_return, int * win_x_return, int * win_y_return, unsigned int * mask_return)
 #define __TRACE_ARGLIST_XQueryPointer__ ( display, w, root_return, child_return, root_x_return, root_y_return, win_x_return, win_y_return, mask_return)
@@ -5638,7 +6140,7 @@ Bool XQueryPointer  // 9 args
     __TRACE_PRINTF_ARG__(XQueryPointer, unsigned_int_p, mask_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryPointer__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryPointer, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryPointer)
+__TRACE__(XQueryPointer)
 
 
 /*
@@ -5652,6 +6154,8 @@ int XQueryTextExtents  // 8 args
     "int *" "font_descent_return"
     "XCharStruct *" "overall_return"
 */
+#define __TRACE_RETSTYLE_XQueryTextExtents__ TYPED
+#define __TRACE_ARGSTYLE_XQueryTextExtents__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryTextExtents__ int
 #define __TRACE_PROTOARGLIST_XQueryTextExtents__ ( Display * display, XID font_ID, const char * string, int nchars, int * direction_return, int * font_ascent_return, int * font_descent_return, XCharStruct * overall_return)
 #define __TRACE_ARGLIST_XQueryTextExtents__ ( display, font_ID, string, nchars, direction_return, font_ascent_return, font_descent_return, overall_return)
@@ -5670,7 +6174,7 @@ int XQueryTextExtents  // 8 args
     __TRACE_PRINTF_ARG__(XQueryTextExtents, XCharStruct_p, overall_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryTextExtents__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryTextExtents, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryTextExtents)
+__TRACE__(XQueryTextExtents)
 
 
 /*
@@ -5684,6 +6188,8 @@ int XQueryTextExtents16  // 8 args
     "int *" "font_descent_return"
     "XCharStruct *" "overall_return"
 */
+#define __TRACE_RETSTYLE_XQueryTextExtents16__ TYPED
+#define __TRACE_ARGSTYLE_XQueryTextExtents16__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryTextExtents16__ int
 #define __TRACE_PROTOARGLIST_XQueryTextExtents16__ ( Display * display, XID font_ID, const XChar2b * string, int nchars, int * direction_return, int * font_ascent_return, int * font_descent_return, XCharStruct * overall_return)
 #define __TRACE_ARGLIST_XQueryTextExtents16__ ( display, font_ID, string, nchars, direction_return, font_ascent_return, font_descent_return, overall_return)
@@ -5702,7 +6208,7 @@ int XQueryTextExtents16  // 8 args
     __TRACE_PRINTF_ARG__(XQueryTextExtents16, XCharStruct_p, overall_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryTextExtents16__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryTextExtents16, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryTextExtents16)
+__TRACE__(XQueryTextExtents16)
 
 
 /*
@@ -5714,6 +6220,8 @@ Status XQueryTree  // 6 args
     "Window **" "children_return"
     "unsigned int *" "nchildren_return"
 */
+#define __TRACE_RETSTYLE_XQueryTree__ TYPED
+#define __TRACE_ARGSTYLE_XQueryTree__ FIXED
 #define __TRACE_SAFERETTYPE_XQueryTree__ Status
 #define __TRACE_PROTOARGLIST_XQueryTree__ ( Display * display, Window w, Window * root_return, Window * parent_return, Window ** children_return, unsigned int * nchildren_return)
 #define __TRACE_ARGLIST_XQueryTree__ ( display, w, root_return, parent_return, children_return, nchildren_return)
@@ -5730,7 +6238,7 @@ Status XQueryTree  // 6 args
     __TRACE_PRINTF_ARG__(XQueryTree, unsigned_int_p, nchildren_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XQueryTree__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XQueryTree, Display_p, display)
-__TRACE__(TYPED, FIXED, XQueryTree)
+__TRACE__(XQueryTree)
 
 
 /*
@@ -5738,6 +6246,8 @@ int XRaiseWindow  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XRaiseWindow__ TYPED
+#define __TRACE_ARGSTYLE_XRaiseWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XRaiseWindow__ int
 #define __TRACE_PROTOARGLIST_XRaiseWindow__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XRaiseWindow__ ( display, w)
@@ -5750,7 +6260,7 @@ int XRaiseWindow  // 2 args
     __TRACE_PRINTF_ARG__(XRaiseWindow, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRaiseWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRaiseWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XRaiseWindow)
+__TRACE__(XRaiseWindow)
 
 
 /*
@@ -5764,6 +6274,8 @@ int XReadBitmapFile  // 8 args
     "int *" "x_hot_return"
     "int *" "y_hot_return"
 */
+#define __TRACE_RETSTYLE_XReadBitmapFile__ TYPED
+#define __TRACE_ARGSTYLE_XReadBitmapFile__ FIXED
 #define __TRACE_SAFERETTYPE_XReadBitmapFile__ int
 #define __TRACE_PROTOARGLIST_XReadBitmapFile__ ( Display * display, Drawable d, const char * filename, unsigned int * width_return, unsigned int * height_return, Pixmap * bitmap_return, int * x_hot_return, int * y_hot_return)
 #define __TRACE_ARGLIST_XReadBitmapFile__ ( display, d, filename, width_return, height_return, bitmap_return, x_hot_return, y_hot_return)
@@ -5782,7 +6294,7 @@ int XReadBitmapFile  // 8 args
     __TRACE_PRINTF_ARG__(XReadBitmapFile, int_p, y_hot_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XReadBitmapFile__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XReadBitmapFile, Display_p, display)
-__TRACE__(TYPED, FIXED, XReadBitmapFile)
+__TRACE__(XReadBitmapFile)
 
 
 /*
@@ -5794,6 +6306,8 @@ int XReadBitmapFileData  // 6 args
     "int *" "x_hot_return"
     "int *" "y_hot_return"
 */
+#define __TRACE_RETSTYLE_XReadBitmapFileData__ TYPED
+#define __TRACE_ARGSTYLE_XReadBitmapFileData__ FIXED
 #define __TRACE_SAFERETTYPE_XReadBitmapFileData__ int
 #define __TRACE_PROTOARGLIST_XReadBitmapFileData__ ( const char * filename, unsigned int * width_return, unsigned int * height_return, unsigned char ** data_return, int * x_hot_return, int * y_hot_return)
 #define __TRACE_ARGLIST_XReadBitmapFileData__ ( filename, width_return, height_return, data_return, x_hot_return, y_hot_return)
@@ -5809,7 +6323,7 @@ int XReadBitmapFileData  // 6 args
     __TRACE_PRINTF_ARG__(XReadBitmapFileData, int_p, x_hot_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XReadBitmapFileData, int_p, y_hot_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XReadBitmapFileData__ 
-__TRACE__(TYPED, FIXED, XReadBitmapFileData)
+__TRACE__(XReadBitmapFileData)
 
 
 /*
@@ -5821,6 +6335,8 @@ int XRebindKeysym  // 6 args
     "const unsigned char *" "string"
     "int" "bytes_string"
 */
+#define __TRACE_RETSTYLE_XRebindKeysym__ TYPED
+#define __TRACE_ARGSTYLE_XRebindKeysym__ FIXED
 #define __TRACE_SAFERETTYPE_XRebindKeysym__ int
 #define __TRACE_PROTOARGLIST_XRebindKeysym__ ( Display * display, KeySym keysym, KeySym * list, int mod_count, const unsigned char * string, int bytes_string)
 #define __TRACE_ARGLIST_XRebindKeysym__ ( display, keysym, list, mod_count, string, bytes_string)
@@ -5837,7 +6353,7 @@ int XRebindKeysym  // 6 args
     __TRACE_PRINTF_ARG__(XRebindKeysym, int, bytes_string)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRebindKeysym__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRebindKeysym, Display_p, display)
-__TRACE__(TYPED, FIXED, XRebindKeysym)
+__TRACE__(XRebindKeysym)
 
 
 /*
@@ -5847,6 +6363,8 @@ int XRecolorCursor  // 4 args
     "XColor *" "foreground_color"
     "XColor *" "background_color"
 */
+#define __TRACE_RETSTYLE_XRecolorCursor__ TYPED
+#define __TRACE_ARGSTYLE_XRecolorCursor__ FIXED
 #define __TRACE_SAFERETTYPE_XRecolorCursor__ int
 #define __TRACE_PROTOARGLIST_XRecolorCursor__ ( Display * display, Cursor cursor, XColor * foreground_color, XColor * background_color)
 #define __TRACE_ARGLIST_XRecolorCursor__ ( display, cursor, foreground_color, background_color)
@@ -5861,13 +6379,15 @@ int XRecolorCursor  // 4 args
     __TRACE_PRINTF_ARG__(XRecolorCursor, XColor_p, background_color)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRecolorCursor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRecolorCursor, Display_p, display)
-__TRACE__(TYPED, FIXED, XRecolorCursor)
+__TRACE__(XRecolorCursor)
 
 
 /*
 int XRefreshKeyboardMapping  // 1 args
     "XMappingEvent *" "event_map"
 */
+#define __TRACE_RETSTYLE_XRefreshKeyboardMapping__ TYPED
+#define __TRACE_ARGSTYLE_XRefreshKeyboardMapping__ FIXED
 #define __TRACE_SAFERETTYPE_XRefreshKeyboardMapping__ int
 #define __TRACE_PROTOARGLIST_XRefreshKeyboardMapping__ ( XMappingEvent * event_map)
 #define __TRACE_ARGLIST_XRefreshKeyboardMapping__ ( event_map)
@@ -5878,7 +6398,7 @@ int XRefreshKeyboardMapping  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XRefreshKeyboardMapping, XMappingEvent_p, event_map)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRefreshKeyboardMapping__ 
-__TRACE__(TYPED, FIXED, XRefreshKeyboardMapping)
+__TRACE__(XRefreshKeyboardMapping)
 
 
 /*
@@ -5886,6 +6406,8 @@ int XRemoveFromSaveSet  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XRemoveFromSaveSet__ TYPED
+#define __TRACE_ARGSTYLE_XRemoveFromSaveSet__ FIXED
 #define __TRACE_SAFERETTYPE_XRemoveFromSaveSet__ int
 #define __TRACE_PROTOARGLIST_XRemoveFromSaveSet__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XRemoveFromSaveSet__ ( display, w)
@@ -5898,7 +6420,7 @@ int XRemoveFromSaveSet  // 2 args
     __TRACE_PRINTF_ARG__(XRemoveFromSaveSet, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRemoveFromSaveSet__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRemoveFromSaveSet, Display_p, display)
-__TRACE__(TYPED, FIXED, XRemoveFromSaveSet)
+__TRACE__(XRemoveFromSaveSet)
 
 
 /*
@@ -5906,6 +6428,8 @@ int XRemoveHost  // 2 args
     "Display *" "display"
     "XHostAddress *" "host"
 */
+#define __TRACE_RETSTYLE_XRemoveHost__ TYPED
+#define __TRACE_ARGSTYLE_XRemoveHost__ FIXED
 #define __TRACE_SAFERETTYPE_XRemoveHost__ int
 #define __TRACE_PROTOARGLIST_XRemoveHost__ ( Display * display, XHostAddress * host)
 #define __TRACE_ARGLIST_XRemoveHost__ ( display, host)
@@ -5918,7 +6442,7 @@ int XRemoveHost  // 2 args
     __TRACE_PRINTF_ARG__(XRemoveHost, XHostAddress_p, host)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRemoveHost__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRemoveHost, Display_p, display)
-__TRACE__(TYPED, FIXED, XRemoveHost)
+__TRACE__(XRemoveHost)
 
 
 /*
@@ -5927,6 +6451,8 @@ int XRemoveHosts  // 3 args
     "XHostAddress *" "hosts"
     "int" "num_hosts"
 */
+#define __TRACE_RETSTYLE_XRemoveHosts__ TYPED
+#define __TRACE_ARGSTYLE_XRemoveHosts__ FIXED
 #define __TRACE_SAFERETTYPE_XRemoveHosts__ int
 #define __TRACE_PROTOARGLIST_XRemoveHosts__ ( Display * display, XHostAddress * hosts, int num_hosts)
 #define __TRACE_ARGLIST_XRemoveHosts__ ( display, hosts, num_hosts)
@@ -5940,7 +6466,7 @@ int XRemoveHosts  // 3 args
     __TRACE_PRINTF_ARG__(XRemoveHosts, int, num_hosts)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRemoveHosts__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRemoveHosts, Display_p, display)
-__TRACE__(TYPED, FIXED, XRemoveHosts)
+__TRACE__(XRemoveHosts)
 
 
 /*
@@ -5951,6 +6477,8 @@ int XReparentWindow  // 5 args
     "int" "x"
     "int" "y"
 */
+#define __TRACE_RETSTYLE_XReparentWindow__ TYPED
+#define __TRACE_ARGSTYLE_XReparentWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XReparentWindow__ int
 #define __TRACE_PROTOARGLIST_XReparentWindow__ ( Display * display, Window w, Window parent, int x, int y)
 #define __TRACE_ARGLIST_XReparentWindow__ ( display, w, parent, x, y)
@@ -5966,13 +6494,15 @@ int XReparentWindow  // 5 args
     __TRACE_PRINTF_ARG__(XReparentWindow, int, y)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XReparentWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XReparentWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XReparentWindow)
+__TRACE__(XReparentWindow)
 
 
 /*
 int XResetScreenSaver  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XResetScreenSaver__ TYPED
+#define __TRACE_ARGSTYLE_XResetScreenSaver__ FIXED
 #define __TRACE_SAFERETTYPE_XResetScreenSaver__ int
 #define __TRACE_PROTOARGLIST_XResetScreenSaver__ ( Display * display)
 #define __TRACE_ARGLIST_XResetScreenSaver__ ( display)
@@ -5984,7 +6514,7 @@ int XResetScreenSaver  // 1 args
     __TRACE_PRINTF_ARG__(XResetScreenSaver, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XResetScreenSaver__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XResetScreenSaver, Display_p, display)
-__TRACE__(TYPED, FIXED, XResetScreenSaver)
+__TRACE__(XResetScreenSaver)
 
 
 /*
@@ -5994,6 +6524,8 @@ int XResizeWindow  // 4 args
     "unsigned int" "width"
     "unsigned int" "height"
 */
+#define __TRACE_RETSTYLE_XResizeWindow__ TYPED
+#define __TRACE_ARGSTYLE_XResizeWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XResizeWindow__ int
 #define __TRACE_PROTOARGLIST_XResizeWindow__ ( Display * display, Window w, unsigned int width, unsigned int height)
 #define __TRACE_ARGLIST_XResizeWindow__ ( display, w, width, height)
@@ -6008,7 +6540,7 @@ int XResizeWindow  // 4 args
     __TRACE_PRINTF_ARG__(XResizeWindow, unsigned_int, height)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XResizeWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XResizeWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XResizeWindow)
+__TRACE__(XResizeWindow)
 
 
 /*
@@ -6017,6 +6549,8 @@ int XRestackWindows  // 3 args
     "Window *" "windows"
     "int" "nwindows"
 */
+#define __TRACE_RETSTYLE_XRestackWindows__ TYPED
+#define __TRACE_ARGSTYLE_XRestackWindows__ FIXED
 #define __TRACE_SAFERETTYPE_XRestackWindows__ int
 #define __TRACE_PROTOARGLIST_XRestackWindows__ ( Display * display, Window * windows, int nwindows)
 #define __TRACE_ARGLIST_XRestackWindows__ ( display, windows, nwindows)
@@ -6030,7 +6564,7 @@ int XRestackWindows  // 3 args
     __TRACE_PRINTF_ARG__(XRestackWindows, int, nwindows)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRestackWindows__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRestackWindows, Display_p, display)
-__TRACE__(TYPED, FIXED, XRestackWindows)
+__TRACE__(XRestackWindows)
 
 
 /*
@@ -6038,6 +6572,8 @@ int XRotateBuffers  // 2 args
     "Display *" "display"
     "int" "rotate"
 */
+#define __TRACE_RETSTYLE_XRotateBuffers__ TYPED
+#define __TRACE_ARGSTYLE_XRotateBuffers__ FIXED
 #define __TRACE_SAFERETTYPE_XRotateBuffers__ int
 #define __TRACE_PROTOARGLIST_XRotateBuffers__ ( Display * display, int rotate)
 #define __TRACE_ARGLIST_XRotateBuffers__ ( display, rotate)
@@ -6050,7 +6586,7 @@ int XRotateBuffers  // 2 args
     __TRACE_PRINTF_ARG__(XRotateBuffers, int, rotate)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRotateBuffers__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRotateBuffers, Display_p, display)
-__TRACE__(TYPED, FIXED, XRotateBuffers)
+__TRACE__(XRotateBuffers)
 
 
 /*
@@ -6061,6 +6597,8 @@ int XRotateWindowProperties  // 5 args
     "int" "num_prop"
     "int" "npositions"
 */
+#define __TRACE_RETSTYLE_XRotateWindowProperties__ TYPED
+#define __TRACE_ARGSTYLE_XRotateWindowProperties__ FIXED
 #define __TRACE_SAFERETTYPE_XRotateWindowProperties__ int
 #define __TRACE_PROTOARGLIST_XRotateWindowProperties__ ( Display * display, Window w, Atom * properties, int num_prop, int npositions)
 #define __TRACE_ARGLIST_XRotateWindowProperties__ ( display, w, properties, num_prop, npositions)
@@ -6076,13 +6614,15 @@ int XRotateWindowProperties  // 5 args
     __TRACE_PRINTF_ARG__(XRotateWindowProperties, int, npositions)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRotateWindowProperties__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRotateWindowProperties, Display_p, display)
-__TRACE__(TYPED, FIXED, XRotateWindowProperties)
+__TRACE__(XRotateWindowProperties)
 
 
 /*
 int XScreenCount  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XScreenCount__ TYPED
+#define __TRACE_ARGSTYLE_XScreenCount__ FIXED
 #define __TRACE_SAFERETTYPE_XScreenCount__ int
 #define __TRACE_PROTOARGLIST_XScreenCount__ ( Display * display)
 #define __TRACE_ARGLIST_XScreenCount__ ( display)
@@ -6094,7 +6634,7 @@ int XScreenCount  // 1 args
     __TRACE_PRINTF_ARG__(XScreenCount, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XScreenCount__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XScreenCount, Display_p, display)
-__TRACE__(TYPED, FIXED, XScreenCount)
+__TRACE__(XScreenCount)
 
 
 /*
@@ -6103,6 +6643,8 @@ int XSelectInput  // 3 args
     "Window" "w"
     "long" "event_mask"
 */
+#define __TRACE_RETSTYLE_XSelectInput__ TYPED
+#define __TRACE_ARGSTYLE_XSelectInput__ FIXED
 #define __TRACE_SAFERETTYPE_XSelectInput__ int
 #define __TRACE_PROTOARGLIST_XSelectInput__ ( Display * display, Window w, long event_mask)
 #define __TRACE_ARGLIST_XSelectInput__ ( display, w, event_mask)
@@ -6116,7 +6658,7 @@ int XSelectInput  // 3 args
     __TRACE_PRINTF_ARG__(XSelectInput, long_EventMask, event_mask)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSelectInput__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSelectInput, Display_p, display)
-__TRACE__(TYPED, FIXED, XSelectInput)
+__TRACE__(XSelectInput)
 
 
 /*
@@ -6127,6 +6669,8 @@ Status XSendEvent  // 5 args
     "long" "event_mask"
     "XEvent *" "event_send"
 */
+#define __TRACE_RETSTYLE_XSendEvent__ TYPED
+#define __TRACE_ARGSTYLE_XSendEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XSendEvent__ Status
 #define __TRACE_PROTOARGLIST_XSendEvent__ ( Display * display, Window w, Bool propagate, long event_mask, XEvent * event_send)
 #define __TRACE_ARGLIST_XSendEvent__ ( display, w, propagate, event_mask, event_send)
@@ -6142,7 +6686,7 @@ Status XSendEvent  // 5 args
     __TRACE_PRINTF_ARG__(XSendEvent, XEvent_p, event_send)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSendEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSendEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XSendEvent)
+__TRACE__(XSendEvent)
 
 
 /*
@@ -6150,6 +6694,8 @@ int XSetAccessControl  // 2 args
     "Display *" "display"
     "int" "mode"
 */
+#define __TRACE_RETSTYLE_XSetAccessControl__ TYPED
+#define __TRACE_ARGSTYLE_XSetAccessControl__ FIXED
 #define __TRACE_SAFERETTYPE_XSetAccessControl__ int
 #define __TRACE_PROTOARGLIST_XSetAccessControl__ ( Display * display, int mode)
 #define __TRACE_ARGLIST_XSetAccessControl__ ( display, mode)
@@ -6162,7 +6708,7 @@ int XSetAccessControl  // 2 args
     __TRACE_PRINTF_ARG__(XSetAccessControl, int_HostAccess, mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetAccessControl__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetAccessControl, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetAccessControl)
+__TRACE__(XSetAccessControl)
 
 
 /*
@@ -6171,6 +6717,8 @@ int XSetArcMode  // 3 args
     "GC" "gc"
     "int" "arc_mode"
 */
+#define __TRACE_RETSTYLE_XSetArcMode__ TYPED
+#define __TRACE_ARGSTYLE_XSetArcMode__ FIXED
 #define __TRACE_SAFERETTYPE_XSetArcMode__ int
 #define __TRACE_PROTOARGLIST_XSetArcMode__ ( Display * display, GC gc, int arc_mode)
 #define __TRACE_ARGLIST_XSetArcMode__ ( display, gc, arc_mode)
@@ -6184,7 +6732,7 @@ int XSetArcMode  // 3 args
     __TRACE_PRINTF_ARG__(XSetArcMode, int_ArcMode, arc_mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetArcMode__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetArcMode, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetArcMode)
+__TRACE__(XSetArcMode)
 
 
 /*
@@ -6193,6 +6741,8 @@ int XSetBackground  // 3 args
     "GC" "gc"
     "unsigned long" "background"
 */
+#define __TRACE_RETSTYLE_XSetBackground__ TYPED
+#define __TRACE_ARGSTYLE_XSetBackground__ FIXED
 #define __TRACE_SAFERETTYPE_XSetBackground__ int
 #define __TRACE_PROTOARGLIST_XSetBackground__ ( Display * display, GC gc, unsigned long background)
 #define __TRACE_ARGLIST_XSetBackground__ ( display, gc, background)
@@ -6206,7 +6756,7 @@ int XSetBackground  // 3 args
     __TRACE_PRINTF_ARG__(XSetBackground, unsigned_long, background)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetBackground__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetBackground, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetBackground)
+__TRACE__(XSetBackground)
 
 
 /*
@@ -6215,6 +6765,8 @@ int XSetClipMask  // 3 args
     "GC" "gc"
     "Pixmap" "pixmap"
 */
+#define __TRACE_RETSTYLE_XSetClipMask__ TYPED
+#define __TRACE_ARGSTYLE_XSetClipMask__ FIXED
 #define __TRACE_SAFERETTYPE_XSetClipMask__ int
 #define __TRACE_PROTOARGLIST_XSetClipMask__ ( Display * display, GC gc, Pixmap pixmap)
 #define __TRACE_ARGLIST_XSetClipMask__ ( display, gc, pixmap)
@@ -6228,7 +6780,7 @@ int XSetClipMask  // 3 args
     __TRACE_PRINTF_ARG__(XSetClipMask, Pixmap, pixmap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetClipMask__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetClipMask, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetClipMask)
+__TRACE__(XSetClipMask)
 
 
 /*
@@ -6238,6 +6790,8 @@ int XSetClipOrigin  // 4 args
     "int" "clip_x_origin"
     "int" "clip_y_origin"
 */
+#define __TRACE_RETSTYLE_XSetClipOrigin__ TYPED
+#define __TRACE_ARGSTYLE_XSetClipOrigin__ FIXED
 #define __TRACE_SAFERETTYPE_XSetClipOrigin__ int
 #define __TRACE_PROTOARGLIST_XSetClipOrigin__ ( Display * display, GC gc, int clip_x_origin, int clip_y_origin)
 #define __TRACE_ARGLIST_XSetClipOrigin__ ( display, gc, clip_x_origin, clip_y_origin)
@@ -6252,7 +6806,7 @@ int XSetClipOrigin  // 4 args
     __TRACE_PRINTF_ARG__(XSetClipOrigin, int, clip_y_origin)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetClipOrigin__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetClipOrigin, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetClipOrigin)
+__TRACE__(XSetClipOrigin)
 
 
 /*
@@ -6265,6 +6819,8 @@ int XSetClipRectangles  // 7 args
     "int" "n"
     "int" "ordering"
 */
+#define __TRACE_RETSTYLE_XSetClipRectangles__ TYPED
+#define __TRACE_ARGSTYLE_XSetClipRectangles__ FIXED
 #define __TRACE_SAFERETTYPE_XSetClipRectangles__ int
 #define __TRACE_PROTOARGLIST_XSetClipRectangles__ ( Display * display, GC gc, int clip_x_origin, int clip_y_origin, XRectangle * rectangles, int n, int ordering)
 #define __TRACE_ARGLIST_XSetClipRectangles__ ( display, gc, clip_x_origin, clip_y_origin, rectangles, n, ordering)
@@ -6282,7 +6838,7 @@ int XSetClipRectangles  // 7 args
     __TRACE_PRINTF_ARG__(XSetClipRectangles, int_SetClipRectanglesOrdering, ordering)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetClipRectangles__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetClipRectangles, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetClipRectangles)
+__TRACE__(XSetClipRectangles)
 
 
 /*
@@ -6290,6 +6846,8 @@ int XSetCloseDownMode  // 2 args
     "Display *" "display"
     "int" "close_mode"
 */
+#define __TRACE_RETSTYLE_XSetCloseDownMode__ TYPED
+#define __TRACE_ARGSTYLE_XSetCloseDownMode__ FIXED
 #define __TRACE_SAFERETTYPE_XSetCloseDownMode__ int
 #define __TRACE_PROTOARGLIST_XSetCloseDownMode__ ( Display * display, int close_mode)
 #define __TRACE_ARGLIST_XSetCloseDownMode__ ( display, close_mode)
@@ -6302,7 +6860,7 @@ int XSetCloseDownMode  // 2 args
     __TRACE_PRINTF_ARG__(XSetCloseDownMode, int_ChangeCloseDownMode, close_mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetCloseDownMode__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetCloseDownMode, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetCloseDownMode)
+__TRACE__(XSetCloseDownMode)
 
 
 /*
@@ -6312,6 +6870,8 @@ int XSetCommand  // 4 args
     "char **" "argv"
     "int" "argc"
 */
+#define __TRACE_RETSTYLE_XSetCommand__ TYPED
+#define __TRACE_ARGSTYLE_XSetCommand__ FIXED
 #define __TRACE_SAFERETTYPE_XSetCommand__ int
 #define __TRACE_PROTOARGLIST_XSetCommand__ ( Display * display, Window w, char ** argv, int argc)
 #define __TRACE_ARGLIST_XSetCommand__ ( display, w, argv, argc)
@@ -6326,7 +6886,7 @@ int XSetCommand  // 4 args
     __TRACE_PRINTF_ARG__(XSetCommand, int, argc)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetCommand__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetCommand, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetCommand)
+__TRACE__(XSetCommand)
 
 
 /*
@@ -6337,6 +6897,8 @@ int XSetDashes  // 5 args
     "const char *" "dash_list"
     "int" "n"
 */
+#define __TRACE_RETSTYLE_XSetDashes__ TYPED
+#define __TRACE_ARGSTYLE_XSetDashes__ FIXED
 #define __TRACE_SAFERETTYPE_XSetDashes__ int
 #define __TRACE_PROTOARGLIST_XSetDashes__ ( Display * display, GC gc, int dash_offset, const char * dash_list, int n)
 #define __TRACE_ARGLIST_XSetDashes__ ( display, gc, dash_offset, dash_list, n)
@@ -6352,7 +6914,7 @@ int XSetDashes  // 5 args
     __TRACE_PRINTF_ARG__(XSetDashes, int, n)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetDashes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetDashes, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetDashes)
+__TRACE__(XSetDashes)
 
 
 /*
@@ -6361,6 +6923,8 @@ int XSetFillRule  // 3 args
     "GC" "gc"
     "int" "fill_rule"
 */
+#define __TRACE_RETSTYLE_XSetFillRule__ TYPED
+#define __TRACE_ARGSTYLE_XSetFillRule__ FIXED
 #define __TRACE_SAFERETTYPE_XSetFillRule__ int
 #define __TRACE_PROTOARGLIST_XSetFillRule__ ( Display * display, GC gc, int fill_rule)
 #define __TRACE_ARGLIST_XSetFillRule__ ( display, gc, fill_rule)
@@ -6374,7 +6938,7 @@ int XSetFillRule  // 3 args
     __TRACE_PRINTF_ARG__(XSetFillRule, int_FillRule, fill_rule)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetFillRule__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetFillRule, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetFillRule)
+__TRACE__(XSetFillRule)
 
 
 /*
@@ -6383,6 +6947,8 @@ int XSetFillStyle  // 3 args
     "GC" "gc"
     "int" "fill_style"
 */
+#define __TRACE_RETSTYLE_XSetFillStyle__ TYPED
+#define __TRACE_ARGSTYLE_XSetFillStyle__ FIXED
 #define __TRACE_SAFERETTYPE_XSetFillStyle__ int
 #define __TRACE_PROTOARGLIST_XSetFillStyle__ ( Display * display, GC gc, int fill_style)
 #define __TRACE_ARGLIST_XSetFillStyle__ ( display, gc, fill_style)
@@ -6396,7 +6962,7 @@ int XSetFillStyle  // 3 args
     __TRACE_PRINTF_ARG__(XSetFillStyle, int_FillStyle, fill_style)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetFillStyle__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetFillStyle, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetFillStyle)
+__TRACE__(XSetFillStyle)
 
 
 /*
@@ -6405,6 +6971,8 @@ int XSetFont  // 3 args
     "GC" "gc"
     "Font" "font"
 */
+#define __TRACE_RETSTYLE_XSetFont__ TYPED
+#define __TRACE_ARGSTYLE_XSetFont__ FIXED
 #define __TRACE_SAFERETTYPE_XSetFont__ int
 #define __TRACE_PROTOARGLIST_XSetFont__ ( Display * display, GC gc, Font font)
 #define __TRACE_ARGLIST_XSetFont__ ( display, gc, font)
@@ -6418,7 +6986,7 @@ int XSetFont  // 3 args
     __TRACE_PRINTF_ARG__(XSetFont, Font, font)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetFont__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetFont, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetFont)
+__TRACE__(XSetFont)
 
 
 /*
@@ -6427,6 +6995,8 @@ int XSetFontPath  // 3 args
     "char **" "directories"
     "int" "ndirs"
 */
+#define __TRACE_RETSTYLE_XSetFontPath__ TYPED
+#define __TRACE_ARGSTYLE_XSetFontPath__ FIXED
 #define __TRACE_SAFERETTYPE_XSetFontPath__ int
 #define __TRACE_PROTOARGLIST_XSetFontPath__ ( Display * display, char ** directories, int ndirs)
 #define __TRACE_ARGLIST_XSetFontPath__ ( display, directories, ndirs)
@@ -6440,7 +7010,7 @@ int XSetFontPath  // 3 args
     __TRACE_PRINTF_ARG__(XSetFontPath, int, ndirs)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetFontPath__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetFontPath, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetFontPath)
+__TRACE__(XSetFontPath)
 
 
 /*
@@ -6449,6 +7019,8 @@ int XSetForeground  // 3 args
     "GC" "gc"
     "unsigned long" "foreground"
 */
+#define __TRACE_RETSTYLE_XSetForeground__ TYPED
+#define __TRACE_ARGSTYLE_XSetForeground__ FIXED
 #define __TRACE_SAFERETTYPE_XSetForeground__ int
 #define __TRACE_PROTOARGLIST_XSetForeground__ ( Display * display, GC gc, unsigned long foreground)
 #define __TRACE_ARGLIST_XSetForeground__ ( display, gc, foreground)
@@ -6462,7 +7034,7 @@ int XSetForeground  // 3 args
     __TRACE_PRINTF_ARG__(XSetForeground, unsigned_long, foreground)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetForeground__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetForeground, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetForeground)
+__TRACE__(XSetForeground)
 
 
 /*
@@ -6471,6 +7043,8 @@ int XSetFunction  // 3 args
     "GC" "gc"
     "int" "function"
 */
+#define __TRACE_RETSTYLE_XSetFunction__ TYPED
+#define __TRACE_ARGSTYLE_XSetFunction__ FIXED
 #define __TRACE_SAFERETTYPE_XSetFunction__ int
 #define __TRACE_PROTOARGLIST_XSetFunction__ ( Display * display, GC gc, int function)
 #define __TRACE_ARGLIST_XSetFunction__ ( display, gc, function)
@@ -6484,7 +7058,7 @@ int XSetFunction  // 3 args
     __TRACE_PRINTF_ARG__(XSetFunction, int, function)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetFunction__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetFunction, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetFunction)
+__TRACE__(XSetFunction)
 
 
 /*
@@ -6493,6 +7067,8 @@ int XSetGraphicsExposures  // 3 args
     "GC" "gc"
     "Bool" "graphics_exposures"
 */
+#define __TRACE_RETSTYLE_XSetGraphicsExposures__ TYPED
+#define __TRACE_ARGSTYLE_XSetGraphicsExposures__ FIXED
 #define __TRACE_SAFERETTYPE_XSetGraphicsExposures__ int
 #define __TRACE_PROTOARGLIST_XSetGraphicsExposures__ ( Display * display, GC gc, Bool graphics_exposures)
 #define __TRACE_ARGLIST_XSetGraphicsExposures__ ( display, gc, graphics_exposures)
@@ -6506,7 +7082,7 @@ int XSetGraphicsExposures  // 3 args
     __TRACE_PRINTF_ARG__(XSetGraphicsExposures, Bool, graphics_exposures)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetGraphicsExposures__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetGraphicsExposures, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetGraphicsExposures)
+__TRACE__(XSetGraphicsExposures)
 
 
 /*
@@ -6515,6 +7091,8 @@ int XSetIconName  // 3 args
     "Window" "w"
     "const char *" "icon_name"
 */
+#define __TRACE_RETSTYLE_XSetIconName__ TYPED
+#define __TRACE_ARGSTYLE_XSetIconName__ FIXED
 #define __TRACE_SAFERETTYPE_XSetIconName__ int
 #define __TRACE_PROTOARGLIST_XSetIconName__ ( Display * display, Window w, const char * icon_name)
 #define __TRACE_ARGLIST_XSetIconName__ ( display, w, icon_name)
@@ -6528,7 +7106,7 @@ int XSetIconName  // 3 args
     __TRACE_PRINTF_ARG__(XSetIconName, char_p, icon_name)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetIconName__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetIconName, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetIconName)
+__TRACE__(XSetIconName)
 
 
 /*
@@ -6538,6 +7116,8 @@ int XSetInputFocus  // 4 args
     "int" "revert_to"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XSetInputFocus__ TYPED
+#define __TRACE_ARGSTYLE_XSetInputFocus__ FIXED
 #define __TRACE_SAFERETTYPE_XSetInputFocus__ int
 #define __TRACE_PROTOARGLIST_XSetInputFocus__ ( Display * display, Window focus, int revert_to, Time time)
 #define __TRACE_ARGLIST_XSetInputFocus__ ( display, focus, revert_to, time)
@@ -6552,7 +7132,7 @@ int XSetInputFocus  // 4 args
     __TRACE_PRINTF_ARG__(XSetInputFocus, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetInputFocus__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetInputFocus, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetInputFocus)
+__TRACE__(XSetInputFocus)
 
 
 /*
@@ -6564,6 +7144,8 @@ int XSetLineAttributes  // 6 args
     "int" "cap_style"
     "int" "join_style"
 */
+#define __TRACE_RETSTYLE_XSetLineAttributes__ TYPED
+#define __TRACE_ARGSTYLE_XSetLineAttributes__ FIXED
 #define __TRACE_SAFERETTYPE_XSetLineAttributes__ int
 #define __TRACE_PROTOARGLIST_XSetLineAttributes__ ( Display * display, GC gc, unsigned int line_width, int line_style, int cap_style, int join_style)
 #define __TRACE_ARGLIST_XSetLineAttributes__ ( display, gc, line_width, line_style, cap_style, join_style)
@@ -6580,7 +7162,7 @@ int XSetLineAttributes  // 6 args
     __TRACE_PRINTF_ARG__(XSetLineAttributes, int_JoinStyle, join_style)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetLineAttributes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetLineAttributes, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetLineAttributes)
+__TRACE__(XSetLineAttributes)
 
 
 /*
@@ -6588,6 +7170,8 @@ int XSetModifierMapping  // 2 args
     "Display *" "display"
     "XModifierKeymap *" "modmap"
 */
+#define __TRACE_RETSTYLE_XSetModifierMapping__ TYPED
+#define __TRACE_ARGSTYLE_XSetModifierMapping__ FIXED
 #define __TRACE_SAFERETTYPE_XSetModifierMapping__ int_MappingResult
 #define __TRACE_PROTOARGLIST_XSetModifierMapping__ ( Display * display, XModifierKeymap * modmap)
 #define __TRACE_ARGLIST_XSetModifierMapping__ ( display, modmap)
@@ -6600,7 +7184,7 @@ int XSetModifierMapping  // 2 args
     __TRACE_PRINTF_ARG__(XSetModifierMapping, XModifierKeymap_p, modmap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetModifierMapping__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetModifierMapping, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetModifierMapping)
+__TRACE__(XSetModifierMapping)
 
 
 /*
@@ -6609,6 +7193,8 @@ int XSetPlaneMask  // 3 args
     "GC" "gc"
     "unsigned long" "plane_mask"
 */
+#define __TRACE_RETSTYLE_XSetPlaneMask__ TYPED
+#define __TRACE_ARGSTYLE_XSetPlaneMask__ FIXED
 #define __TRACE_SAFERETTYPE_XSetPlaneMask__ int
 #define __TRACE_PROTOARGLIST_XSetPlaneMask__ ( Display * display, GC gc, unsigned long plane_mask)
 #define __TRACE_ARGLIST_XSetPlaneMask__ ( display, gc, plane_mask)
@@ -6622,7 +7208,7 @@ int XSetPlaneMask  // 3 args
     __TRACE_PRINTF_ARG__(XSetPlaneMask, unsigned_long, plane_mask)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetPlaneMask__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetPlaneMask, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetPlaneMask)
+__TRACE__(XSetPlaneMask)
 
 
 /*
@@ -6631,6 +7217,8 @@ int XSetPointerMapping  // 3 args
     "const unsigned char *" "map"
     "int" "nmap"
 */
+#define __TRACE_RETSTYLE_XSetPointerMapping__ TYPED
+#define __TRACE_ARGSTYLE_XSetPointerMapping__ FIXED
 #define __TRACE_SAFERETTYPE_XSetPointerMapping__ int_MappingResult
 #define __TRACE_PROTOARGLIST_XSetPointerMapping__ ( Display * display, const unsigned char * map, int nmap)
 #define __TRACE_ARGLIST_XSetPointerMapping__ ( display, map, nmap)
@@ -6644,7 +7232,7 @@ int XSetPointerMapping  // 3 args
     __TRACE_PRINTF_ARG__(XSetPointerMapping, int, nmap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetPointerMapping__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetPointerMapping, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetPointerMapping)
+__TRACE__(XSetPointerMapping)
 
 
 /*
@@ -6655,6 +7243,8 @@ int XSetScreenSaver  // 5 args
     "int" "prefer_blanking"
     "int" "allow_exposures"
 */
+#define __TRACE_RETSTYLE_XSetScreenSaver__ TYPED
+#define __TRACE_ARGSTYLE_XSetScreenSaver__ FIXED
 #define __TRACE_SAFERETTYPE_XSetScreenSaver__ int
 #define __TRACE_PROTOARGLIST_XSetScreenSaver__ ( Display * display, int timeout, int interval, int prefer_blanking, int allow_exposures)
 #define __TRACE_ARGLIST_XSetScreenSaver__ ( display, timeout, interval, prefer_blanking, allow_exposures)
@@ -6670,7 +7260,7 @@ int XSetScreenSaver  // 5 args
     __TRACE_PRINTF_ARG__(XSetScreenSaver, int_ScreenSaverExposures, allow_exposures)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetScreenSaver__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetScreenSaver, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetScreenSaver)
+__TRACE__(XSetScreenSaver)
 
 
 /*
@@ -6680,6 +7270,8 @@ int XSetSelectionOwner  // 4 args
     "Window" "owner"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XSetSelectionOwner__ TYPED
+#define __TRACE_ARGSTYLE_XSetSelectionOwner__ FIXED
 #define __TRACE_SAFERETTYPE_XSetSelectionOwner__ int
 #define __TRACE_PROTOARGLIST_XSetSelectionOwner__ ( Display * display, Atom selection, Window owner, Time time)
 #define __TRACE_ARGLIST_XSetSelectionOwner__ ( display, selection, owner, time)
@@ -6694,7 +7286,7 @@ int XSetSelectionOwner  // 4 args
     __TRACE_PRINTF_ARG__(XSetSelectionOwner, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetSelectionOwner__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetSelectionOwner, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetSelectionOwner)
+__TRACE__(XSetSelectionOwner)
 
 
 /*
@@ -6706,6 +7298,8 @@ int XSetState  // 6 args
     "int" "function"
     "unsigned long" "plane_mask"
 */
+#define __TRACE_RETSTYLE_XSetState__ TYPED
+#define __TRACE_ARGSTYLE_XSetState__ FIXED
 #define __TRACE_SAFERETTYPE_XSetState__ int
 #define __TRACE_PROTOARGLIST_XSetState__ ( Display * display, GC gc, unsigned long foreground, unsigned long background, int function, unsigned long plane_mask)
 #define __TRACE_ARGLIST_XSetState__ ( display, gc, foreground, background, function, plane_mask)
@@ -6722,7 +7316,7 @@ int XSetState  // 6 args
     __TRACE_PRINTF_ARG__(XSetState, unsigned_long, plane_mask)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetState__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetState, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetState)
+__TRACE__(XSetState)
 
 
 /*
@@ -6731,6 +7325,8 @@ int XSetStipple  // 3 args
     "GC" "gc"
     "Pixmap" "stipple"
 */
+#define __TRACE_RETSTYLE_XSetStipple__ TYPED
+#define __TRACE_ARGSTYLE_XSetStipple__ FIXED
 #define __TRACE_SAFERETTYPE_XSetStipple__ int
 #define __TRACE_PROTOARGLIST_XSetStipple__ ( Display * display, GC gc, Pixmap stipple)
 #define __TRACE_ARGLIST_XSetStipple__ ( display, gc, stipple)
@@ -6744,7 +7340,7 @@ int XSetStipple  // 3 args
     __TRACE_PRINTF_ARG__(XSetStipple, Pixmap, stipple)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetStipple__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetStipple, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetStipple)
+__TRACE__(XSetStipple)
 
 
 /*
@@ -6753,6 +7349,8 @@ int XSetSubwindowMode  // 3 args
     "GC" "gc"
     "int" "subwindow_mode"
 */
+#define __TRACE_RETSTYLE_XSetSubwindowMode__ TYPED
+#define __TRACE_ARGSTYLE_XSetSubwindowMode__ FIXED
 #define __TRACE_SAFERETTYPE_XSetSubwindowMode__ int
 #define __TRACE_PROTOARGLIST_XSetSubwindowMode__ ( Display * display, GC gc, int subwindow_mode)
 #define __TRACE_ARGLIST_XSetSubwindowMode__ ( display, gc, subwindow_mode)
@@ -6766,7 +7364,7 @@ int XSetSubwindowMode  // 3 args
     __TRACE_PRINTF_ARG__(XSetSubwindowMode, int_SubwindowMode, subwindow_mode)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetSubwindowMode__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetSubwindowMode, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetSubwindowMode)
+__TRACE__(XSetSubwindowMode)
 
 
 /*
@@ -6776,6 +7374,8 @@ int XSetTSOrigin  // 4 args
     "int" "ts_x_origin"
     "int" "ts_y_origin"
 */
+#define __TRACE_RETSTYLE_XSetTSOrigin__ TYPED
+#define __TRACE_ARGSTYLE_XSetTSOrigin__ FIXED
 #define __TRACE_SAFERETTYPE_XSetTSOrigin__ int
 #define __TRACE_PROTOARGLIST_XSetTSOrigin__ ( Display * display, GC gc, int ts_x_origin, int ts_y_origin)
 #define __TRACE_ARGLIST_XSetTSOrigin__ ( display, gc, ts_x_origin, ts_y_origin)
@@ -6790,7 +7390,7 @@ int XSetTSOrigin  // 4 args
     __TRACE_PRINTF_ARG__(XSetTSOrigin, int, ts_y_origin)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetTSOrigin__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetTSOrigin, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetTSOrigin)
+__TRACE__(XSetTSOrigin)
 
 
 /*
@@ -6799,6 +7399,8 @@ int XSetTile  // 3 args
     "GC" "gc"
     "Pixmap" "tile"
 */
+#define __TRACE_RETSTYLE_XSetTile__ TYPED
+#define __TRACE_ARGSTYLE_XSetTile__ FIXED
 #define __TRACE_SAFERETTYPE_XSetTile__ int
 #define __TRACE_PROTOARGLIST_XSetTile__ ( Display * display, GC gc, Pixmap tile)
 #define __TRACE_ARGLIST_XSetTile__ ( display, gc, tile)
@@ -6812,7 +7414,7 @@ int XSetTile  // 3 args
     __TRACE_PRINTF_ARG__(XSetTile, Pixmap, tile)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetTile__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetTile, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetTile)
+__TRACE__(XSetTile)
 
 
 /*
@@ -6821,6 +7423,8 @@ int XSetWindowBackground  // 3 args
     "Window" "w"
     "unsigned long" "background_pixel"
 */
+#define __TRACE_RETSTYLE_XSetWindowBackground__ TYPED
+#define __TRACE_ARGSTYLE_XSetWindowBackground__ FIXED
 #define __TRACE_SAFERETTYPE_XSetWindowBackground__ int
 #define __TRACE_PROTOARGLIST_XSetWindowBackground__ ( Display * display, Window w, unsigned long background_pixel)
 #define __TRACE_ARGLIST_XSetWindowBackground__ ( display, w, background_pixel)
@@ -6834,7 +7438,7 @@ int XSetWindowBackground  // 3 args
     __TRACE_PRINTF_ARG__(XSetWindowBackground, unsigned_long, background_pixel)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetWindowBackground__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetWindowBackground, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetWindowBackground)
+__TRACE__(XSetWindowBackground)
 
 
 /*
@@ -6843,6 +7447,8 @@ int XSetWindowBackgroundPixmap  // 3 args
     "Window" "w"
     "Pixmap" "background_pixmap"
 */
+#define __TRACE_RETSTYLE_XSetWindowBackgroundPixmap__ TYPED
+#define __TRACE_ARGSTYLE_XSetWindowBackgroundPixmap__ FIXED
 #define __TRACE_SAFERETTYPE_XSetWindowBackgroundPixmap__ int
 #define __TRACE_PROTOARGLIST_XSetWindowBackgroundPixmap__ ( Display * display, Window w, Pixmap background_pixmap)
 #define __TRACE_ARGLIST_XSetWindowBackgroundPixmap__ ( display, w, background_pixmap)
@@ -6856,7 +7462,7 @@ int XSetWindowBackgroundPixmap  // 3 args
     __TRACE_PRINTF_ARG__(XSetWindowBackgroundPixmap, Pixmap, background_pixmap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetWindowBackgroundPixmap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetWindowBackgroundPixmap, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetWindowBackgroundPixmap)
+__TRACE__(XSetWindowBackgroundPixmap)
 
 
 /*
@@ -6865,6 +7471,8 @@ int XSetWindowBorder  // 3 args
     "Window" "w"
     "unsigned long" "border_pixel"
 */
+#define __TRACE_RETSTYLE_XSetWindowBorder__ TYPED
+#define __TRACE_ARGSTYLE_XSetWindowBorder__ FIXED
 #define __TRACE_SAFERETTYPE_XSetWindowBorder__ int
 #define __TRACE_PROTOARGLIST_XSetWindowBorder__ ( Display * display, Window w, unsigned long border_pixel)
 #define __TRACE_ARGLIST_XSetWindowBorder__ ( display, w, border_pixel)
@@ -6878,7 +7486,7 @@ int XSetWindowBorder  // 3 args
     __TRACE_PRINTF_ARG__(XSetWindowBorder, unsigned_long, border_pixel)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetWindowBorder__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetWindowBorder, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetWindowBorder)
+__TRACE__(XSetWindowBorder)
 
 
 /*
@@ -6887,6 +7495,8 @@ int XSetWindowBorderPixmap  // 3 args
     "Window" "w"
     "Pixmap" "border_pixmap"
 */
+#define __TRACE_RETSTYLE_XSetWindowBorderPixmap__ TYPED
+#define __TRACE_ARGSTYLE_XSetWindowBorderPixmap__ FIXED
 #define __TRACE_SAFERETTYPE_XSetWindowBorderPixmap__ int
 #define __TRACE_PROTOARGLIST_XSetWindowBorderPixmap__ ( Display * display, Window w, Pixmap border_pixmap)
 #define __TRACE_ARGLIST_XSetWindowBorderPixmap__ ( display, w, border_pixmap)
@@ -6900,7 +7510,7 @@ int XSetWindowBorderPixmap  // 3 args
     __TRACE_PRINTF_ARG__(XSetWindowBorderPixmap, Pixmap, border_pixmap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetWindowBorderPixmap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetWindowBorderPixmap, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetWindowBorderPixmap)
+__TRACE__(XSetWindowBorderPixmap)
 
 
 /*
@@ -6909,6 +7519,8 @@ int XSetWindowBorderWidth  // 3 args
     "Window" "w"
     "unsigned int" "width"
 */
+#define __TRACE_RETSTYLE_XSetWindowBorderWidth__ TYPED
+#define __TRACE_ARGSTYLE_XSetWindowBorderWidth__ FIXED
 #define __TRACE_SAFERETTYPE_XSetWindowBorderWidth__ int
 #define __TRACE_PROTOARGLIST_XSetWindowBorderWidth__ ( Display * display, Window w, unsigned int width)
 #define __TRACE_ARGLIST_XSetWindowBorderWidth__ ( display, w, width)
@@ -6922,7 +7534,7 @@ int XSetWindowBorderWidth  // 3 args
     __TRACE_PRINTF_ARG__(XSetWindowBorderWidth, unsigned_int, width)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetWindowBorderWidth__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetWindowBorderWidth, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetWindowBorderWidth)
+__TRACE__(XSetWindowBorderWidth)
 
 
 /*
@@ -6931,6 +7543,8 @@ int XSetWindowColormap  // 3 args
     "Window" "w"
     "Colormap" "colormap"
 */
+#define __TRACE_RETSTYLE_XSetWindowColormap__ TYPED
+#define __TRACE_ARGSTYLE_XSetWindowColormap__ FIXED
 #define __TRACE_SAFERETTYPE_XSetWindowColormap__ int
 #define __TRACE_PROTOARGLIST_XSetWindowColormap__ ( Display * display, Window w, Colormap colormap)
 #define __TRACE_ARGLIST_XSetWindowColormap__ ( display, w, colormap)
@@ -6944,7 +7558,7 @@ int XSetWindowColormap  // 3 args
     __TRACE_PRINTF_ARG__(XSetWindowColormap, Colormap, colormap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetWindowColormap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XSetWindowColormap, Display_p, display)
-__TRACE__(TYPED, FIXED, XSetWindowColormap)
+__TRACE__(XSetWindowColormap)
 
 
 /*
@@ -6954,6 +7568,8 @@ int XStoreBuffer  // 4 args
     "int" "nbytes"
     "int" "buffer"
 */
+#define __TRACE_RETSTYLE_XStoreBuffer__ TYPED
+#define __TRACE_ARGSTYLE_XStoreBuffer__ FIXED
 #define __TRACE_SAFERETTYPE_XStoreBuffer__ int
 #define __TRACE_PROTOARGLIST_XStoreBuffer__ ( Display * display, const char * bytes, int nbytes, int buffer)
 #define __TRACE_ARGLIST_XStoreBuffer__ ( display, bytes, nbytes, buffer)
@@ -6968,7 +7584,7 @@ int XStoreBuffer  // 4 args
     __TRACE_PRINTF_ARG__(XStoreBuffer, int, buffer)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XStoreBuffer__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XStoreBuffer, Display_p, display)
-__TRACE__(TYPED, FIXED, XStoreBuffer)
+__TRACE__(XStoreBuffer)
 
 
 /*
@@ -6977,6 +7593,8 @@ int XStoreBytes  // 3 args
     "const char *" "bytes"
     "int" "nbytes"
 */
+#define __TRACE_RETSTYLE_XStoreBytes__ TYPED
+#define __TRACE_ARGSTYLE_XStoreBytes__ FIXED
 #define __TRACE_SAFERETTYPE_XStoreBytes__ int
 #define __TRACE_PROTOARGLIST_XStoreBytes__ ( Display * display, const char * bytes, int nbytes)
 #define __TRACE_ARGLIST_XStoreBytes__ ( display, bytes, nbytes)
@@ -6990,7 +7608,7 @@ int XStoreBytes  // 3 args
     __TRACE_PRINTF_ARG__(XStoreBytes, int, nbytes)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XStoreBytes__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XStoreBytes, Display_p, display)
-__TRACE__(TYPED, FIXED, XStoreBytes)
+__TRACE__(XStoreBytes)
 
 
 /*
@@ -6999,6 +7617,8 @@ int XStoreColor  // 3 args
     "Colormap" "colormap"
     "XColor *" "color"
 */
+#define __TRACE_RETSTYLE_XStoreColor__ TYPED
+#define __TRACE_ARGSTYLE_XStoreColor__ FIXED
 #define __TRACE_SAFERETTYPE_XStoreColor__ int
 #define __TRACE_PROTOARGLIST_XStoreColor__ ( Display * display, Colormap colormap, XColor * color)
 #define __TRACE_ARGLIST_XStoreColor__ ( display, colormap, color)
@@ -7012,7 +7632,7 @@ int XStoreColor  // 3 args
     __TRACE_PRINTF_ARG__(XStoreColor, XColor_p, color)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XStoreColor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XStoreColor, Display_p, display)
-__TRACE__(TYPED, FIXED, XStoreColor)
+__TRACE__(XStoreColor)
 
 
 /*
@@ -7022,6 +7642,8 @@ int XStoreColors  // 4 args
     "XColor *" "color"
     "int" "ncolors"
 */
+#define __TRACE_RETSTYLE_XStoreColors__ TYPED
+#define __TRACE_ARGSTYLE_XStoreColors__ FIXED
 #define __TRACE_SAFERETTYPE_XStoreColors__ int
 #define __TRACE_PROTOARGLIST_XStoreColors__ ( Display * display, Colormap colormap, XColor * color, int ncolors)
 #define __TRACE_ARGLIST_XStoreColors__ ( display, colormap, color, ncolors)
@@ -7036,7 +7658,7 @@ int XStoreColors  // 4 args
     __TRACE_PRINTF_ARG__(XStoreColors, int, ncolors)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XStoreColors__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XStoreColors, Display_p, display)
-__TRACE__(TYPED, FIXED, XStoreColors)
+__TRACE__(XStoreColors)
 
 
 /*
@@ -7045,6 +7667,8 @@ int XStoreName  // 3 args
     "Window" "w"
     "const char *" "window_name"
 */
+#define __TRACE_RETSTYLE_XStoreName__ TYPED
+#define __TRACE_ARGSTYLE_XStoreName__ FIXED
 #define __TRACE_SAFERETTYPE_XStoreName__ int
 #define __TRACE_PROTOARGLIST_XStoreName__ ( Display * display, Window w, const char * window_name)
 #define __TRACE_ARGLIST_XStoreName__ ( display, w, window_name)
@@ -7058,7 +7682,7 @@ int XStoreName  // 3 args
     __TRACE_PRINTF_ARG__(XStoreName, char_p, window_name)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XStoreName__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XStoreName, Display_p, display)
-__TRACE__(TYPED, FIXED, XStoreName)
+__TRACE__(XStoreName)
 
 
 /*
@@ -7069,6 +7693,8 @@ int XStoreNamedColor  // 5 args
     "unsigned long" "pixel"
     "int" "flags"
 */
+#define __TRACE_RETSTYLE_XStoreNamedColor__ TYPED
+#define __TRACE_ARGSTYLE_XStoreNamedColor__ FIXED
 #define __TRACE_SAFERETTYPE_XStoreNamedColor__ int
 #define __TRACE_PROTOARGLIST_XStoreNamedColor__ ( Display * display, Colormap colormap, const char * color, unsigned long pixel, int flags)
 #define __TRACE_ARGLIST_XStoreNamedColor__ ( display, colormap, color, pixel, flags)
@@ -7084,7 +7710,7 @@ int XStoreNamedColor  // 5 args
     __TRACE_PRINTF_ARG__(XStoreNamedColor, int_ColormapFlags, flags)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XStoreNamedColor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XStoreNamedColor, Display_p, display)
-__TRACE__(TYPED, FIXED, XStoreNamedColor)
+__TRACE__(XStoreNamedColor)
 
 
 /*
@@ -7092,6 +7718,8 @@ int XSync  // 2 args
     "Display *" "display"
     "Bool" "discard"
 */
+#define __TRACE_RETSTYLE_XSync__ TYPED
+#define __TRACE_ARGSTYLE_XSync__ FIXED
 #define __TRACE_SAFERETTYPE_XSync__ int
 #define __TRACE_PROTOARGLIST_XSync__ ( Display * display, Bool discard)
 #define __TRACE_ARGLIST_XSync__ ( display, discard)
@@ -7103,7 +7731,7 @@ int XSync  // 2 args
     __TRACE_PRINTF_ARG__(XSync, Display_p, display) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XSync, Bool, discard)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSync__ 
-__TRACE__(TYPED, FIXED, XSync)
+__TRACE__(XSync)
 
 
 /*
@@ -7116,6 +7744,8 @@ int XTextExtents  // 7 args
     "int *" "font_descent_return"
     "XCharStruct *" "overall_return"
 */
+#define __TRACE_RETSTYLE_XTextExtents__ TYPED
+#define __TRACE_ARGSTYLE_XTextExtents__ FIXED
 #define __TRACE_SAFERETTYPE_XTextExtents__ int
 #define __TRACE_PROTOARGLIST_XTextExtents__ ( XFontStruct * font_struct, const char * string, int nchars, int * direction_return, int * font_ascent_return, int * font_descent_return, XCharStruct * overall_return)
 #define __TRACE_ARGLIST_XTextExtents__ ( font_struct, string, nchars, direction_return, font_ascent_return, font_descent_return, overall_return)
@@ -7132,7 +7762,7 @@ int XTextExtents  // 7 args
     __TRACE_PRINTF_ARG__(XTextExtents, int_p, font_descent_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XTextExtents, XCharStruct_p, overall_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XTextExtents__ 
-__TRACE__(TYPED, FIXED, XTextExtents)
+__TRACE__(XTextExtents)
 
 
 /*
@@ -7145,6 +7775,8 @@ int XTextExtents16  // 7 args
     "int *" "font_descent_return"
     "XCharStruct *" "overall_return"
 */
+#define __TRACE_RETSTYLE_XTextExtents16__ TYPED
+#define __TRACE_ARGSTYLE_XTextExtents16__ FIXED
 #define __TRACE_SAFERETTYPE_XTextExtents16__ int
 #define __TRACE_PROTOARGLIST_XTextExtents16__ ( XFontStruct * font_struct, const XChar2b * string, int nchars, int * direction_return, int * font_ascent_return, int * font_descent_return, XCharStruct * overall_return)
 #define __TRACE_ARGLIST_XTextExtents16__ ( font_struct, string, nchars, direction_return, font_ascent_return, font_descent_return, overall_return)
@@ -7161,7 +7793,7 @@ int XTextExtents16  // 7 args
     __TRACE_PRINTF_ARG__(XTextExtents16, int_p, font_descent_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XTextExtents16, XCharStruct_p, overall_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XTextExtents16__ 
-__TRACE__(TYPED, FIXED, XTextExtents16)
+__TRACE__(XTextExtents16)
 
 
 /*
@@ -7170,6 +7802,8 @@ int XTextWidth  // 3 args
     "const char *" "string"
     "int" "count"
 */
+#define __TRACE_RETSTYLE_XTextWidth__ TYPED
+#define __TRACE_ARGSTYLE_XTextWidth__ FIXED
 #define __TRACE_SAFERETTYPE_XTextWidth__ int
 #define __TRACE_PROTOARGLIST_XTextWidth__ ( XFontStruct * font_struct, const char * string, int count)
 #define __TRACE_ARGLIST_XTextWidth__ ( font_struct, string, count)
@@ -7182,7 +7816,7 @@ int XTextWidth  // 3 args
     __TRACE_PRINTF_ARG__(XTextWidth, char_p, string) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XTextWidth, int, count)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XTextWidth__ 
-__TRACE__(TYPED, FIXED, XTextWidth)
+__TRACE__(XTextWidth)
 
 
 /*
@@ -7191,6 +7825,8 @@ int XTextWidth16  // 3 args
     "const XChar2b *" "string"
     "int" "count"
 */
+#define __TRACE_RETSTYLE_XTextWidth16__ TYPED
+#define __TRACE_ARGSTYLE_XTextWidth16__ FIXED
 #define __TRACE_SAFERETTYPE_XTextWidth16__ int
 #define __TRACE_PROTOARGLIST_XTextWidth16__ ( XFontStruct * font_struct, const XChar2b * string, int count)
 #define __TRACE_ARGLIST_XTextWidth16__ ( font_struct, string, count)
@@ -7203,7 +7839,7 @@ int XTextWidth16  // 3 args
     __TRACE_PRINTF_ARG__(XTextWidth16, XChar2b_p, string) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XTextWidth16, int, count)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XTextWidth16__ 
-__TRACE__(TYPED, FIXED, XTextWidth16)
+__TRACE__(XTextWidth16)
 
 
 /*
@@ -7217,6 +7853,8 @@ Bool XTranslateCoordinates  // 8 args
     "int *" "dest_y_return"
     "Window *" "child_return"
 */
+#define __TRACE_RETSTYLE_XTranslateCoordinates__ TYPED
+#define __TRACE_ARGSTYLE_XTranslateCoordinates__ FIXED
 #define __TRACE_SAFERETTYPE_XTranslateCoordinates__ Bool
 #define __TRACE_PROTOARGLIST_XTranslateCoordinates__ ( Display * display, Window src_w, Window dest_w, int src_x, int src_y, int * dest_x_return, int * dest_y_return, Window * child_return)
 #define __TRACE_ARGLIST_XTranslateCoordinates__ ( display, src_w, dest_w, src_x, src_y, dest_x_return, dest_y_return, child_return)
@@ -7235,7 +7873,7 @@ Bool XTranslateCoordinates  // 8 args
     __TRACE_PRINTF_ARG__(XTranslateCoordinates, Window_p, child_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XTranslateCoordinates__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XTranslateCoordinates, Display_p, display)
-__TRACE__(TYPED, FIXED, XTranslateCoordinates)
+__TRACE__(XTranslateCoordinates)
 
 
 /*
@@ -7243,6 +7881,8 @@ int XUndefineCursor  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XUndefineCursor__ TYPED
+#define __TRACE_ARGSTYLE_XUndefineCursor__ FIXED
 #define __TRACE_SAFERETTYPE_XUndefineCursor__ int
 #define __TRACE_PROTOARGLIST_XUndefineCursor__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XUndefineCursor__ ( display, w)
@@ -7255,7 +7895,7 @@ int XUndefineCursor  // 2 args
     __TRACE_PRINTF_ARG__(XUndefineCursor, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUndefineCursor__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUndefineCursor, Display_p, display)
-__TRACE__(TYPED, FIXED, XUndefineCursor)
+__TRACE__(XUndefineCursor)
 
 
 /*
@@ -7265,6 +7905,8 @@ int XUngrabButton  // 4 args
     "unsigned int" "modifiers"
     "Window" "grab_window"
 */
+#define __TRACE_RETSTYLE_XUngrabButton__ TYPED
+#define __TRACE_ARGSTYLE_XUngrabButton__ FIXED
 #define __TRACE_SAFERETTYPE_XUngrabButton__ int
 #define __TRACE_PROTOARGLIST_XUngrabButton__ ( Display * display, unsigned int button, unsigned int modifiers, Window grab_window)
 #define __TRACE_ARGLIST_XUngrabButton__ ( display, button, modifiers, grab_window)
@@ -7279,7 +7921,7 @@ int XUngrabButton  // 4 args
     __TRACE_PRINTF_ARG__(XUngrabButton, Window, grab_window)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUngrabButton__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUngrabButton, Display_p, display)
-__TRACE__(TYPED, FIXED, XUngrabButton)
+__TRACE__(XUngrabButton)
 
 
 /*
@@ -7289,6 +7931,8 @@ int XUngrabKey  // 4 args
     "unsigned int" "modifiers"
     "Window" "grab_window"
 */
+#define __TRACE_RETSTYLE_XUngrabKey__ TYPED
+#define __TRACE_ARGSTYLE_XUngrabKey__ FIXED
 #define __TRACE_SAFERETTYPE_XUngrabKey__ int
 #define __TRACE_PROTOARGLIST_XUngrabKey__ ( Display * display, int keycode, unsigned int modifiers, Window grab_window)
 #define __TRACE_ARGLIST_XUngrabKey__ ( display, keycode, modifiers, grab_window)
@@ -7303,7 +7947,7 @@ int XUngrabKey  // 4 args
     __TRACE_PRINTF_ARG__(XUngrabKey, Window, grab_window)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUngrabKey__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUngrabKey, Display_p, display)
-__TRACE__(TYPED, FIXED, XUngrabKey)
+__TRACE__(XUngrabKey)
 
 
 /*
@@ -7311,6 +7955,8 @@ int XUngrabKeyboard  // 2 args
     "Display *" "display"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XUngrabKeyboard__ TYPED
+#define __TRACE_ARGSTYLE_XUngrabKeyboard__ FIXED
 #define __TRACE_SAFERETTYPE_XUngrabKeyboard__ int
 #define __TRACE_PROTOARGLIST_XUngrabKeyboard__ ( Display * display, Time time)
 #define __TRACE_ARGLIST_XUngrabKeyboard__ ( display, time)
@@ -7323,7 +7969,7 @@ int XUngrabKeyboard  // 2 args
     __TRACE_PRINTF_ARG__(XUngrabKeyboard, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUngrabKeyboard__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUngrabKeyboard, Display_p, display)
-__TRACE__(TYPED, FIXED, XUngrabKeyboard)
+__TRACE__(XUngrabKeyboard)
 
 
 /*
@@ -7331,6 +7977,8 @@ int XUngrabPointer  // 2 args
     "Display *" "display"
     "Time" "time"
 */
+#define __TRACE_RETSTYLE_XUngrabPointer__ TYPED
+#define __TRACE_ARGSTYLE_XUngrabPointer__ FIXED
 #define __TRACE_SAFERETTYPE_XUngrabPointer__ int
 #define __TRACE_PROTOARGLIST_XUngrabPointer__ ( Display * display, Time time)
 #define __TRACE_ARGLIST_XUngrabPointer__ ( display, time)
@@ -7343,13 +7991,15 @@ int XUngrabPointer  // 2 args
     __TRACE_PRINTF_ARG__(XUngrabPointer, Time, time)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUngrabPointer__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUngrabPointer, Display_p, display)
-__TRACE__(TYPED, FIXED, XUngrabPointer)
+__TRACE__(XUngrabPointer)
 
 
 /*
 int XUngrabServer  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XUngrabServer__ TYPED
+#define __TRACE_ARGSTYLE_XUngrabServer__ FIXED
 #define __TRACE_SAFERETTYPE_XUngrabServer__ int
 #define __TRACE_PROTOARGLIST_XUngrabServer__ ( Display * display)
 #define __TRACE_ARGLIST_XUngrabServer__ ( display)
@@ -7361,7 +8011,7 @@ int XUngrabServer  // 1 args
     __TRACE_PRINTF_ARG__(XUngrabServer, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUngrabServer__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUngrabServer, Display_p, display)
-__TRACE__(TYPED, FIXED, XUngrabServer)
+__TRACE__(XUngrabServer)
 
 
 /*
@@ -7369,6 +8019,8 @@ int XUninstallColormap  // 2 args
     "Display *" "display"
     "Colormap" "colormap"
 */
+#define __TRACE_RETSTYLE_XUninstallColormap__ TYPED
+#define __TRACE_ARGSTYLE_XUninstallColormap__ FIXED
 #define __TRACE_SAFERETTYPE_XUninstallColormap__ int
 #define __TRACE_PROTOARGLIST_XUninstallColormap__ ( Display * display, Colormap colormap)
 #define __TRACE_ARGLIST_XUninstallColormap__ ( display, colormap)
@@ -7381,7 +8033,7 @@ int XUninstallColormap  // 2 args
     __TRACE_PRINTF_ARG__(XUninstallColormap, Colormap, colormap)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUninstallColormap__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUninstallColormap, Display_p, display)
-__TRACE__(TYPED, FIXED, XUninstallColormap)
+__TRACE__(XUninstallColormap)
 
 
 /*
@@ -7389,6 +8041,8 @@ int XUnloadFont  // 2 args
     "Display *" "display"
     "Font" "font"
 */
+#define __TRACE_RETSTYLE_XUnloadFont__ TYPED
+#define __TRACE_ARGSTYLE_XUnloadFont__ FIXED
 #define __TRACE_SAFERETTYPE_XUnloadFont__ int
 #define __TRACE_PROTOARGLIST_XUnloadFont__ ( Display * display, Font font)
 #define __TRACE_ARGLIST_XUnloadFont__ ( display, font)
@@ -7401,7 +8055,7 @@ int XUnloadFont  // 2 args
     __TRACE_PRINTF_ARG__(XUnloadFont, Font, font)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUnloadFont__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUnloadFont, Display_p, display)
-__TRACE__(TYPED, FIXED, XUnloadFont)
+__TRACE__(XUnloadFont)
 
 
 /*
@@ -7409,6 +8063,8 @@ int XUnmapSubwindows  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XUnmapSubwindows__ TYPED
+#define __TRACE_ARGSTYLE_XUnmapSubwindows__ FIXED
 #define __TRACE_SAFERETTYPE_XUnmapSubwindows__ int
 #define __TRACE_PROTOARGLIST_XUnmapSubwindows__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XUnmapSubwindows__ ( display, w)
@@ -7421,7 +8077,7 @@ int XUnmapSubwindows  // 2 args
     __TRACE_PRINTF_ARG__(XUnmapSubwindows, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUnmapSubwindows__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUnmapSubwindows, Display_p, display)
-__TRACE__(TYPED, FIXED, XUnmapSubwindows)
+__TRACE__(XUnmapSubwindows)
 
 
 /*
@@ -7429,6 +8085,8 @@ int XUnmapWindow  // 2 args
     "Display *" "display"
     "Window" "w"
 */
+#define __TRACE_RETSTYLE_XUnmapWindow__ TYPED
+#define __TRACE_ARGSTYLE_XUnmapWindow__ FIXED
 #define __TRACE_SAFERETTYPE_XUnmapWindow__ int
 #define __TRACE_PROTOARGLIST_XUnmapWindow__ ( Display * display, Window w)
 #define __TRACE_ARGLIST_XUnmapWindow__ ( display, w)
@@ -7441,13 +8099,15 @@ int XUnmapWindow  // 2 args
     __TRACE_PRINTF_ARG__(XUnmapWindow, Window, w)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUnmapWindow__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUnmapWindow, Display_p, display)
-__TRACE__(TYPED, FIXED, XUnmapWindow)
+__TRACE__(XUnmapWindow)
 
 
 /*
 int XVendorRelease  // 1 args
     "Display *" "display"
 */
+#define __TRACE_RETSTYLE_XVendorRelease__ TYPED
+#define __TRACE_ARGSTYLE_XVendorRelease__ FIXED
 #define __TRACE_SAFERETTYPE_XVendorRelease__ int
 #define __TRACE_PROTOARGLIST_XVendorRelease__ ( Display * display)
 #define __TRACE_ARGLIST_XVendorRelease__ ( display)
@@ -7459,7 +8119,7 @@ int XVendorRelease  // 1 args
     __TRACE_PRINTF_ARG__(XVendorRelease, Display_p, display)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XVendorRelease__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XVendorRelease, Display_p, display)
-__TRACE__(TYPED, FIXED, XVendorRelease)
+__TRACE__(XVendorRelease)
 
 
 /*
@@ -7474,6 +8134,8 @@ int XWarpPointer  // 9 args
     "int" "dest_x"
     "int" "dest_y"
 */
+#define __TRACE_RETSTYLE_XWarpPointer__ TYPED
+#define __TRACE_ARGSTYLE_XWarpPointer__ FIXED
 #define __TRACE_SAFERETTYPE_XWarpPointer__ int
 #define __TRACE_PROTOARGLIST_XWarpPointer__ ( Display * display, Window src_w, Window dest_w, int src_x, int src_y, unsigned int src_width, unsigned int src_height, int dest_x, int dest_y)
 #define __TRACE_ARGLIST_XWarpPointer__ ( display, src_w, dest_w, src_x, src_y, src_width, src_height, dest_x, dest_y)
@@ -7493,13 +8155,15 @@ int XWarpPointer  // 9 args
     __TRACE_PRINTF_ARG__(XWarpPointer, int, dest_y)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XWarpPointer__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XWarpPointer, Display_p, display)
-__TRACE__(TYPED, FIXED, XWarpPointer)
+__TRACE__(XWarpPointer)
 
 
 /*
 int XWidthMMOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XWidthMMOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XWidthMMOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XWidthMMOfScreen__ int
 #define __TRACE_PROTOARGLIST_XWidthMMOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XWidthMMOfScreen__ ( screen)
@@ -7510,13 +8174,15 @@ int XWidthMMOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XWidthMMOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XWidthMMOfScreen__ 
-__TRACE__(TYPED, FIXED, XWidthMMOfScreen)
+__TRACE__(XWidthMMOfScreen)
 
 
 /*
 int XWidthOfScreen  // 1 args
     "Screen *" "screen"
 */
+#define __TRACE_RETSTYLE_XWidthOfScreen__ TYPED
+#define __TRACE_ARGSTYLE_XWidthOfScreen__ FIXED
 #define __TRACE_SAFERETTYPE_XWidthOfScreen__ int
 #define __TRACE_PROTOARGLIST_XWidthOfScreen__ ( Screen * screen)
 #define __TRACE_ARGLIST_XWidthOfScreen__ ( screen)
@@ -7527,7 +8193,7 @@ int XWidthOfScreen  // 1 args
     always_reprint = 1; \
     __TRACE_PRINTF_ARG__(XWidthOfScreen, Screen_p, screen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XWidthOfScreen__ 
-__TRACE__(TYPED, FIXED, XWidthOfScreen)
+__TRACE__(XWidthOfScreen)
 
 
 /*
@@ -7537,6 +8203,8 @@ int XWindowEvent  // 4 args
     "long" "event_mask"
     "XEvent *" "event_return"
 */
+#define __TRACE_RETSTYLE_XWindowEvent__ TYPED
+#define __TRACE_ARGSTYLE_XWindowEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XWindowEvent__ int
 #define __TRACE_PROTOARGLIST_XWindowEvent__ ( Display * display, Window w, long event_mask, XEvent * event_return)
 #define __TRACE_ARGLIST_XWindowEvent__ ( display, w, event_mask, event_return)
@@ -7551,7 +8219,7 @@ int XWindowEvent  // 4 args
     __TRACE_PRINTF_ARG__(XWindowEvent, XEvent_p, event_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XWindowEvent__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XWindowEvent, Display_p, display)
-__TRACE__(TYPED, FIXED, XWindowEvent)
+__TRACE__(XWindowEvent)
 
 
 /*
@@ -7564,6 +8232,8 @@ int XWriteBitmapFile  // 7 args
     "int" "x_hot"
     "int" "y_hot"
 */
+#define __TRACE_RETSTYLE_XWriteBitmapFile__ TYPED
+#define __TRACE_ARGSTYLE_XWriteBitmapFile__ FIXED
 #define __TRACE_SAFERETTYPE_XWriteBitmapFile__ int
 #define __TRACE_PROTOARGLIST_XWriteBitmapFile__ ( Display * display, const char * filename, Pixmap bitmap, unsigned int width, unsigned int height, int x_hot, int y_hot)
 #define __TRACE_ARGLIST_XWriteBitmapFile__ ( display, filename, bitmap, width, height, x_hot, y_hot)
@@ -7581,13 +8251,15 @@ int XWriteBitmapFile  // 7 args
     __TRACE_PRINTF_ARG__(XWriteBitmapFile, int, y_hot)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XWriteBitmapFile__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XWriteBitmapFile, Display_p, display)
-__TRACE__(TYPED, FIXED, XWriteBitmapFile)
+__TRACE__(XWriteBitmapFile)
 
 
 /*
 char * XSetLocaleModifiers  // 1 args
     "const char *" "modifier_list"
 */
+#define __TRACE_RETSTYLE_XSetLocaleModifiers__ TYPED
+#define __TRACE_ARGSTYLE_XSetLocaleModifiers__ FIXED
 #define __TRACE_SAFERETTYPE_XSetLocaleModifiers__ char_p
 #define __TRACE_PROTOARGLIST_XSetLocaleModifiers__ ( const char * modifier_list)
 #define __TRACE_ARGLIST_XSetLocaleModifiers__ ( modifier_list)
@@ -7597,7 +8269,7 @@ char * XSetLocaleModifiers  // 1 args
 #define __TRACE_PRINTF_BODY_XSetLocaleModifiers__ \
     __TRACE_PRINTF_ARG__(XSetLocaleModifiers, char_p, modifier_list)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetLocaleModifiers__ 
-__TRACE__(TYPED, FIXED, XSetLocaleModifiers)
+__TRACE__(XSetLocaleModifiers)
 
 
 /*
@@ -7607,6 +8279,8 @@ XOM XOpenOM  // 4 args
     "const char *" "res_name"
     "const char *" "res_class"
 */
+#define __TRACE_RETSTYLE_XOpenOM__ TYPED
+#define __TRACE_ARGSTYLE_XOpenOM__ FIXED
 #define __TRACE_SAFERETTYPE_XOpenOM__ XOM
 #define __TRACE_PROTOARGLIST_XOpenOM__ ( Display * display, struct _XrmHashBucketRec * rdb, const char * res_name, const char * res_class)
 #define __TRACE_ARGLIST_XOpenOM__ ( display, rdb, res_name, res_class)
@@ -7621,13 +8295,15 @@ XOM XOpenOM  // 4 args
     __TRACE_PRINTF_ARG__(XOpenOM, char_p, res_class)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XOpenOM__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XOpenOM, Display_p, display)
-__TRACE__(TYPED, FIXED, XOpenOM)
+__TRACE__(XOpenOM)
 
 
 /*
 Status XCloseOM  // 1 args
     "XOM" "om"
 */
+#define __TRACE_RETSTYLE_XCloseOM__ TYPED
+#define __TRACE_ARGSTYLE_XCloseOM__ FIXED
 #define __TRACE_SAFERETTYPE_XCloseOM__ Status
 #define __TRACE_PROTOARGLIST_XCloseOM__ ( XOM om)
 #define __TRACE_ARGLIST_XCloseOM__ ( om)
@@ -7637,7 +8313,7 @@ Status XCloseOM  // 1 args
 #define __TRACE_PRINTF_BODY_XCloseOM__ \
     __TRACE_PRINTF_ARG__(XCloseOM, XOM, om)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCloseOM__ 
-__TRACE__(TYPED, FIXED, XCloseOM)
+__TRACE__(XCloseOM)
 
 
 /*
@@ -7645,6 +8321,8 @@ char * XSetOMValues  // 2 args
     "XOM" "om"
     "..." " ..."
 */
+#define __TRACE_RETSTYLE_XSetOMValues__ TYPED
+#define __TRACE_ARGSTYLE_XSetOMValues__ VAR
 #define __TRACE_SAFERETTYPE_XSetOMValues__ char_p
 #define __TRACE_PROTOARGLIST_XSetOMValues__ ( XOM om, ...)
 #define __TRACE_ARGLIST_XSetOMValues__ ( om,  ...)
@@ -7657,7 +8335,7 @@ char * XSetOMValues  // 2 args
     __TRACE_PRINTF_ARG__(XSetOMValues, XOM, om) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetOMValues__ 
-__TRACE__(TYPED, VAR, XSetOMValues)
+__TRACE__(XSetOMValues)
 
 
 /*
@@ -7665,6 +8343,8 @@ char * XGetOMValues  // 2 args
     "XOM" "om"
     "..." " ..."
 */
+#define __TRACE_RETSTYLE_XGetOMValues__ TYPED
+#define __TRACE_ARGSTYLE_XGetOMValues__ VAR
 #define __TRACE_SAFERETTYPE_XGetOMValues__ char_p
 #define __TRACE_PROTOARGLIST_XGetOMValues__ ( XOM om, ...)
 #define __TRACE_ARGLIST_XGetOMValues__ ( om,  ...)
@@ -7677,13 +8357,15 @@ char * XGetOMValues  // 2 args
     __TRACE_PRINTF_ARG__(XGetOMValues, XOM, om) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetOMValues__ 
-__TRACE__(TYPED, VAR, XGetOMValues)
+__TRACE__(XGetOMValues)
 
 
 /*
 Display * XDisplayOfOM  // 1 args
     "XOM" "om"
 */
+#define __TRACE_RETSTYLE_XDisplayOfOM__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayOfOM__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayOfOM__ Display_p
 #define __TRACE_PROTOARGLIST_XDisplayOfOM__ ( XOM om)
 #define __TRACE_ARGLIST_XDisplayOfOM__ ( om)
@@ -7693,13 +8375,15 @@ Display * XDisplayOfOM  // 1 args
 #define __TRACE_PRINTF_BODY_XDisplayOfOM__ \
     __TRACE_PRINTF_ARG__(XDisplayOfOM, XOM, om)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayOfOM__ 
-__TRACE__(TYPED, FIXED, XDisplayOfOM)
+__TRACE__(XDisplayOfOM)
 
 
 /*
 char * XLocaleOfOM  // 1 args
     "XOM" "om"
 */
+#define __TRACE_RETSTYLE_XLocaleOfOM__ TYPED
+#define __TRACE_ARGSTYLE_XLocaleOfOM__ FIXED
 #define __TRACE_SAFERETTYPE_XLocaleOfOM__ char_p
 #define __TRACE_PROTOARGLIST_XLocaleOfOM__ ( XOM om)
 #define __TRACE_ARGLIST_XLocaleOfOM__ ( om)
@@ -7709,7 +8393,7 @@ char * XLocaleOfOM  // 1 args
 #define __TRACE_PRINTF_BODY_XLocaleOfOM__ \
     __TRACE_PRINTF_ARG__(XLocaleOfOM, XOM, om)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLocaleOfOM__ 
-__TRACE__(TYPED, FIXED, XLocaleOfOM)
+__TRACE__(XLocaleOfOM)
 
 
 /*
@@ -7717,6 +8401,8 @@ XOC XCreateOC  // 2 args
     "XOM" "om"
     "..." " ..."
 */
+#define __TRACE_RETSTYLE_XCreateOC__ TYPED
+#define __TRACE_ARGSTYLE_XCreateOC__ VAR
 #define __TRACE_SAFERETTYPE_XCreateOC__ XOC
 #define __TRACE_PROTOARGLIST_XCreateOC__ ( XOM om, ...)
 #define __TRACE_ARGLIST_XCreateOC__ ( om,  ...)
@@ -7729,13 +8415,15 @@ XOC XCreateOC  // 2 args
     __TRACE_PRINTF_ARG__(XCreateOC, XOM, om) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateOC__ 
-__TRACE__(TYPED, VAR, XCreateOC)
+__TRACE__(XCreateOC)
 
 
 /*
 void XDestroyOC  // 1 args
     "XOC" "oc"
 */
+#define __TRACE_RETSTYLE_XDestroyOC__ VOID
+#define __TRACE_ARGSTYLE_XDestroyOC__ FIXED
 #define __TRACE_SAFERETTYPE_XDestroyOC__ void
 #define __TRACE_PROTOARGLIST_XDestroyOC__ ( XOC oc)
 #define __TRACE_ARGLIST_XDestroyOC__ ( oc)
@@ -7745,13 +8433,15 @@ void XDestroyOC  // 1 args
 #define __TRACE_PRINTF_BODY_XDestroyOC__ \
     __TRACE_PRINTF_ARG__(XDestroyOC, XOC, oc)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDestroyOC__ 
-__TRACE__(VOID, FIXED, XDestroyOC)
+__TRACE__(XDestroyOC)
 
 
 /*
 XOM XOMOfOC  // 1 args
     "XOC" "oc"
 */
+#define __TRACE_RETSTYLE_XOMOfOC__ TYPED
+#define __TRACE_ARGSTYLE_XOMOfOC__ FIXED
 #define __TRACE_SAFERETTYPE_XOMOfOC__ XOM
 #define __TRACE_PROTOARGLIST_XOMOfOC__ ( XOC oc)
 #define __TRACE_ARGLIST_XOMOfOC__ ( oc)
@@ -7761,7 +8451,7 @@ XOM XOMOfOC  // 1 args
 #define __TRACE_PRINTF_BODY_XOMOfOC__ \
     __TRACE_PRINTF_ARG__(XOMOfOC, XOC, oc)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XOMOfOC__ 
-__TRACE__(TYPED, FIXED, XOMOfOC)
+__TRACE__(XOMOfOC)
 
 
 /*
@@ -7769,6 +8459,8 @@ char * XSetOCValues  // 2 args
     "XOC" "oc"
     "..." " ..."
 */
+#define __TRACE_RETSTYLE_XSetOCValues__ TYPED
+#define __TRACE_ARGSTYLE_XSetOCValues__ VAR
 #define __TRACE_SAFERETTYPE_XSetOCValues__ char_p
 #define __TRACE_PROTOARGLIST_XSetOCValues__ ( XOC oc, ...)
 #define __TRACE_ARGLIST_XSetOCValues__ ( oc,  ...)
@@ -7781,7 +8473,7 @@ char * XSetOCValues  // 2 args
     __TRACE_PRINTF_ARG__(XSetOCValues, XOC, oc) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetOCValues__ 
-__TRACE__(TYPED, VAR, XSetOCValues)
+__TRACE__(XSetOCValues)
 
 
 /*
@@ -7789,6 +8481,8 @@ char * XGetOCValues  // 2 args
     "XOC" "oc"
     "..." " ..."
 */
+#define __TRACE_RETSTYLE_XGetOCValues__ TYPED
+#define __TRACE_ARGSTYLE_XGetOCValues__ VAR
 #define __TRACE_SAFERETTYPE_XGetOCValues__ char_p
 #define __TRACE_PROTOARGLIST_XGetOCValues__ ( XOC oc, ...)
 #define __TRACE_ARGLIST_XGetOCValues__ ( oc,  ...)
@@ -7801,7 +8495,7 @@ char * XGetOCValues  // 2 args
     __TRACE_PRINTF_ARG__(XGetOCValues, XOC, oc) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetOCValues__ 
-__TRACE__(TYPED, VAR, XGetOCValues)
+__TRACE__(XGetOCValues)
 
 
 /*
@@ -7812,6 +8506,8 @@ XFontSet XCreateFontSet  // 5 args
     "int *" "missing_charset_count"
     "char **" "def_string"
 */
+#define __TRACE_RETSTYLE_XCreateFontSet__ TYPED
+#define __TRACE_ARGSTYLE_XCreateFontSet__ FIXED
 #define __TRACE_SAFERETTYPE_XCreateFontSet__ XFontSet
 #define __TRACE_PROTOARGLIST_XCreateFontSet__ ( Display * display, const char * base_font_name_list, char *** missing_charset_list, int * missing_charset_count, char ** def_string)
 #define __TRACE_ARGLIST_XCreateFontSet__ ( display, base_font_name_list, missing_charset_list, missing_charset_count, def_string)
@@ -7827,7 +8523,7 @@ XFontSet XCreateFontSet  // 5 args
     __TRACE_PRINTF_ARG__(XCreateFontSet, char_pp, def_string)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateFontSet__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XCreateFontSet, Display_p, display)
-__TRACE__(TYPED, FIXED, XCreateFontSet)
+__TRACE__(XCreateFontSet)
 
 
 /*
@@ -7835,6 +8531,8 @@ void XFreeFontSet  // 2 args
     "Display *" "display"
     "XFontSet" "font_set"
 */
+#define __TRACE_RETSTYLE_XFreeFontSet__ VOID
+#define __TRACE_ARGSTYLE_XFreeFontSet__ FIXED
 #define __TRACE_SAFERETTYPE_XFreeFontSet__ void
 #define __TRACE_PROTOARGLIST_XFreeFontSet__ ( Display * display, XFontSet font_set)
 #define __TRACE_ARGLIST_XFreeFontSet__ ( display, font_set)
@@ -7847,7 +8545,7 @@ void XFreeFontSet  // 2 args
     __TRACE_PRINTF_ARG__(XFreeFontSet, XFontSet, font_set)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFreeFontSet__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XFreeFontSet, Display_p, display)
-__TRACE__(VOID, FIXED, XFreeFontSet)
+__TRACE__(XFreeFontSet)
 
 
 /*
@@ -7856,6 +8554,8 @@ int XFontsOfFontSet  // 3 args
     "XFontStruct ***" "font_struct_list"
     "char ***" "font_name_list"
 */
+#define __TRACE_RETSTYLE_XFontsOfFontSet__ TYPED
+#define __TRACE_ARGSTYLE_XFontsOfFontSet__ FIXED
 #define __TRACE_SAFERETTYPE_XFontsOfFontSet__ int
 #define __TRACE_PROTOARGLIST_XFontsOfFontSet__ ( XFontSet font_set, XFontStruct *** font_struct_list, char *** font_name_list)
 #define __TRACE_ARGLIST_XFontsOfFontSet__ ( font_set, font_struct_list, font_name_list)
@@ -7868,13 +8568,15 @@ int XFontsOfFontSet  // 3 args
     __TRACE_PRINTF_ARG__(XFontsOfFontSet, XFontStruct_ppp, font_struct_list) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XFontsOfFontSet, char_ppp, font_name_list)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFontsOfFontSet__ 
-__TRACE__(TYPED, FIXED, XFontsOfFontSet)
+__TRACE__(XFontsOfFontSet)
 
 
 /*
 char * XBaseFontNameListOfFontSet  // 1 args
     "XFontSet" "font_set"
 */
+#define __TRACE_RETSTYLE_XBaseFontNameListOfFontSet__ TYPED
+#define __TRACE_ARGSTYLE_XBaseFontNameListOfFontSet__ FIXED
 #define __TRACE_SAFERETTYPE_XBaseFontNameListOfFontSet__ char_p
 #define __TRACE_PROTOARGLIST_XBaseFontNameListOfFontSet__ ( XFontSet font_set)
 #define __TRACE_ARGLIST_XBaseFontNameListOfFontSet__ ( font_set)
@@ -7884,13 +8586,15 @@ char * XBaseFontNameListOfFontSet  // 1 args
 #define __TRACE_PRINTF_BODY_XBaseFontNameListOfFontSet__ \
     __TRACE_PRINTF_ARG__(XBaseFontNameListOfFontSet, XFontSet, font_set)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XBaseFontNameListOfFontSet__ 
-__TRACE__(TYPED, FIXED, XBaseFontNameListOfFontSet)
+__TRACE__(XBaseFontNameListOfFontSet)
 
 
 /*
 char * XLocaleOfFontSet  // 1 args
     "XFontSet" "font_set"
 */
+#define __TRACE_RETSTYLE_XLocaleOfFontSet__ TYPED
+#define __TRACE_ARGSTYLE_XLocaleOfFontSet__ FIXED
 #define __TRACE_SAFERETTYPE_XLocaleOfFontSet__ char_p
 #define __TRACE_PROTOARGLIST_XLocaleOfFontSet__ ( XFontSet font_set)
 #define __TRACE_ARGLIST_XLocaleOfFontSet__ ( font_set)
@@ -7900,13 +8604,15 @@ char * XLocaleOfFontSet  // 1 args
 #define __TRACE_PRINTF_BODY_XLocaleOfFontSet__ \
     __TRACE_PRINTF_ARG__(XLocaleOfFontSet, XFontSet, font_set)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLocaleOfFontSet__ 
-__TRACE__(TYPED, FIXED, XLocaleOfFontSet)
+__TRACE__(XLocaleOfFontSet)
 
 
 /*
 Bool XContextDependentDrawing  // 1 args
     "XFontSet" "font_set"
 */
+#define __TRACE_RETSTYLE_XContextDependentDrawing__ TYPED
+#define __TRACE_ARGSTYLE_XContextDependentDrawing__ FIXED
 #define __TRACE_SAFERETTYPE_XContextDependentDrawing__ Bool
 #define __TRACE_PROTOARGLIST_XContextDependentDrawing__ ( XFontSet font_set)
 #define __TRACE_ARGLIST_XContextDependentDrawing__ ( font_set)
@@ -7916,13 +8622,15 @@ Bool XContextDependentDrawing  // 1 args
 #define __TRACE_PRINTF_BODY_XContextDependentDrawing__ \
     __TRACE_PRINTF_ARG__(XContextDependentDrawing, XFontSet, font_set)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XContextDependentDrawing__ 
-__TRACE__(TYPED, FIXED, XContextDependentDrawing)
+__TRACE__(XContextDependentDrawing)
 
 
 /*
 Bool XDirectionalDependentDrawing  // 1 args
     "XFontSet" "font_set"
 */
+#define __TRACE_RETSTYLE_XDirectionalDependentDrawing__ TYPED
+#define __TRACE_ARGSTYLE_XDirectionalDependentDrawing__ FIXED
 #define __TRACE_SAFERETTYPE_XDirectionalDependentDrawing__ Bool
 #define __TRACE_PROTOARGLIST_XDirectionalDependentDrawing__ ( XFontSet font_set)
 #define __TRACE_ARGLIST_XDirectionalDependentDrawing__ ( font_set)
@@ -7932,13 +8640,15 @@ Bool XDirectionalDependentDrawing  // 1 args
 #define __TRACE_PRINTF_BODY_XDirectionalDependentDrawing__ \
     __TRACE_PRINTF_ARG__(XDirectionalDependentDrawing, XFontSet, font_set)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDirectionalDependentDrawing__ 
-__TRACE__(TYPED, FIXED, XDirectionalDependentDrawing)
+__TRACE__(XDirectionalDependentDrawing)
 
 
 /*
 Bool XContextualDrawing  // 1 args
     "XFontSet" "font_set"
 */
+#define __TRACE_RETSTYLE_XContextualDrawing__ TYPED
+#define __TRACE_ARGSTYLE_XContextualDrawing__ FIXED
 #define __TRACE_SAFERETTYPE_XContextualDrawing__ Bool
 #define __TRACE_PROTOARGLIST_XContextualDrawing__ ( XFontSet font_set)
 #define __TRACE_ARGLIST_XContextualDrawing__ ( font_set)
@@ -7948,13 +8658,15 @@ Bool XContextualDrawing  // 1 args
 #define __TRACE_PRINTF_BODY_XContextualDrawing__ \
     __TRACE_PRINTF_ARG__(XContextualDrawing, XFontSet, font_set)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XContextualDrawing__ 
-__TRACE__(TYPED, FIXED, XContextualDrawing)
+__TRACE__(XContextualDrawing)
 
 
 /*
 XFontSetExtents * XExtentsOfFontSet  // 1 args
     "XFontSet" "font_set"
 */
+#define __TRACE_RETSTYLE_XExtentsOfFontSet__ TYPED
+#define __TRACE_ARGSTYLE_XExtentsOfFontSet__ FIXED
 #define __TRACE_SAFERETTYPE_XExtentsOfFontSet__ XFontSetExtents_p
 #define __TRACE_PROTOARGLIST_XExtentsOfFontSet__ ( XFontSet font_set)
 #define __TRACE_ARGLIST_XExtentsOfFontSet__ ( font_set)
@@ -7964,7 +8676,7 @@ XFontSetExtents * XExtentsOfFontSet  // 1 args
 #define __TRACE_PRINTF_BODY_XExtentsOfFontSet__ \
     __TRACE_PRINTF_ARG__(XExtentsOfFontSet, XFontSet, font_set)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XExtentsOfFontSet__ 
-__TRACE__(TYPED, FIXED, XExtentsOfFontSet)
+__TRACE__(XExtentsOfFontSet)
 
 
 /*
@@ -7973,6 +8685,8 @@ int XmbTextEscapement  // 3 args
     "const char *" "text"
     "int" "bytes_text"
 */
+#define __TRACE_RETSTYLE_XmbTextEscapement__ TYPED
+#define __TRACE_ARGSTYLE_XmbTextEscapement__ FIXED
 #define __TRACE_SAFERETTYPE_XmbTextEscapement__ int
 #define __TRACE_PROTOARGLIST_XmbTextEscapement__ ( XFontSet font_set, const char * text, int bytes_text)
 #define __TRACE_ARGLIST_XmbTextEscapement__ ( font_set, text, bytes_text)
@@ -7984,7 +8698,7 @@ int XmbTextEscapement  // 3 args
     __TRACE_PRINTF_ARG__(XmbTextEscapement, char_p, text) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XmbTextEscapement, int, bytes_text)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XmbTextEscapement__ 
-__TRACE__(TYPED, FIXED, XmbTextEscapement)
+__TRACE__(XmbTextEscapement)
 
 
 /*
@@ -7993,6 +8707,8 @@ int XwcTextEscapement  // 3 args
     "const wchar_t *" "text"
     "int" "num_wchars"
 */
+#define __TRACE_RETSTYLE_XwcTextEscapement__ TYPED
+#define __TRACE_ARGSTYLE_XwcTextEscapement__ FIXED
 #define __TRACE_SAFERETTYPE_XwcTextEscapement__ int
 #define __TRACE_PROTOARGLIST_XwcTextEscapement__ ( XFontSet font_set, const wchar_t * text, int num_wchars)
 #define __TRACE_ARGLIST_XwcTextEscapement__ ( font_set, text, num_wchars)
@@ -8004,7 +8720,7 @@ int XwcTextEscapement  // 3 args
     __TRACE_PRINTF_ARG__(XwcTextEscapement, wchar_t_p, text) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XwcTextEscapement, int, num_wchars)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XwcTextEscapement__ 
-__TRACE__(TYPED, FIXED, XwcTextEscapement)
+__TRACE__(XwcTextEscapement)
 
 
 /*
@@ -8013,6 +8729,8 @@ int Xutf8TextEscapement  // 3 args
     "const char *" "text"
     "int" "bytes_text"
 */
+#define __TRACE_RETSTYLE_Xutf8TextEscapement__ TYPED
+#define __TRACE_ARGSTYLE_Xutf8TextEscapement__ FIXED
 #define __TRACE_SAFERETTYPE_Xutf8TextEscapement__ int
 #define __TRACE_PROTOARGLIST_Xutf8TextEscapement__ ( XFontSet font_set, const char * text, int bytes_text)
 #define __TRACE_ARGLIST_Xutf8TextEscapement__ ( font_set, text, bytes_text)
@@ -8024,7 +8742,7 @@ int Xutf8TextEscapement  // 3 args
     __TRACE_PRINTF_ARG__(Xutf8TextEscapement, char_p, text) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(Xutf8TextEscapement, int, bytes_text)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_Xutf8TextEscapement__ 
-__TRACE__(TYPED, FIXED, Xutf8TextEscapement)
+__TRACE__(Xutf8TextEscapement)
 
 
 /*
@@ -8035,6 +8753,8 @@ int XmbTextExtents  // 5 args
     "XRectangle *" "overall_ink_return"
     "XRectangle *" "overall_logical_return"
 */
+#define __TRACE_RETSTYLE_XmbTextExtents__ TYPED
+#define __TRACE_ARGSTYLE_XmbTextExtents__ FIXED
 #define __TRACE_SAFERETTYPE_XmbTextExtents__ int
 #define __TRACE_PROTOARGLIST_XmbTextExtents__ ( XFontSet font_set, const char * text, int bytes_text, XRectangle * overall_ink_return, XRectangle * overall_logical_return)
 #define __TRACE_ARGLIST_XmbTextExtents__ ( font_set, text, bytes_text, overall_ink_return, overall_logical_return)
@@ -8049,7 +8769,7 @@ int XmbTextExtents  // 5 args
     __TRACE_PRINTF_ARG__(XmbTextExtents, XRectangle_p, overall_ink_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XmbTextExtents, XRectangle_p, overall_logical_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XmbTextExtents__ 
-__TRACE__(TYPED, FIXED, XmbTextExtents)
+__TRACE__(XmbTextExtents)
 
 
 /*
@@ -8060,6 +8780,8 @@ int XwcTextExtents  // 5 args
     "XRectangle *" "overall_ink_return"
     "XRectangle *" "overall_logical_return"
 */
+#define __TRACE_RETSTYLE_XwcTextExtents__ TYPED
+#define __TRACE_ARGSTYLE_XwcTextExtents__ FIXED
 #define __TRACE_SAFERETTYPE_XwcTextExtents__ int
 #define __TRACE_PROTOARGLIST_XwcTextExtents__ ( XFontSet font_set, const wchar_t * text, int num_wchars, XRectangle * overall_ink_return, XRectangle * overall_logical_return)
 #define __TRACE_ARGLIST_XwcTextExtents__ ( font_set, text, num_wchars, overall_ink_return, overall_logical_return)
@@ -8074,7 +8796,7 @@ int XwcTextExtents  // 5 args
     __TRACE_PRINTF_ARG__(XwcTextExtents, XRectangle_p, overall_ink_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XwcTextExtents, XRectangle_p, overall_logical_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XwcTextExtents__ 
-__TRACE__(TYPED, FIXED, XwcTextExtents)
+__TRACE__(XwcTextExtents)
 
 
 /*
@@ -8085,6 +8807,8 @@ int Xutf8TextExtents  // 5 args
     "XRectangle *" "overall_ink_return"
     "XRectangle *" "overall_logical_return"
 */
+#define __TRACE_RETSTYLE_Xutf8TextExtents__ TYPED
+#define __TRACE_ARGSTYLE_Xutf8TextExtents__ FIXED
 #define __TRACE_SAFERETTYPE_Xutf8TextExtents__ int
 #define __TRACE_PROTOARGLIST_Xutf8TextExtents__ ( XFontSet font_set, const char * text, int bytes_text, XRectangle * overall_ink_return, XRectangle * overall_logical_return)
 #define __TRACE_ARGLIST_Xutf8TextExtents__ ( font_set, text, bytes_text, overall_ink_return, overall_logical_return)
@@ -8099,7 +8823,7 @@ int Xutf8TextExtents  // 5 args
     __TRACE_PRINTF_ARG__(Xutf8TextExtents, XRectangle_p, overall_ink_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(Xutf8TextExtents, XRectangle_p, overall_logical_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_Xutf8TextExtents__ 
-__TRACE__(TYPED, FIXED, Xutf8TextExtents)
+__TRACE__(Xutf8TextExtents)
 
 
 /*
@@ -8114,6 +8838,8 @@ Status XmbTextPerCharExtents  // 9 args
     "XRectangle *" "overall_ink_return"
     "XRectangle *" "overall_logical_return"
 */
+#define __TRACE_RETSTYLE_XmbTextPerCharExtents__ TYPED
+#define __TRACE_ARGSTYLE_XmbTextPerCharExtents__ FIXED
 #define __TRACE_SAFERETTYPE_XmbTextPerCharExtents__ Status
 #define __TRACE_PROTOARGLIST_XmbTextPerCharExtents__ ( XFontSet font_set, const char * text, int bytes_text, XRectangle * ink_extents_buffer, XRectangle * logical_extents_buffer, int buffer_size, int * num_chars, XRectangle * overall_ink_return, XRectangle * overall_logical_return)
 #define __TRACE_ARGLIST_XmbTextPerCharExtents__ ( font_set, text, bytes_text, ink_extents_buffer, logical_extents_buffer, buffer_size, num_chars, overall_ink_return, overall_logical_return)
@@ -8132,7 +8858,7 @@ Status XmbTextPerCharExtents  // 9 args
     __TRACE_PRINTF_ARG__(XmbTextPerCharExtents, XRectangle_p, overall_ink_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XmbTextPerCharExtents, XRectangle_p, overall_logical_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XmbTextPerCharExtents__ 
-__TRACE__(TYPED, FIXED, XmbTextPerCharExtents)
+__TRACE__(XmbTextPerCharExtents)
 
 
 /*
@@ -8147,6 +8873,8 @@ Status XwcTextPerCharExtents  // 9 args
     "XRectangle *" "overall_ink_return"
     "XRectangle *" "overall_logical_return"
 */
+#define __TRACE_RETSTYLE_XwcTextPerCharExtents__ TYPED
+#define __TRACE_ARGSTYLE_XwcTextPerCharExtents__ FIXED
 #define __TRACE_SAFERETTYPE_XwcTextPerCharExtents__ Status
 #define __TRACE_PROTOARGLIST_XwcTextPerCharExtents__ ( XFontSet font_set, const wchar_t * text, int num_wchars, XRectangle * ink_extents_buffer, XRectangle * logical_extents_buffer, int buffer_size, int * num_chars, XRectangle * overall_ink_return, XRectangle * overall_logical_return)
 #define __TRACE_ARGLIST_XwcTextPerCharExtents__ ( font_set, text, num_wchars, ink_extents_buffer, logical_extents_buffer, buffer_size, num_chars, overall_ink_return, overall_logical_return)
@@ -8165,7 +8893,7 @@ Status XwcTextPerCharExtents  // 9 args
     __TRACE_PRINTF_ARG__(XwcTextPerCharExtents, XRectangle_p, overall_ink_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XwcTextPerCharExtents, XRectangle_p, overall_logical_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XwcTextPerCharExtents__ 
-__TRACE__(TYPED, FIXED, XwcTextPerCharExtents)
+__TRACE__(XwcTextPerCharExtents)
 
 
 /*
@@ -8180,6 +8908,8 @@ Status Xutf8TextPerCharExtents  // 9 args
     "XRectangle *" "overall_ink_return"
     "XRectangle *" "overall_logical_return"
 */
+#define __TRACE_RETSTYLE_Xutf8TextPerCharExtents__ TYPED
+#define __TRACE_ARGSTYLE_Xutf8TextPerCharExtents__ FIXED
 #define __TRACE_SAFERETTYPE_Xutf8TextPerCharExtents__ Status
 #define __TRACE_PROTOARGLIST_Xutf8TextPerCharExtents__ ( XFontSet font_set, const char * text, int bytes_text, XRectangle * ink_extents_buffer, XRectangle * logical_extents_buffer, int buffer_size, int * num_chars, XRectangle * overall_ink_return, XRectangle * overall_logical_return)
 #define __TRACE_ARGLIST_Xutf8TextPerCharExtents__ ( font_set, text, bytes_text, ink_extents_buffer, logical_extents_buffer, buffer_size, num_chars, overall_ink_return, overall_logical_return)
@@ -8198,7 +8928,7 @@ Status Xutf8TextPerCharExtents  // 9 args
     __TRACE_PRINTF_ARG__(Xutf8TextPerCharExtents, XRectangle_p, overall_ink_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(Xutf8TextPerCharExtents, XRectangle_p, overall_logical_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_Xutf8TextPerCharExtents__ 
-__TRACE__(TYPED, FIXED, Xutf8TextPerCharExtents)
+__TRACE__(Xutf8TextPerCharExtents)
 
 
 /*
@@ -8211,6 +8941,8 @@ void XmbDrawText  // 7 args
     "XmbTextItem *" "text_items"
     "int" "nitems"
 */
+#define __TRACE_RETSTYLE_XmbDrawText__ VOID
+#define __TRACE_ARGSTYLE_XmbDrawText__ FIXED
 #define __TRACE_SAFERETTYPE_XmbDrawText__ void
 #define __TRACE_PROTOARGLIST_XmbDrawText__ ( Display * display, Drawable d, GC gc, int x, int y, XmbTextItem * text_items, int nitems)
 #define __TRACE_ARGLIST_XmbDrawText__ ( display, d, gc, x, y, text_items, nitems)
@@ -8228,7 +8960,7 @@ void XmbDrawText  // 7 args
     __TRACE_PRINTF_ARG__(XmbDrawText, int, nitems)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XmbDrawText__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XmbDrawText, Display_p, display)
-__TRACE__(VOID, FIXED, XmbDrawText)
+__TRACE__(XmbDrawText)
 
 
 /*
@@ -8241,6 +8973,8 @@ void XwcDrawText  // 7 args
     "XwcTextItem *" "text_items"
     "int" "nitems"
 */
+#define __TRACE_RETSTYLE_XwcDrawText__ VOID
+#define __TRACE_ARGSTYLE_XwcDrawText__ FIXED
 #define __TRACE_SAFERETTYPE_XwcDrawText__ void
 #define __TRACE_PROTOARGLIST_XwcDrawText__ ( Display * display, Drawable d, GC gc, int x, int y, XwcTextItem * text_items, int nitems)
 #define __TRACE_ARGLIST_XwcDrawText__ ( display, d, gc, x, y, text_items, nitems)
@@ -8258,7 +8992,7 @@ void XwcDrawText  // 7 args
     __TRACE_PRINTF_ARG__(XwcDrawText, int, nitems)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XwcDrawText__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XwcDrawText, Display_p, display)
-__TRACE__(VOID, FIXED, XwcDrawText)
+__TRACE__(XwcDrawText)
 
 
 /*
@@ -8271,6 +9005,8 @@ void Xutf8DrawText  // 7 args
     "XmbTextItem *" "text_items"
     "int" "nitems"
 */
+#define __TRACE_RETSTYLE_Xutf8DrawText__ VOID
+#define __TRACE_ARGSTYLE_Xutf8DrawText__ FIXED
 #define __TRACE_SAFERETTYPE_Xutf8DrawText__ void
 #define __TRACE_PROTOARGLIST_Xutf8DrawText__ ( Display * display, Drawable d, GC gc, int x, int y, XmbTextItem * text_items, int nitems)
 #define __TRACE_ARGLIST_Xutf8DrawText__ ( display, d, gc, x, y, text_items, nitems)
@@ -8288,7 +9024,7 @@ void Xutf8DrawText  // 7 args
     __TRACE_PRINTF_ARG__(Xutf8DrawText, int, nitems)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_Xutf8DrawText__ \
     __TRACE_RUN_XFLUSH_XSYNC__(Xutf8DrawText, Display_p, display)
-__TRACE__(VOID, FIXED, Xutf8DrawText)
+__TRACE__(Xutf8DrawText)
 
 
 /*
@@ -8302,6 +9038,8 @@ void XmbDrawString  // 8 args
     "const char *" "text"
     "int" "bytes_text"
 */
+#define __TRACE_RETSTYLE_XmbDrawString__ VOID
+#define __TRACE_ARGSTYLE_XmbDrawString__ FIXED
 #define __TRACE_SAFERETTYPE_XmbDrawString__ void
 #define __TRACE_PROTOARGLIST_XmbDrawString__ ( Display * display, Drawable d, XFontSet font_set, GC gc, int x, int y, const char * text, int bytes_text)
 #define __TRACE_ARGLIST_XmbDrawString__ ( display, d, font_set, gc, x, y, text, bytes_text)
@@ -8320,7 +9058,7 @@ void XmbDrawString  // 8 args
     __TRACE_PRINTF_ARG__(XmbDrawString, int, bytes_text)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XmbDrawString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XmbDrawString, Display_p, display)
-__TRACE__(VOID, FIXED, XmbDrawString)
+__TRACE__(XmbDrawString)
 
 
 /*
@@ -8334,6 +9072,8 @@ void XwcDrawString  // 8 args
     "const wchar_t *" "text"
     "int" "num_wchars"
 */
+#define __TRACE_RETSTYLE_XwcDrawString__ VOID
+#define __TRACE_ARGSTYLE_XwcDrawString__ FIXED
 #define __TRACE_SAFERETTYPE_XwcDrawString__ void
 #define __TRACE_PROTOARGLIST_XwcDrawString__ ( Display * display, Drawable d, XFontSet font_set, GC gc, int x, int y, const wchar_t * text, int num_wchars)
 #define __TRACE_ARGLIST_XwcDrawString__ ( display, d, font_set, gc, x, y, text, num_wchars)
@@ -8352,7 +9092,7 @@ void XwcDrawString  // 8 args
     __TRACE_PRINTF_ARG__(XwcDrawString, int, num_wchars)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XwcDrawString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XwcDrawString, Display_p, display)
-__TRACE__(VOID, FIXED, XwcDrawString)
+__TRACE__(XwcDrawString)
 
 
 /*
@@ -8366,6 +9106,8 @@ void Xutf8DrawString  // 8 args
     "const char *" "text"
     "int" "bytes_text"
 */
+#define __TRACE_RETSTYLE_Xutf8DrawString__ VOID
+#define __TRACE_ARGSTYLE_Xutf8DrawString__ FIXED
 #define __TRACE_SAFERETTYPE_Xutf8DrawString__ void
 #define __TRACE_PROTOARGLIST_Xutf8DrawString__ ( Display * display, Drawable d, XFontSet font_set, GC gc, int x, int y, const char * text, int bytes_text)
 #define __TRACE_ARGLIST_Xutf8DrawString__ ( display, d, font_set, gc, x, y, text, bytes_text)
@@ -8384,7 +9126,7 @@ void Xutf8DrawString  // 8 args
     __TRACE_PRINTF_ARG__(Xutf8DrawString, int, bytes_text)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_Xutf8DrawString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(Xutf8DrawString, Display_p, display)
-__TRACE__(VOID, FIXED, Xutf8DrawString)
+__TRACE__(Xutf8DrawString)
 
 
 /*
@@ -8398,6 +9140,8 @@ void XmbDrawImageString  // 8 args
     "const char *" "text"
     "int" "bytes_text"
 */
+#define __TRACE_RETSTYLE_XmbDrawImageString__ VOID
+#define __TRACE_ARGSTYLE_XmbDrawImageString__ FIXED
 #define __TRACE_SAFERETTYPE_XmbDrawImageString__ void
 #define __TRACE_PROTOARGLIST_XmbDrawImageString__ ( Display * display, Drawable d, XFontSet font_set, GC gc, int x, int y, const char * text, int bytes_text)
 #define __TRACE_ARGLIST_XmbDrawImageString__ ( display, d, font_set, gc, x, y, text, bytes_text)
@@ -8416,7 +9160,7 @@ void XmbDrawImageString  // 8 args
     __TRACE_PRINTF_ARG__(XmbDrawImageString, int, bytes_text)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XmbDrawImageString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XmbDrawImageString, Display_p, display)
-__TRACE__(VOID, FIXED, XmbDrawImageString)
+__TRACE__(XmbDrawImageString)
 
 
 /*
@@ -8430,6 +9174,8 @@ void XwcDrawImageString  // 8 args
     "const wchar_t *" "text"
     "int" "num_wchars"
 */
+#define __TRACE_RETSTYLE_XwcDrawImageString__ VOID
+#define __TRACE_ARGSTYLE_XwcDrawImageString__ FIXED
 #define __TRACE_SAFERETTYPE_XwcDrawImageString__ void
 #define __TRACE_PROTOARGLIST_XwcDrawImageString__ ( Display * display, Drawable d, XFontSet font_set, GC gc, int x, int y, const wchar_t * text, int num_wchars)
 #define __TRACE_ARGLIST_XwcDrawImageString__ ( display, d, font_set, gc, x, y, text, num_wchars)
@@ -8448,7 +9194,7 @@ void XwcDrawImageString  // 8 args
     __TRACE_PRINTF_ARG__(XwcDrawImageString, int, num_wchars)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XwcDrawImageString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XwcDrawImageString, Display_p, display)
-__TRACE__(VOID, FIXED, XwcDrawImageString)
+__TRACE__(XwcDrawImageString)
 
 
 /*
@@ -8462,6 +9208,8 @@ void Xutf8DrawImageString  // 8 args
     "const char *" "text"
     "int" "bytes_text"
 */
+#define __TRACE_RETSTYLE_Xutf8DrawImageString__ VOID
+#define __TRACE_ARGSTYLE_Xutf8DrawImageString__ FIXED
 #define __TRACE_SAFERETTYPE_Xutf8DrawImageString__ void
 #define __TRACE_PROTOARGLIST_Xutf8DrawImageString__ ( Display * display, Drawable d, XFontSet font_set, GC gc, int x, int y, const char * text, int bytes_text)
 #define __TRACE_ARGLIST_Xutf8DrawImageString__ ( display, d, font_set, gc, x, y, text, bytes_text)
@@ -8480,7 +9228,7 @@ void Xutf8DrawImageString  // 8 args
     __TRACE_PRINTF_ARG__(Xutf8DrawImageString, int, bytes_text)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_Xutf8DrawImageString__ \
     __TRACE_RUN_XFLUSH_XSYNC__(Xutf8DrawImageString, Display_p, display)
-__TRACE__(VOID, FIXED, Xutf8DrawImageString)
+__TRACE__(Xutf8DrawImageString)
 
 
 /*
@@ -8490,6 +9238,8 @@ XIM XOpenIM  // 4 args
     "char *" "res_name"
     "char *" "res_class"
 */
+#define __TRACE_RETSTYLE_XOpenIM__ TYPED
+#define __TRACE_ARGSTYLE_XOpenIM__ FIXED
 #define __TRACE_SAFERETTYPE_XOpenIM__ XIM
 #define __TRACE_PROTOARGLIST_XOpenIM__ ( Display * dpy, struct _XrmHashBucketRec * rdb, char * res_name, char * res_class)
 #define __TRACE_ARGLIST_XOpenIM__ ( dpy, rdb, res_name, res_class)
@@ -8504,13 +9254,15 @@ XIM XOpenIM  // 4 args
     __TRACE_PRINTF_ARG__(XOpenIM, char_p, res_class)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XOpenIM__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XOpenIM, Display_p, dpy)
-__TRACE__(TYPED, FIXED, XOpenIM)
+__TRACE__(XOpenIM)
 
 
 /*
 Status XCloseIM  // 1 args
     "XIM" "im"
 */
+#define __TRACE_RETSTYLE_XCloseIM__ TYPED
+#define __TRACE_ARGSTYLE_XCloseIM__ FIXED
 #define __TRACE_SAFERETTYPE_XCloseIM__ Status
 #define __TRACE_PROTOARGLIST_XCloseIM__ ( XIM im)
 #define __TRACE_ARGLIST_XCloseIM__ ( im)
@@ -8520,7 +9272,7 @@ Status XCloseIM  // 1 args
 #define __TRACE_PRINTF_BODY_XCloseIM__ \
     __TRACE_PRINTF_ARG__(XCloseIM, XIM, im)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCloseIM__ 
-__TRACE__(TYPED, FIXED, XCloseIM)
+__TRACE__(XCloseIM)
 
 
 /*
@@ -8528,6 +9280,8 @@ char * XGetIMValues  // 2 args
     "XIM" "im"
     "..." "..."
 */
+#define __TRACE_RETSTYLE_XGetIMValues__ TYPED
+#define __TRACE_ARGSTYLE_XGetIMValues__ VAR
 #define __TRACE_SAFERETTYPE_XGetIMValues__ char_p
 #define __TRACE_PROTOARGLIST_XGetIMValues__ ( XIM im, ...)
 #define __TRACE_ARGLIST_XGetIMValues__ ( im, ...)
@@ -8540,7 +9294,7 @@ char * XGetIMValues  // 2 args
     __TRACE_PRINTF_ARG__(XGetIMValues, XIM, im) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetIMValues__ 
-__TRACE__(TYPED, VAR, XGetIMValues)
+__TRACE__(XGetIMValues)
 
 
 /*
@@ -8548,6 +9302,8 @@ char * XSetIMValues  // 2 args
     "XIM" "im"
     "..." "..."
 */
+#define __TRACE_RETSTYLE_XSetIMValues__ TYPED
+#define __TRACE_ARGSTYLE_XSetIMValues__ VAR
 #define __TRACE_SAFERETTYPE_XSetIMValues__ char_p
 #define __TRACE_PROTOARGLIST_XSetIMValues__ ( XIM im, ...)
 #define __TRACE_ARGLIST_XSetIMValues__ ( im, ...)
@@ -8560,13 +9316,15 @@ char * XSetIMValues  // 2 args
     __TRACE_PRINTF_ARG__(XSetIMValues, XIM, im) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetIMValues__ 
-__TRACE__(TYPED, VAR, XSetIMValues)
+__TRACE__(XSetIMValues)
 
 
 /*
 Display * XDisplayOfIM  // 1 args
     "XIM" "im"
 */
+#define __TRACE_RETSTYLE_XDisplayOfIM__ TYPED
+#define __TRACE_ARGSTYLE_XDisplayOfIM__ FIXED
 #define __TRACE_SAFERETTYPE_XDisplayOfIM__ Display_p
 #define __TRACE_PROTOARGLIST_XDisplayOfIM__ ( XIM im)
 #define __TRACE_ARGLIST_XDisplayOfIM__ ( im)
@@ -8576,13 +9334,15 @@ Display * XDisplayOfIM  // 1 args
 #define __TRACE_PRINTF_BODY_XDisplayOfIM__ \
     __TRACE_PRINTF_ARG__(XDisplayOfIM, XIM, im)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDisplayOfIM__ 
-__TRACE__(TYPED, FIXED, XDisplayOfIM)
+__TRACE__(XDisplayOfIM)
 
 
 /*
 char * XLocaleOfIM  // 1 args
     "XIM" "im"
 */
+#define __TRACE_RETSTYLE_XLocaleOfIM__ TYPED
+#define __TRACE_ARGSTYLE_XLocaleOfIM__ FIXED
 #define __TRACE_SAFERETTYPE_XLocaleOfIM__ char_p
 #define __TRACE_PROTOARGLIST_XLocaleOfIM__ ( XIM im)
 #define __TRACE_ARGLIST_XLocaleOfIM__ ( im)
@@ -8592,7 +9352,7 @@ char * XLocaleOfIM  // 1 args
 #define __TRACE_PRINTF_BODY_XLocaleOfIM__ \
     __TRACE_PRINTF_ARG__(XLocaleOfIM, XIM, im)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XLocaleOfIM__ 
-__TRACE__(TYPED, FIXED, XLocaleOfIM)
+__TRACE__(XLocaleOfIM)
 
 
 /*
@@ -8600,6 +9360,8 @@ XIC XCreateIC  // 2 args
     "XIM" "im"
     "..." "..."
 */
+#define __TRACE_RETSTYLE_XCreateIC__ TYPED
+#define __TRACE_ARGSTYLE_XCreateIC__ VAR
 #define __TRACE_SAFERETTYPE_XCreateIC__ XIC
 #define __TRACE_PROTOARGLIST_XCreateIC__ ( XIM im, ...)
 #define __TRACE_ARGLIST_XCreateIC__ ( im, ...)
@@ -8612,13 +9374,15 @@ XIC XCreateIC  // 2 args
     __TRACE_PRINTF_ARG__(XCreateIC, XIM, im) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XCreateIC__ 
-__TRACE__(TYPED, VAR, XCreateIC)
+__TRACE__(XCreateIC)
 
 
 /*
 void XDestroyIC  // 1 args
     "XIC" "ic"
 */
+#define __TRACE_RETSTYLE_XDestroyIC__ VOID
+#define __TRACE_ARGSTYLE_XDestroyIC__ FIXED
 #define __TRACE_SAFERETTYPE_XDestroyIC__ void
 #define __TRACE_PROTOARGLIST_XDestroyIC__ ( XIC ic)
 #define __TRACE_ARGLIST_XDestroyIC__ ( ic)
@@ -8628,13 +9392,15 @@ void XDestroyIC  // 1 args
 #define __TRACE_PRINTF_BODY_XDestroyIC__ \
     __TRACE_PRINTF_ARG__(XDestroyIC, XIC, ic)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XDestroyIC__ 
-__TRACE__(VOID, FIXED, XDestroyIC)
+__TRACE__(XDestroyIC)
 
 
 /*
 void XSetICFocus  // 1 args
     "XIC" "ic"
 */
+#define __TRACE_RETSTYLE_XSetICFocus__ VOID
+#define __TRACE_ARGSTYLE_XSetICFocus__ FIXED
 #define __TRACE_SAFERETTYPE_XSetICFocus__ void
 #define __TRACE_PROTOARGLIST_XSetICFocus__ ( XIC ic)
 #define __TRACE_ARGLIST_XSetICFocus__ ( ic)
@@ -8644,13 +9410,15 @@ void XSetICFocus  // 1 args
 #define __TRACE_PRINTF_BODY_XSetICFocus__ \
     __TRACE_PRINTF_ARG__(XSetICFocus, XIC, ic)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetICFocus__ 
-__TRACE__(VOID, FIXED, XSetICFocus)
+__TRACE__(XSetICFocus)
 
 
 /*
 void XUnsetICFocus  // 1 args
     "XIC" "ic"
 */
+#define __TRACE_RETSTYLE_XUnsetICFocus__ VOID
+#define __TRACE_ARGSTYLE_XUnsetICFocus__ FIXED
 #define __TRACE_SAFERETTYPE_XUnsetICFocus__ void
 #define __TRACE_PROTOARGLIST_XUnsetICFocus__ ( XIC ic)
 #define __TRACE_ARGLIST_XUnsetICFocus__ ( ic)
@@ -8660,13 +9428,15 @@ void XUnsetICFocus  // 1 args
 #define __TRACE_PRINTF_BODY_XUnsetICFocus__ \
     __TRACE_PRINTF_ARG__(XUnsetICFocus, XIC, ic)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUnsetICFocus__ 
-__TRACE__(VOID, FIXED, XUnsetICFocus)
+__TRACE__(XUnsetICFocus)
 
 
 /*
 wchar_t * XwcResetIC  // 1 args
     "XIC" "ic"
 */
+#define __TRACE_RETSTYLE_XwcResetIC__ TYPED
+#define __TRACE_ARGSTYLE_XwcResetIC__ FIXED
 #define __TRACE_SAFERETTYPE_XwcResetIC__ wchar_t_p
 #define __TRACE_PROTOARGLIST_XwcResetIC__ ( XIC ic)
 #define __TRACE_ARGLIST_XwcResetIC__ ( ic)
@@ -8676,13 +9446,15 @@ wchar_t * XwcResetIC  // 1 args
 #define __TRACE_PRINTF_BODY_XwcResetIC__ \
     __TRACE_PRINTF_ARG__(XwcResetIC, XIC, ic)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XwcResetIC__ 
-__TRACE__(TYPED, FIXED, XwcResetIC)
+__TRACE__(XwcResetIC)
 
 
 /*
 char * XmbResetIC  // 1 args
     "XIC" "ic"
 */
+#define __TRACE_RETSTYLE_XmbResetIC__ TYPED
+#define __TRACE_ARGSTYLE_XmbResetIC__ FIXED
 #define __TRACE_SAFERETTYPE_XmbResetIC__ char_p
 #define __TRACE_PROTOARGLIST_XmbResetIC__ ( XIC ic)
 #define __TRACE_ARGLIST_XmbResetIC__ ( ic)
@@ -8692,13 +9464,15 @@ char * XmbResetIC  // 1 args
 #define __TRACE_PRINTF_BODY_XmbResetIC__ \
     __TRACE_PRINTF_ARG__(XmbResetIC, XIC, ic)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XmbResetIC__ 
-__TRACE__(TYPED, FIXED, XmbResetIC)
+__TRACE__(XmbResetIC)
 
 
 /*
 char * Xutf8ResetIC  // 1 args
     "XIC" "ic"
 */
+#define __TRACE_RETSTYLE_Xutf8ResetIC__ TYPED
+#define __TRACE_ARGSTYLE_Xutf8ResetIC__ FIXED
 #define __TRACE_SAFERETTYPE_Xutf8ResetIC__ char_p
 #define __TRACE_PROTOARGLIST_Xutf8ResetIC__ ( XIC ic)
 #define __TRACE_ARGLIST_Xutf8ResetIC__ ( ic)
@@ -8708,7 +9482,7 @@ char * Xutf8ResetIC  // 1 args
 #define __TRACE_PRINTF_BODY_Xutf8ResetIC__ \
     __TRACE_PRINTF_ARG__(Xutf8ResetIC, XIC, ic)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_Xutf8ResetIC__ 
-__TRACE__(TYPED, FIXED, Xutf8ResetIC)
+__TRACE__(Xutf8ResetIC)
 
 
 /*
@@ -8716,6 +9490,8 @@ char * XSetICValues  // 2 args
     "XIC" "ic"
     "..." "..."
 */
+#define __TRACE_RETSTYLE_XSetICValues__ TYPED
+#define __TRACE_ARGSTYLE_XSetICValues__ VAR
 #define __TRACE_SAFERETTYPE_XSetICValues__ char_p
 #define __TRACE_PROTOARGLIST_XSetICValues__ ( XIC ic, ...)
 #define __TRACE_ARGLIST_XSetICValues__ ( ic, ...)
@@ -8728,7 +9504,7 @@ char * XSetICValues  // 2 args
     __TRACE_PRINTF_ARG__(XSetICValues, XIC, ic) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetICValues__ 
-__TRACE__(TYPED, VAR, XSetICValues)
+__TRACE__(XSetICValues)
 
 
 /*
@@ -8736,6 +9512,8 @@ char * XGetICValues  // 2 args
     "XIC" "ic"
     "..." "..."
 */
+#define __TRACE_RETSTYLE_XGetICValues__ TYPED
+#define __TRACE_ARGSTYLE_XGetICValues__ VAR
 #define __TRACE_SAFERETTYPE_XGetICValues__ char_p
 #define __TRACE_PROTOARGLIST_XGetICValues__ ( XIC ic, ...)
 #define __TRACE_ARGLIST_XGetICValues__ ( ic, ...)
@@ -8748,13 +9526,15 @@ char * XGetICValues  // 2 args
     __TRACE_PRINTF_ARG__(XGetICValues, XIC, ic) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XGetICValues__ 
-__TRACE__(TYPED, VAR, XGetICValues)
+__TRACE__(XGetICValues)
 
 
 /*
 XIM XIMOfIC  // 1 args
     "XIC" "ic"
 */
+#define __TRACE_RETSTYLE_XIMOfIC__ TYPED
+#define __TRACE_ARGSTYLE_XIMOfIC__ FIXED
 #define __TRACE_SAFERETTYPE_XIMOfIC__ XIM
 #define __TRACE_PROTOARGLIST_XIMOfIC__ ( XIC ic)
 #define __TRACE_ARGLIST_XIMOfIC__ ( ic)
@@ -8764,7 +9544,7 @@ XIM XIMOfIC  // 1 args
 #define __TRACE_PRINTF_BODY_XIMOfIC__ \
     __TRACE_PRINTF_ARG__(XIMOfIC, XIC, ic)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XIMOfIC__ 
-__TRACE__(TYPED, FIXED, XIMOfIC)
+__TRACE__(XIMOfIC)
 
 
 /*
@@ -8772,6 +9552,8 @@ Bool XFilterEvent  // 2 args
     "XEvent *" "event"
     "Window" "window"
 */
+#define __TRACE_RETSTYLE_XFilterEvent__ TYPED
+#define __TRACE_ARGSTYLE_XFilterEvent__ FIXED
 #define __TRACE_SAFERETTYPE_XFilterEvent__ Bool
 #define __TRACE_PROTOARGLIST_XFilterEvent__ ( XEvent * event, Window window)
 #define __TRACE_ARGLIST_XFilterEvent__ ( event, window)
@@ -8783,7 +9565,7 @@ Bool XFilterEvent  // 2 args
     __TRACE_PRINTF_ARG__(XFilterEvent, XEvent_p, event) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XFilterEvent, Window, window)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XFilterEvent__ 
-__TRACE__(TYPED, FIXED, XFilterEvent)
+__TRACE__(XFilterEvent)
 
 
 /*
@@ -8795,6 +9577,8 @@ int XmbLookupString  // 6 args
     "KeySym *" "keysym_return"
     "Status *" "status_return"
 */
+#define __TRACE_RETSTYLE_XmbLookupString__ TYPED
+#define __TRACE_ARGSTYLE_XmbLookupString__ FIXED
 #define __TRACE_SAFERETTYPE_XmbLookupString__ int
 #define __TRACE_PROTOARGLIST_XmbLookupString__ ( XIC ic, XKeyPressedEvent * event, char * buffer_return, int bytes_buffer, KeySym * keysym_return, Status * status_return)
 #define __TRACE_ARGLIST_XmbLookupString__ ( ic, event, buffer_return, bytes_buffer, keysym_return, status_return)
@@ -8810,7 +9594,7 @@ int XmbLookupString  // 6 args
     __TRACE_PRINTF_ARG__(XmbLookupString, KeySym_p, keysym_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XmbLookupString, Status_p, status_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XmbLookupString__ 
-__TRACE__(TYPED, FIXED, XmbLookupString)
+__TRACE__(XmbLookupString)
 
 
 /*
@@ -8822,6 +9606,8 @@ int XwcLookupString  // 6 args
     "KeySym *" "keysym_return"
     "Status *" "status_return"
 */
+#define __TRACE_RETSTYLE_XwcLookupString__ TYPED
+#define __TRACE_ARGSTYLE_XwcLookupString__ FIXED
 #define __TRACE_SAFERETTYPE_XwcLookupString__ int
 #define __TRACE_PROTOARGLIST_XwcLookupString__ ( XIC ic, XKeyPressedEvent * event, wchar_t * buffer_return, int wchars_buffer, KeySym * keysym_return, Status * status_return)
 #define __TRACE_ARGLIST_XwcLookupString__ ( ic, event, buffer_return, wchars_buffer, keysym_return, status_return)
@@ -8837,7 +9623,7 @@ int XwcLookupString  // 6 args
     __TRACE_PRINTF_ARG__(XwcLookupString, KeySym_p, keysym_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XwcLookupString, Status_p, status_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XwcLookupString__ 
-__TRACE__(TYPED, FIXED, XwcLookupString)
+__TRACE__(XwcLookupString)
 
 
 /*
@@ -8849,6 +9635,8 @@ int Xutf8LookupString  // 6 args
     "KeySym *" "keysym_return"
     "Status *" "status_return"
 */
+#define __TRACE_RETSTYLE_Xutf8LookupString__ TYPED
+#define __TRACE_ARGSTYLE_Xutf8LookupString__ FIXED
 #define __TRACE_SAFERETTYPE_Xutf8LookupString__ int
 #define __TRACE_PROTOARGLIST_Xutf8LookupString__ ( XIC ic, XKeyPressedEvent * event, char * buffer_return, int bytes_buffer, KeySym * keysym_return, Status * status_return)
 #define __TRACE_ARGLIST_Xutf8LookupString__ ( ic, event, buffer_return, bytes_buffer, keysym_return, status_return)
@@ -8864,7 +9652,7 @@ int Xutf8LookupString  // 6 args
     __TRACE_PRINTF_ARG__(Xutf8LookupString, KeySym_p, keysym_return) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(Xutf8LookupString, Status_p, status_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_Xutf8LookupString__ 
-__TRACE__(TYPED, FIXED, Xutf8LookupString)
+__TRACE__(Xutf8LookupString)
 
 
 /*
@@ -8872,6 +9660,8 @@ XVaNestedList XVaCreateNestedList  // 2 args
     "int" "unused"
     "..." "..."
 */
+#define __TRACE_RETSTYLE_XVaCreateNestedList__ TYPED
+#define __TRACE_ARGSTYLE_XVaCreateNestedList__ VAR
 #define __TRACE_SAFERETTYPE_XVaCreateNestedList__ XVaNestedList
 #define __TRACE_PROTOARGLIST_XVaCreateNestedList__ ( int unused, ...)
 #define __TRACE_ARGLIST_XVaCreateNestedList__ ( unused, ...)
@@ -8884,7 +9674,7 @@ XVaNestedList XVaCreateNestedList  // 2 args
     __TRACE_PRINTF_ARG__(XVaCreateNestedList, int, unused) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_VARARG__()
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XVaCreateNestedList__ 
-__TRACE__(TYPED, VAR, XVaCreateNestedList)
+__TRACE__(XVaCreateNestedList)
 
 
 /*
@@ -8896,6 +9686,8 @@ Bool XRegisterIMInstantiateCallback  // 6 args
     "XIDProc" "callback"
     "XPointer" "client_data"
 */
+#define __TRACE_RETSTYLE_XRegisterIMInstantiateCallback__ TYPED
+#define __TRACE_ARGSTYLE_XRegisterIMInstantiateCallback__ FIXED
 #define __TRACE_SAFERETTYPE_XRegisterIMInstantiateCallback__ Bool
 #define __TRACE_PROTOARGLIST_XRegisterIMInstantiateCallback__ ( Display * dpy, struct _XrmHashBucketRec * rdb, char * res_name, char * res_class, XIDProc callback, XPointer client_data)
 #define __TRACE_ARGLIST_XRegisterIMInstantiateCallback__ ( dpy, rdb, res_name, res_class, callback, client_data)
@@ -8912,7 +9704,7 @@ Bool XRegisterIMInstantiateCallback  // 6 args
     __TRACE_PRINTF_ARG__(XRegisterIMInstantiateCallback, XPointer, client_data)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRegisterIMInstantiateCallback__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRegisterIMInstantiateCallback, Display_p, dpy)
-__TRACE__(TYPED, FIXED, XRegisterIMInstantiateCallback)
+__TRACE__(XRegisterIMInstantiateCallback)
 
 
 /*
@@ -8924,6 +9716,8 @@ Bool XUnregisterIMInstantiateCallback  // 6 args
     "XIDProc" "callback"
     "XPointer" "client_data"
 */
+#define __TRACE_RETSTYLE_XUnregisterIMInstantiateCallback__ TYPED
+#define __TRACE_ARGSTYLE_XUnregisterIMInstantiateCallback__ FIXED
 #define __TRACE_SAFERETTYPE_XUnregisterIMInstantiateCallback__ Bool
 #define __TRACE_PROTOARGLIST_XUnregisterIMInstantiateCallback__ ( Display * dpy, struct _XrmHashBucketRec * rdb, char * res_name, char * res_class, XIDProc callback, XPointer client_data)
 #define __TRACE_ARGLIST_XUnregisterIMInstantiateCallback__ ( dpy, rdb, res_name, res_class, callback, client_data)
@@ -8940,7 +9734,7 @@ Bool XUnregisterIMInstantiateCallback  // 6 args
     __TRACE_PRINTF_ARG__(XUnregisterIMInstantiateCallback, XPointer, client_data)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XUnregisterIMInstantiateCallback__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XUnregisterIMInstantiateCallback, Display_p, dpy)
-__TRACE__(TYPED, FIXED, XUnregisterIMInstantiateCallback)
+__TRACE__(XUnregisterIMInstantiateCallback)
 
 
 /*
@@ -8949,6 +9743,8 @@ Status XInternalConnectionNumbers  // 3 args
     "int **" "fd_return"
     "int *" "count_return"
 */
+#define __TRACE_RETSTYLE_XInternalConnectionNumbers__ TYPED
+#define __TRACE_ARGSTYLE_XInternalConnectionNumbers__ FIXED
 #define __TRACE_SAFERETTYPE_XInternalConnectionNumbers__ Status
 #define __TRACE_PROTOARGLIST_XInternalConnectionNumbers__ ( Display * dpy, int ** fd_return, int * count_return)
 #define __TRACE_ARGLIST_XInternalConnectionNumbers__ ( dpy, fd_return, count_return)
@@ -8962,7 +9758,7 @@ Status XInternalConnectionNumbers  // 3 args
     __TRACE_PRINTF_ARG__(XInternalConnectionNumbers, int_p, count_return)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XInternalConnectionNumbers__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XInternalConnectionNumbers, Display_p, dpy)
-__TRACE__(TYPED, FIXED, XInternalConnectionNumbers)
+__TRACE__(XInternalConnectionNumbers)
 
 
 /*
@@ -8970,6 +9766,8 @@ void XProcessInternalConnection  // 2 args
     "Display *" "dpy"
     "int" "fd"
 */
+#define __TRACE_RETSTYLE_XProcessInternalConnection__ VOID
+#define __TRACE_ARGSTYLE_XProcessInternalConnection__ FIXED
 #define __TRACE_SAFERETTYPE_XProcessInternalConnection__ void
 #define __TRACE_PROTOARGLIST_XProcessInternalConnection__ ( Display * dpy, int fd)
 #define __TRACE_ARGLIST_XProcessInternalConnection__ ( dpy, fd)
@@ -8982,7 +9780,7 @@ void XProcessInternalConnection  // 2 args
     __TRACE_PRINTF_ARG__(XProcessInternalConnection, int, fd)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XProcessInternalConnection__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XProcessInternalConnection, Display_p, dpy)
-__TRACE__(VOID, FIXED, XProcessInternalConnection)
+__TRACE__(XProcessInternalConnection)
 
 
 /*
@@ -8991,6 +9789,8 @@ Status XAddConnectionWatch  // 3 args
     "XConnectionWatchProc" "callback"
     "XPointer" "client_data"
 */
+#define __TRACE_RETSTYLE_XAddConnectionWatch__ TYPED
+#define __TRACE_ARGSTYLE_XAddConnectionWatch__ FIXED
 #define __TRACE_SAFERETTYPE_XAddConnectionWatch__ Status
 #define __TRACE_PROTOARGLIST_XAddConnectionWatch__ ( Display * dpy, XConnectionWatchProc callback, XPointer client_data)
 #define __TRACE_ARGLIST_XAddConnectionWatch__ ( dpy, callback, client_data)
@@ -9004,7 +9804,7 @@ Status XAddConnectionWatch  // 3 args
     __TRACE_PRINTF_ARG__(XAddConnectionWatch, XPointer, client_data)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XAddConnectionWatch__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XAddConnectionWatch, Display_p, dpy)
-__TRACE__(TYPED, FIXED, XAddConnectionWatch)
+__TRACE__(XAddConnectionWatch)
 
 
 /*
@@ -9013,6 +9813,8 @@ void XRemoveConnectionWatch  // 3 args
     "XConnectionWatchProc" "callback"
     "XPointer" "client_data"
 */
+#define __TRACE_RETSTYLE_XRemoveConnectionWatch__ VOID
+#define __TRACE_ARGSTYLE_XRemoveConnectionWatch__ FIXED
 #define __TRACE_SAFERETTYPE_XRemoveConnectionWatch__ void
 #define __TRACE_PROTOARGLIST_XRemoveConnectionWatch__ ( Display * dpy, XConnectionWatchProc callback, XPointer client_data)
 #define __TRACE_ARGLIST_XRemoveConnectionWatch__ ( dpy, callback, client_data)
@@ -9026,7 +9828,7 @@ void XRemoveConnectionWatch  // 3 args
     __TRACE_PRINTF_ARG__(XRemoveConnectionWatch, XPointer, client_data)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XRemoveConnectionWatch__ \
     __TRACE_RUN_XFLUSH_XSYNC__(XRemoveConnectionWatch, Display_p, dpy)
-__TRACE__(VOID, FIXED, XRemoveConnectionWatch)
+__TRACE__(XRemoveConnectionWatch)
 
 
 /*
@@ -9036,6 +9838,8 @@ void XSetAuthorization  // 4 args
     "char *" "data"
     "int" "datalen"
 */
+#define __TRACE_RETSTYLE_XSetAuthorization__ VOID
+#define __TRACE_ARGSTYLE_XSetAuthorization__ FIXED
 #define __TRACE_SAFERETTYPE_XSetAuthorization__ void
 #define __TRACE_PROTOARGLIST_XSetAuthorization__ ( char * name, int namelen, char * data, int datalen)
 #define __TRACE_ARGLIST_XSetAuthorization__ ( name, namelen, data, datalen)
@@ -9049,7 +9853,7 @@ void XSetAuthorization  // 4 args
     __TRACE_PRINTF_ARG__(XSetAuthorization, char_p, data) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(XSetAuthorization, int, datalen)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE_XSetAuthorization__ 
-__TRACE__(VOID, FIXED, XSetAuthorization)
+__TRACE__(XSetAuthorization)
 
 
 /*
@@ -9058,6 +9862,8 @@ int _Xmbtowc  // 3 args
     "char *" "str"
     "int" "len"
 */
+#define __TRACE_RETSTYLE__Xmbtowc__ TYPED
+#define __TRACE_ARGSTYLE__Xmbtowc__ FIXED
 #define __TRACE_SAFERETTYPE__Xmbtowc__ int
 #define __TRACE_PROTOARGLIST__Xmbtowc__ ( wchar_t * wstr, char * str, int len)
 #define __TRACE_ARGLIST__Xmbtowc__ ( wstr, str, len)
@@ -9070,7 +9876,7 @@ int _Xmbtowc  // 3 args
     __TRACE_PRINTF_ARG__(_Xmbtowc, char_p, str) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(_Xmbtowc, int, len)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE__Xmbtowc__ 
-__TRACE__(TYPED, FIXED, _Xmbtowc)
+__TRACE__(_Xmbtowc)
 
 
 /*
@@ -9078,6 +9884,8 @@ int _Xwctomb  // 2 args
     "char *" "str"
     "wchar_t" "wc"
 */
+#define __TRACE_RETSTYLE__Xwctomb__ TYPED
+#define __TRACE_ARGSTYLE__Xwctomb__ FIXED
 #define __TRACE_SAFERETTYPE__Xwctomb__ int
 #define __TRACE_PROTOARGLIST__Xwctomb__ ( char * str, wchar_t wc)
 #define __TRACE_ARGLIST__Xwctomb__ ( str, wc)
@@ -9089,6 +9897,6 @@ int _Xwctomb  // 2 args
     __TRACE_PRINTF_ARG__(_Xwctomb, char_p, str) __PRINT_COMMA__(out) \
     __TRACE_PRINTF_ARG__(_Xwctomb, wchar_t, wc)
 #define __TRACE_RUN_UNDERLYING_EPILOGUE__Xwctomb__ 
-__TRACE__(TYPED, FIXED, _Xwctomb)
+__TRACE__(_Xwctomb)
 
 

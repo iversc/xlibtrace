@@ -32,6 +32,12 @@
 #define __CONSTRUCT_CALL_3__(t1,t2,t3) t1##t2##t3
 #define __INDIRECT_CALL_3__(t1,t2,t3) __CONSTRUCT_CALL_3__(t1,t2,t3)
 
+#define __INDIRECT_CALL__(macro, arg) \
+	macro(arg)
+
+#define __INDIRECT__(x) x
+
+
 
 // Option testing functions
 int _show_implementation_dependent_structs();

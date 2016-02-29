@@ -30,11 +30,31 @@
 #include "libxlibtrace-print-x.h"
 
 
+#define __TRACE_GET_RETSTYLE__(funcname) \
+	__TRACE_RETSTYLE_##funcname##__
+
+#define __TRACE_GET_ARGSTYLE__(funcname) \
+	__TRACE_ARGSTYLE_##funcname##__
+
+#define __TRACE_GET_RETSTYLE_INDIRECT__(funcname) \
+	__TRACE_GET_RETSTYLE__(funcname)
+
+#define __TRACE_GET_ARGSTYLE_INDIRECT__(funcname) \
+	__TRACE_GET_ARGSTYLE__(funcname)
+
 
 #define __TRACE_LOCAL_VARS__(funcname) \
 		int reprint = 0; \
 		int always_reprint = 0; \
 		int *my_prev_reprint = NULL; \
+
+#define __TRACE_LOCAL_VARS_VOID__(funcname) \
+
+#define __TRACE_LOCAL_VARS_TYPED__(funcname) \
+
+#define __TRACE_LOCAL_VARS_FIXED__(funcname) \
+
+#define __TRACE_LOCAL_VARS_VAR__(funcname) \
 
 #define __TRACE_BEGIN_BASE__(funcname, protoarglist) \
 	__REALTYPE_INDIRECT__(__TRACE_SAFERETTYPE_##funcname##__) funcname protoarglist { \
@@ -44,12 +64,15 @@
 
 #define __TRACE_BEGIN_VOID__(funcname) \
 	__TRACE_BEGIN_BASE__(funcname, __TRACE_PROTOARGLIST_##funcname##__) \
+		__TRACE_LOCAL_VARS_VOID__(funcname) \
 
 #define __TRACE_BEGIN_TYPED__(funcname) \
 	__TRACE_BEGIN_BASE__(funcname, __TRACE_PROTOARGLIST_##funcname##__) \
 		__REALTYPE_INDIRECT__(__TRACE_SAFERETTYPE_##funcname##__) retval; \
+		__TRACE_LOCAL_VARS_TYPED__(funcname) \
 
 #define __TRACE_BEGIN_FIXED__(funcname) \
+		__TRACE_LOCAL_VARS_FIXED__(funcname) \
 
 #define __TRACE_BEGIN_VAR__(funcname) \
 	va_list ap; \
@@ -59,10 +82,17 @@
 	XPointer va_this_value; \
 	char ** va_name; \
 	XPointer * va_value; \
+		__TRACE_LOCAL_VARS_VAR__(funcname) \
 
 #define __TRACE_BEGIN_STYLE__(retstyle, argstyle, funcname) \
 	__TRACE_BEGIN_##retstyle##__(funcname) \
 	__TRACE_BEGIN_##argstyle##__(funcname) \
+
+#define __TRACE_BEGIN_STYLE_INDIRECT__(retstyle, argstyle, funcname) \
+	__TRACE_BEGIN_STYLE__(retstyle, argstyle, funcname) \
+
+#define __TRACE_BEGIN__(funcname) \
+	__TRACE_BEGIN_STYLE_INDIRECT__(__TRACE_GET_RETSTYLE__(funcname), __TRACE_GET_ARGSTYLE__(funcname), funcname) \
 
 
 
@@ -143,7 +173,21 @@
 		fgetc(stdin); \
 	} \
 
+#define __TRACE_PRE_RUN_UNDERLYING_STYLE_INDIRECT__(funcname) \
+	__TRACE_PRE_RUN_UNDERLYING_STYLE__(funcname) \
+
+#define __TRACE_PRE_RUN_UNDERLYING__(funcname) \
+	__TRACE_PRE_RUN_UNDERLYING_STYLE_INDIRECT__(__TRACE_GET_RETSTYLE__(funcname), __TRACE_GET_ARGSTYLE__(funcname), funcname) \
+
+
 #define __TRACE_POST_RUN_UNDERLYING_STYLE__(retstyle, argstyle, funcname) \
+
+#define __TRACE_POST_RUN_UNDERLYING_STYLE_INDIRECT__(retstyle, argstyle, funcname) \
+	__TRACE_POST_RUN_UNDERLYING_STYLE__(retstyle, argstyle, funcname) \
+
+#define __TRACE_POST_RUN_UNDERLYING__(funcname) \
+	__TRACE_POST_RUN_UNDERLYING_STYLE_INDIRECT__(__TRACE_GET_RETSTYLE__(funcname), __TRACE_GET_ARGSTYLE__(funcname), funcname) \
+
 
 #define __TRACE_RUN_UNDERLYING_STYLE__(retstyle, argstyle, funcname) \
 	__TRACE_GET_UNDERLYING__(funcname) \
@@ -153,6 +197,11 @@
 	__TRACE_POST_RUN_UNDERLYING_STYLE__(retstyle, argstyle, funcname) \
 	__TRACE_ADDITIONAL_POST_RUN_UNDERLYING_##funcname##__ \
 
+#define __TRACE_RUN_UNDERLYING_STYLE_INDIRECT__(retstyle, argstyle, funcname) \
+	__TRACE_RUN_UNDERLYING_STYLE__(retstyle, argstyle, funcname) \
+
+#define __TRACE_RUN_UNDERLYING__(funcname) \
+	__TRACE_RUN_UNDERLYING_STYLE_INDIRECT__(__TRACE_GET_RETSTYLE__(funcname), __TRACE_GET_ARGSTYLE__(funcname), funcname) \
 
 
 
@@ -170,6 +219,12 @@
 
 #define __TRACE_END_STYLE__(retstyle, argstyle, funcname) \
 	__TRACE_END_##retstyle##__(funcname) \
+
+#define __TRACE_END_STYLE_INDIRECT__(retstyle, argstyle, funcname) \
+	__TRACE_END_STYLE__(retstyle, argstyle, funcname) \
+
+#define __TRACE_END__(funcname) \
+	__TRACE_END_STYLE_INDIRECT__(__TRACE_GET_RETSTYLE__(funcname), __TRACE_GET_ARGSTYLE__(funcname), funcname) \
 
 
 
@@ -195,13 +250,20 @@
 
 
 
-#define __TRACE__(retstyle, argstyle, funcname) \
+#define __TRACE_STYLE__(retstyle, argstyle, funcname) \
 	__TRACE_BEGIN_STYLE__(retstyle, argstyle, funcname) \
 	{ __TRACE_PRINTF_ENTERING_STYLE__(retstyle, argstyle, funcname) } \
 	__TRACE_RUN_UNDERLYING_STYLE__(retstyle, argstyle, funcname) \
 	{ __TRACE_PRINTF_LEAVING_STYLE__(retstyle, argstyle, funcname) } \
 	__TRACE_RUN_UNDERLYING_EPILOGUE_##funcname##__ \
 	__TRACE_END_STYLE__(retstyle, argstyle, funcname) \
+
+
+#define __TRACE_STYLE_INDIRECT__(retstyle, argstyle, funcname) \
+	__TRACE_STYLE__(retstyle, argstyle, funcname) \
+
+#define __TRACE__(funcname) \
+	__TRACE_STYLE_INDIRECT__(__TRACE_GET_RETSTYLE__(funcname), __TRACE_GET_ARGSTYLE__(funcname), funcname)
 
 
 
