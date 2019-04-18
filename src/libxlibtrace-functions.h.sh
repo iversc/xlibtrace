@@ -81,7 +81,7 @@ function isconst(t) {
 	return (t ~ /^[cC][oO][nN][sS][tT][ 	]/);
 }
 
-function isarray(t) {
+function our_isarray(t) {
 	return (t ~ /\[.*\]$/);
 }
 
@@ -90,7 +90,7 @@ function makedefn(t, n) {
 		return sprintf("%s", t);
 	} else if (isfunctionpointer(t)) {
 		return gensub("^(.*\\(\\*)(\\).*)$", "\\1"n"\\2", "", t);
-	} else if (isarray(t)) {
+	} else if (our_isarray(t)) {
 		return gensub("^(.*)(\\[.*\\])$", "\\1"n"\\2", "", t);
 	} else {
 		return sprintf("%s %s", t, n);
